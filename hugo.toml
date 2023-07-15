@@ -1,0 +1,15 @@
+baseURL = 'https://arthurmorisson.fr'
+languageCode = 'fr-fr'
+title = 'Arthur Morisson'
+theme = "gokarna"
+
+[params]
+    socialIcons = [
+        {name = "linkedin", url = "https://www.linkedin.com/in/arthur-morisson-039557157/"},
+        {name = "stackoverflow", url = "https://stackoverflow.com/users/12807187/artmg"},
+        {name = "github", url = "https://github.com/ArtGM"},
+    ]
+    description = "Developpeur web fullstack"
+    avatarURL = "/images/moi-square.jpg"
+    AvatarAltText = "avatar"
+    avatarSize = "size-xs"

@@ -8,6 +8,7 @@ theme = "gokarna"
         {name = "linkedin", url = "https://www.linkedin.com/in/arthur-morisson-039557157/"},
         {name = "stackoverflow", url = "https://stackoverflow.com/users/12807187/artmg"},
         {name = "github", url = "https://github.com/ArtGM"},
+        {name = "malt", url = "https://www.malt.fr/profile/arthurmorisson?overview"},
     ]
     description = "Developpeur web fullstack"
     avatarURL = "/images/moi-square.jpg"

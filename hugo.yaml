@@ -1,0 +1,243 @@
+baseURL: "https://arthurmorisson.fr"
+languageCode: "fr-fr"
+title: "Arthur Morisson"
+theme: hugo-profile
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: "Arthur Morisson — Developpeur web fullstack freelance"
+  description: "Developpeur web fullstack freelance. Je conçois et développe des sites et applications web sur mesure."
+  favicon: "/images/moi-square.jpg"
+  useBootstrapCDN: false
+  mathjax: false
+  animate: true
+
+  theme: {}
+
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+
+  navbar:
+    align: ms-auto
+    brandName: "Arthur Morisson"
+    showBrandLogo: false
+    disableSearch: true
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: true
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
+      disableContact: false
+
+  hero:
+    enable: true
+    intro: "Bonjour, je suis"
+    title: "Arthur."
+    subtitle: "Je conçois et développe vos sites et applications web"
+    content: "Developpeur fullstack freelance. J'accompagne PME, startups et indépendants de la maquette à la mise en production — des sites rapides, fiables et maintenables."
+    image: /images/moi-square.jpg
+    roundImage: true
+    bottomImage:
+      enable: false
+    button:
+      enable: true
+      name: "Me contacter"
+      url: "#contact"
+      download: false
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/arthur-morisson-039557157/
+        - icon: fab fa-github
+          url: https://github.com/ArtGM
+        - icon: fab fa-stack-overflow
+          url: https://stackoverflow.com/users/12807187/artmg
+      customIcons:
+        - icon: /svg/icons/malt.svg
+          url: https://www.malt.fr/profile/arthurmorisson?overview
+
+  about:
+    enable: true
+    title: "À propos"
+    content: |-
+      Developpeur web fullstack, je construis des produits web solides et agréables à utiliser.
+
+      En freelance, j'interviens sur l'ensemble de la chaîne : conception, développement front et back, mise en production. Mon objectif : livrer vite, propre, et maintenable sur le long terme.
+    skills:
+      enable: true
+      title: "Quelques technologies avec lesquelles je travaille au quotidien :"
+      items:
+        - "TypeScript / JavaScript"
+        - "React"
+        - "Node.js"
+        - "PHP"
+        - "PostgreSQL"
+        - "Docker"
+
+  experience:
+    enable: false
+
+  education:
+    enable: false
+
+  achievements:
+    enable: false
+
+  projects:
+    enable: false
+
+  contact:
+    enable: true
+    title: "Contact"
+    content: "Un projet en tête ? Une question ? Écrivez-moi, je réponds rapidement."
+    btnName: "M'écrire"
+    btnLink: "mailto:contact@arthurmorisson.fr"
+
+  footer:
+    recentPosts:
+      enable: false
+    socialNetworks:
+      github: https://github.com/ArtGM
+      linkedin: https://www.linkedin.com/in/arthur-morisson-039557157/
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    socialShare: false
+    readTime:
+      enable: false
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  terms:
+    read: "Lire"
+    toc: "Sommaire"
+    copyright: "Tous droits réservés"
+    emailText: "Regardez ce site"
+
+  datesFormat:
+    article: "2 Jan 2006"
+    articleList: "2 Jan 2006"
+    articleRecent: "2 Jan 2006"
+
+  customScripts: |-
+    <!-- Matomo -->
+    <script>
+        var _paq = window._paq = window._paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "https://analytics.lambofcode.com/";
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+            _paq.push(['setSiteId', '3']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.async = true;
+            g.src = u + 'piwik.js';
+            s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
+
+    <!-- Background pixel drift -->
+    <canvas id="bg-particles" aria-hidden="true"></canvas>
+    <style>
+      #bg-particles {
+        position: fixed !important;
+        inset: 0;
+        width: 100vw !important;
+        height: 100vh !important;
+        z-index: 9999;
+        pointer-events: none;
+        background: transparent !important;
+      }
+    </style>
+    <script>
+    (function () {
+      var canvas = document.getElementById('bg-particles');
+      if (!canvas) return;
+      var ctx = canvas.getContext('2d');
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var width, height, particles;
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function resize() {
+        width = canvas.width = Math.floor(window.innerWidth * dpr);
+        height = canvas.height = Math.floor(window.innerHeight * dpr);
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+      }
+
+      function init() {
+        resize();
+        var count = Math.min(70, Math.floor((window.innerWidth * window.innerHeight) / 22000));
+        particles = [];
+        for (var i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.25 * dpr,
+            vy: (Math.random() - 0.5) * 0.25 * dpr,
+            size: (Math.random() < 0.7 ? 1 : 2) * dpr,
+            alpha: Math.random() * 0.5 + 0.25
+          });
+        }
+      }
+
+      function color() {
+        return document.body.classList.contains('dark')
+          ? '255, 255, 255'
+          : '90, 90, 90';
+      }
+
+      function tick() {
+        ctx.clearRect(0, 0, width, height);
+        var c = color();
+        for (var i = 0; i < particles.length; i++) {
+          var p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+          if (p.y < 0) p.y = height;
+          if (p.y > height) p.y = 0;
+          ctx.fillStyle = 'rgba(' + c + ',' + p.alpha + ')';
+          ctx.fillRect(Math.floor(p.x), Math.floor(p.y), p.size, p.size);
+        }
+        requestAnimationFrame(tick);
+      }
+
+      window.addEventListener('resize', init);
+      init();
+      if (!reduced) tick();
+      else {
+        ctx.clearRect(0, 0, width, height);
+        var c = color();
+        for (var i = 0; i < particles.length; i++) {
+          var p = particles[i];
+          ctx.fillStyle = 'rgba(' + c + ',' + p.alpha + ')';
+          ctx.fillRect(Math.floor(p.x), Math.floor(p.y), p.size, p.size);
+        }
+      }
+    })();
+    </script>

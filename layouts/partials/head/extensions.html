@@ -1,0 +1,59 @@
+{{/* SEO additions — overrides theme's empty head/extensions partial. */}}
+
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+{{ with .Site.Params.keywords }}
+  <meta name="keywords" content="{{ delimit . ", " }}">
+{{ end }}
+
+{{ if .IsHome }}
+  {{ $base := .Site.BaseURL }}
+  {{ $img := "/images/moi-square.jpg" | absURL }}
+  {{ $desc := .Site.Params.description }}
+  {{ $person := dict
+    "@type" "Person"
+    "@id" (printf "%s#person" $base)
+    "name" "Arthur Morisson"
+    "url" $base
+    "image" $img
+    "jobTitle" "Développeur web freelance & expert SEO technique"
+    "description" $desc
+    "sameAs" (slice
+      "https://www.linkedin.com/in/arthur-morisson/"
+      "https://github.com/ArtGM"
+      "https://stackoverflow.com/users/12807187/artmg"
+      "https://www.malt.fr/profile/arthurmorisson")
+    "knowsAbout" (slice
+      "Développement web fullstack" "PHP" "Symfony" "Laravel"
+      "JavaScript" "TypeScript" "React" "Vue.js" "Node.js"
+      "SEO technique" "Core Web Vitals" "Schema.org" "Google Search Console")
+  }}
+  {{ $service := dict
+    "@type" "ProfessionalService"
+    "@id" (printf "%s#service" $base)
+    "name" "Arthur Morisson — Développement web & SEO technique"
+    "url" $base
+    "image" $img
+    "description" $desc
+    "areaServed" "FR"
+    "founder" (dict "@id" (printf "%s#person" $base))
+    "serviceType" (slice
+      "Développement de sites web sur mesure"
+      "Développement d'applications web"
+      "Audit et optimisation SEO technique")
+  }}
+  {{ $website := dict
+    "@type" "WebSite"
+    "@id" (printf "%s#website" $base)
+    "url" $base
+    "name" .Site.Title
+    "inLanguage" "fr-FR"
+    "publisher" (dict "@id" (printf "%s#person" $base))
+  }}
+  {{ $ld := dict
+    "@context" "https://schema.org"
+    "@graph" (slice $person $service $website)
+  }}
+<script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+{{ end }}

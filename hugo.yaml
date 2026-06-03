@@ -14,8 +14,18 @@ markup:
       unsafe: true
 
 params:
-  title: "Arthur Morisson — Developpeur web fullstack freelance"
-  description: "Developpeur web fullstack freelance. Je conçois et développe des sites et applications web sur mesure."
+  title: "Arthur Morisson — Développeur web freelance & SEO technique"
+  description: "Développeur web freelance à Paris. Sites, applications sur mesure et optimisation SEO technique (Core Web Vitals, indexation, schema.org). 8 ans d'expérience."
+  keywords:
+    - "développeur web freelance"
+    - "freelance fullstack"
+    - "SEO technique"
+    - "Core Web Vitals"
+    - "PHP Symfony Laravel"
+    - "Node.js React"
+  images:
+    - "/images/moi-square.jpg"
+  author: "Arthur Morisson"
   favicon: "/images/moi-square.jpg"
   useBootstrapCDN: false
   mathjax: false
@@ -40,9 +50,9 @@ params:
     enableSeparator: false
     menus:
       disableAbout: false
-      disableExperience: true
+      disableExperience: false
       disableEducation: true
-      disableProjects: true
+      disableProjects: false
       disableAchievements: true
       disableContact: false
 
@@ -50,8 +60,8 @@ params:
     enable: true
     intro: "Bonjour, je suis"
     title: "Arthur."
-    subtitle: "Je conçois et développe vos sites et applications web"
-    content: "Developpeur fullstack freelance. J'accompagne PME, startups et indépendants de la maquette à la mise en production — des sites rapides, fiables et maintenables."
+    subtitle: "Développeur web freelance & expert SEO technique"
+    content: "Je conçois sites et applications web sur mesure, et j'optimise leur visibilité sur Google et Bing : Core Web Vitals, indexation, données structurées. 8 ans d'expérience salariée, désormais en freelance pour PME, startups et indépendants."
     image: /images/moi-square.jpg
     roundImage: true
     bottomImage:
@@ -65,7 +75,7 @@ params:
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-linkedin
-          url: https://www.linkedin.com/in/arthur-morisson-039557157/
+          url: https://www.linkedin.com/in/arthur-morisson/
         - icon: fab fa-github
           url: https://github.com/ArtGM
         - icon: fab fa-stack-overflow
@@ -78,22 +88,52 @@ params:
     enable: true
     title: "À propos"
     content: |-
-      Developpeur web fullstack, je construis des produits web solides et agréables à utiliser.
+      Développeur web fullstack avec 8 ans d'expérience salariée, je construis des produits web solides et agréables à utiliser — et je les rends visibles sur les moteurs de recherche.
 
-      En freelance, j'interviens sur l'ensemble de la chaîne : conception, développement front et back, mise en production. Mon objectif : livrer vite, propre, et maintenable sur le long terme.
+      Mes interventions couvrent la chaîne complète : conception, développement front et back, mise en production, puis optimisation SEO **technique** : Core Web Vitals, indexation, sitemap, schema.org, audit Lighthouse. Pas de rédaction de contenu — uniquement la performance technique qui fait grimper un site dans Google et Bing.
+
+      Mon objectif : livrer vite, propre, maintenable, et trouvable.
     skills:
       enable: true
-      title: "Quelques technologies avec lesquelles je travaille au quotidien :"
+      title: "Stack technique :"
       items:
         - "TypeScript / JavaScript"
-        - "React"
-        - "Node.js"
-        - "PHP"
-        - "PostgreSQL"
+        - "React / Vue"
+        - "Node.js / API REST"
+        - "PHP / Symfony / Laravel"
+        - "PostgreSQL / MySQL"
         - "Docker"
+        - "SEO technique : Core Web Vitals, schema.org, sitemap, robots, hreflang"
+        - "Search Console / Lighthouse / PageSpeed Insights"
 
   experience:
-    enable: false
+    enable: true
+    title: "Expérience"
+    items:
+      - company: "TODO — Nom employeur 1"
+        companyUrl: "https://example.com"
+        jobs:
+          - name: "TODO — Intitulé poste"
+            date: "TODO — Mois YYYY - Mois YYYY"
+            content: "TODO — 1 à 3 phrases : périmètre, stack, résultats mesurables (perf, conversion, SEO)."
+            featuredItems:
+              fontAwesomeIcons:
+                - icon: fa-brands fa-php
+                  url: https://www.php.net/
+                - icon: fa-brands fa-symfony
+                  url: https://symfony.com/
+      - company: "TODO — Nom employeur 2"
+        companyUrl: "https://example.com"
+        jobs:
+          - name: "TODO — Intitulé poste"
+            date: "TODO — Mois YYYY - Mois YYYY"
+            content: "TODO — Mission, stack, impact chiffré si possible."
+      - company: "TODO — Nom employeur 3"
+        companyUrl: "https://example.com"
+        jobs:
+          - name: "TODO — Intitulé poste"
+            date: "TODO — Mois YYYY - Mois YYYY"
+            content: "TODO — Mission, stack, impact chiffré si possible."
 
   education:
     enable: false
@@ -102,7 +142,23 @@ params:
     enable: false
 
   projects:
-    enable: false
+    enable: true
+    title: "Projets"
+    items:
+      - title: "TODO — Nom du projet"
+        content: "TODO — 1 à 2 phrases : problème résolu, technos, résultat chiffré (perf, trafic, conversion)."
+        image: /images/moi-square.jpg
+        featured:
+          name: "Voir le projet"
+          link: "https://example.com"
+        badges:
+          - "PHP"
+          - "Symfony"
+          - "React"
+          - "SEO"
+        links:
+          - icon: fab fa-github
+            url: "https://github.com/ArtGM"
 
   contact:
     enable: true
@@ -116,7 +172,7 @@ params:
       enable: false
     socialNetworks:
       github: https://github.com/ArtGM
-      linkedin: https://www.linkedin.com/in/arthur-morisson-039557157/
+      linkedin: https://www.linkedin.com/in/arthur-morisson/
 
   listPages:
     disableFeaturedImage: false

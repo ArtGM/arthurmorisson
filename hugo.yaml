@@ -110,30 +110,30 @@ params:
     enable: true
     title: "Expérience"
     items:
-      - company: "TODO — Nom employeur 1"
-        companyUrl: "https://example.com"
+      - company: "Dream Me Up"
+        companyUrl: "https://www.dream-me-up.fr/"
         jobs:
-          - name: "TODO — Intitulé poste"
-            date: "TODO — Mois YYYY - Mois YYYY"
-            content: "TODO — 1 à 3 phrases : périmètre, stack, résultats mesurables (perf, conversion, SEO)."
+          - name: "Développeur web — agence"
+            date: "2018 - 2019"
+            content: "Création de sites internet pour clients de l'agence, maintenance évolutive et corrective, et optimisation SEO technique (performance, indexation, balisage)."
             featuredItems:
               fontAwesomeIcons:
                 - icon: fa-brands fa-php
                   url: https://www.php.net/
-                - icon: fa-brands fa-symfony
-                  url: https://symfony.com/
-      - company: "TODO — Nom employeur 2"
-        companyUrl: "https://example.com"
+                - icon: fa-brands fa-wordpress
+                  url: https://wordpress.org/
+      - company: "L'Amour du Web"
+        companyUrl: "https://lamourduweb.com/"
         jobs:
-          - name: "TODO — Intitulé poste"
-            date: "TODO — Mois YYYY - Mois YYYY"
-            content: "TODO — Mission, stack, impact chiffré si possible."
-      - company: "TODO — Nom employeur 3"
-        companyUrl: "https://example.com"
+          - name: "Développeur web — agence"
+            date: "2019 - 2022"
+            content: "Missions similaires en agence : création de sites internet, maintenance, et SEO technique pour clients variés."
+      - company: "Mobility Work"
+        companyUrl: "https://www.mobility-work.com/"
         jobs:
-          - name: "TODO — Intitulé poste"
-            date: "TODO — Mois YYYY - Mois YYYY"
-            content: "TODO — Mission, stack, impact chiffré si possible."
+          - name: "Développeur — plateforme SaaS B2B"
+            date: "2022 - aujourd'hui"
+            content: "Plateforme SaaS B2B. Implémentations d'architectures complexes, orchestration d'agents IA, maintenance et évolution de code legacy."
 
   education:
     enable: false
@@ -145,20 +145,19 @@ params:
     enable: true
     title: "Projets"
     items:
-      - title: "TODO — Nom du projet"
-        content: "TODO — 1 à 2 phrases : problème résolu, technos, résultat chiffré (perf, trafic, conversion)."
-        image: /images/moi-square.jpg
+      - title: "Alternav — nouveau site & SEO technique"
+        content: "Site vitrine pour un expert maritime indépendant (La Rochelle, Caen, Méditerranée). Remplacement d'un ancien Weebly/Wix par un nouveau site : nettoyage SERP, optimisation Core Web Vitals et SEO technique global pour récupérer la visibilité organique."
+        image: /images/projects/alternav.jpg
         featured:
-          name: "Voir le projet"
-          link: "https://example.com"
+          name: "Voir le site"
+          link: "https://alternav.fr"
         badges:
-          - "PHP"
-          - "Symfony"
-          - "React"
-          - "SEO"
+          - "SEO technique"
+          - "Core Web Vitals"
+          - "Refonte"
         links:
-          - icon: fab fa-github
-            url: "https://github.com/ArtGM"
+          - icon: fa fa-globe
+            url: "https://alternav.fr"
 
   contact:
     enable: true

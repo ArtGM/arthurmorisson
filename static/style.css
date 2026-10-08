@@ -157,3 +157,152 @@
     margin-top: 14px;
   }
 }
+
+/* --- Enchaînement Services vers la section suivante ---
+
+   Le thème met py-5 sur chaque section, soit 96px cumulés entre deux blocs.
+   Le bloc Services se lisait comme isolé alors qu'il introduit ce qui suit. */
+
+#about {
+  padding-bottom: 0 !important;
+}
+
+#about .row {
+  padding-bottom: 1rem !important;
+}
+
+#experience {
+  padding-top: 1rem !important;
+}
+
+/* --- Bouton vers la page des réalisations ---
+
+   Volontairement sans la classe .btn du thème : ses règles, réparties sur
+   plusieurs feuilles et plusieurs niveaux de spécificité, délavaient le fond et
+   le texte au survol et faisaient tomber le contraste à 4,17 pour 4,5 exigé.
+   Le bouton est donc autonome, avec des couleurs explicites.
+
+   La flèche avance au survol et au focus, et respire quelques fois au
+   chargement pour signaler qu'il y a d'autres projets à voir. */
+
+#projects a.btn-nudge,
+a.btn-nudge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.5rem;
+  min-height: 44px;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.75rem;
+  background-color: transparent;
+  /* index.css pose color: var(--text-link-color) !important sur les liens du
+     corps de page, et projects.css pose #projects a au même titre. Un sélecteur
+     de classe perd contre un sélecteur d'identifiant même avec !important des
+     deux côtés, d'où le préfixe #projects ci-dessus. */
+  color: var(--text-color) !important;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+#projects a.btn-nudge:hover,
+#projects a.btn-nudge:focus-visible,
+a.btn-nudge:hover,
+a.btn-nudge:focus-visible {
+  background-color: var(--primary-color);
+  color: var(--background-color) !important;
+}
+
+a.btn-nudge .nudge-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease-out;
+  animation: nudge 2.4s ease-in-out 1.5s 3;
+}
+
+a.btn-nudge:hover .nudge-arrow,
+a.btn-nudge:focus-visible .nudge-arrow {
+  transform: translateX(4px);
+  animation: none;
+}
+
+@keyframes nudge {
+  0%, 85%, 100% { transform: translateX(0); }
+  90% { transform: translateX(5px); }
+  95% { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.btn-nudge .nudge-arrow {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* --- Effet écran cathodique sur la photo du hero ---
+
+   Trois couches posées sur l'enveloppe .crt du gabarit du hero :
+   les lignes de balayage, un léger décalage de couleur façon tube mal réglé,
+   et une vignette qui assombrit les bords comme le verre bombé d'un tube.
+
+   Entièrement décoratif : les pseudo-éléments ne capturent pas les clics et
+   l'animation s'arrête si la personne demande moins de mouvement. */
+
+#hero .crt {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  isolation: isolate;
+}
+
+#hero .crt img {
+  display: block;
+  filter: saturate(1.08) contrast(1.06);
+}
+
+/* lignes de balayage */
+#hero .crt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.13) 0 1px,
+    rgba(0, 0, 0, 0) 1px 3px
+  );
+  mix-blend-mode: multiply;
+  animation: crt-roll 7s linear infinite;
+}
+
+/* vignette et reflet du verre */
+#hero .crt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  background:
+    radial-gradient(ellipse at 32% 22%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 42%),
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.28) 100%);
+}
+
+/* img-thumbnail ajoute 0.25rem de marge interne et le thème 3px de bordure :
+   sans ce retrait, le cercle des pseudo-éléments est plus large que la photo et
+   les lignes débordent dans l'anneau. */
+#hero .crt.crt-round::before,
+#hero .crt.crt-round::after {
+  inset: calc(0.25rem + 3px);
+  border-radius: 50%;
+}
+
+/* défilement très lent des lignes, comme une synchro imparfaite */
+@keyframes crt-roll {
+  from { background-position: 0 0; }
+  to { background-position: 0 3px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #hero .crt::before {
+    animation: none;
+  }
+}

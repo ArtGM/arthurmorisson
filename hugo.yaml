@@ -208,6 +208,16 @@ params:
     # projets, et cette section liste les employeurs.
     title: "Où j'ai travaillé"
     items:
+      - company: "Mobility Work"
+        companyUrl: "https://www.mobility-work.com/"
+        jobs:
+          - name: "Plateforme SaaS B2B en production, depuis bientôt quatre ans"
+            content: "Reprise de code legacy, architectures complexes et orchestration d'agents IA sur une plateforme utilisée quotidiennement par des industriels. C'est mon poste actuel."
+      - company: "Lamour du Web"
+        companyUrl: "https://lamourduweb.com/"
+        jobs:
+          - name: "Sites vitrines, boutiques en ligne et refontes"
+            content: "Dizaines de sites créés ou repris pour des TPE, PME et indépendants : vitrines, boutiques en ligne, refontes de sites devenus lents ou invisibles sur Google. Dont Picksea, boutique nautique de plusieurs milliers de références, l'application de gestion immobilière de SO'Transactions, et la place de marché de Bretagne Commerce International, connectée à leur CRM Microsoft."
       - company: "Dream Me Up"
         companyUrl: "https://www.dream-me-up.fr/"
         jobs:
@@ -219,16 +229,6 @@ params:
                   url: https://www.php.net/
                 - icon: fa-brands fa-wordpress
                   url: https://wordpress.org/
-      - company: "Lamour du Web"
-        companyUrl: "https://lamourduweb.com/"
-        jobs:
-          - name: "Sites vitrines, boutiques en ligne et refontes"
-            content: "Dizaines de sites créés ou repris pour des TPE, PME et indépendants : vitrines, boutiques en ligne, refontes de sites devenus lents ou invisibles sur Google. Dont Picksea, boutique nautique de plusieurs milliers de références, l'application de gestion immobilière de SO'Transactions, et la place de marché de Bretagne Commerce International, connectée à leur CRM Microsoft."
-      - company: "Mobility Work"
-        companyUrl: "https://www.mobility-work.com/"
-        jobs:
-          - name: "Plateforme SaaS B2B en production, depuis bientôt quatre ans"
-            content: "Reprise de code legacy, architectures complexes et orchestration d'agents IA sur une plateforme utilisée quotidiennement par des industriels. C'est mon poste actuel."
 
   education:
     enable: false

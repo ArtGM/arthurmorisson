@@ -56,6 +56,19 @@ se construire et me dire ce qui ne vous va pas, avant la mise en ligne.
 **4. Je mets en ligne et je vous forme.** Une heure suffit pour que vous soyez
 autonome sur les modifications courantes.
 
+## Mon expérience sur ce type de projet
+
+J'ai passé quatre ans en agence web, à créer des sites vitrines et des boutiques
+en ligne pour des clients variés, puis à les maintenir dans le temps.
+
+Depuis, je travaille sur une plateforme en ligne utilisée tous les jours par des
+entreprises. C'est moins visible dans un portfolio, mais c'est ce qui m'a appris
+le plus utile pour vous : reprendre un code que je n'ai pas écrit, faire tenir un
+site dans la durée, et réparer sans tout casser.
+
+Le diagnostic est gratuit, le devis est ferme avant que je commence, et vous ne
+payez rien si vous décidez de ne pas aller plus loin.
+
 ## Combien ça coûte
 
 Les prix dépendent du nombre de pages et de ce que le site doit faire. Pour que

@@ -198,7 +198,7 @@ params:
         companyUrl: "https://www.dream-me-up.fr/"
         jobs:
           - name: "Sites PME et indépendants"
-            content: "Création et maintenance de sites pour les clients de l'agence. Corrections de bugs bloquants, reprise de sites existants, remise en visibilité sur Google : vitesse, indexation, balisage."
+            content: "Création de sites vitrines et de boutiques en ligne pour les clients de l'agence, puis maintenance. Corrections de bugs bloquants, reprise de sites existants, remise en visibilité sur Google : vitesse, indexation, balisage."
             featuredItems:
               fontAwesomeIcons:
                 - icon: fa-brands fa-php
@@ -208,8 +208,8 @@ params:
       - company: "Lamour du Web"
         companyUrl: "https://lamourduweb.com/"
         jobs:
-          - name: "Refonte et accélération de sites"
-            content: "Dizaines de sites repris, accélérés et remis en visibilité sur Google pour des TPE, PME et indépendants."
+          - name: "Sites vitrines, boutiques en ligne et refontes"
+            content: "Dizaines de sites créés ou repris pour des TPE, PME et indépendants : vitrines, boutiques en ligne, refontes de sites devenus lents ou invisibles sur Google."
       - company: "Mobility Work"
         companyUrl: "https://www.mobility-work.com/"
         jobs:
@@ -226,16 +226,17 @@ params:
     enable: true
     title: "Cas concrets"
     items:
-      - title: "Alternav : site refait et visibilité Google récupérée"
-        content: "Un expert maritime indépendant (La Rochelle, Caen, Méditerranée) avait un ancien site Weebly invisible sur Google. Nouveau site, nettoyage des résultats parasites, vitesse de chargement et visibilité sur Google reprises de zéro. Le site est ressorti dans les résultats."
+      - title: "Alternav : site refait, administration autonome, retour dans les résultats Google"
+        content: "Un expert maritime indépendant (La Rochelle, Caen, Méditerranée) avait un ancien site qui n'apparaissait plus sur Google, et dont il ne pouvait rien modifier sans aide. Refonte complète du site, avec une administration qui lui permet de gérer son contenu lui-même. Paramétrage complet pour les moteurs de recherche, nettoyage des résultats parasites, et prise en main de ses fiches Google. Son site est ressorti dans les résultats, et il n'a plus besoin de personne pour le mettre à jour."
         image: /images/projects/alternav.webp
         featured:
           name: "Voir le site"
           link: "https://alternav.fr"
         badges:
+          - "Refonte complète"
+          - "Administration autonome"
           - "Visibilité Google"
-          - "Core Web Vitals"
-          - "Refonte"
+          - "Fiche Google"
         links:
           - icon: fa fa-globe
             url: "https://alternav.fr"

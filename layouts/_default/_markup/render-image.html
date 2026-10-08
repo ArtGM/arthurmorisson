@@ -1,10 +1,51 @@
 {{/* Rendu des images en markdown.
 
-     Hugo n'ajoute ni loading ni decoding par défaut. La page Réalisations porte
-     sept captures, soit environ 350 Ko : sans chargement différé, tout est
-     téléchargé alors qu'une seule est visible au premier écran. */}}
-<img src="{{ .Destination | safeURL }}"
+     Trois choses que Hugo ne fait pas par défaut :
+
+     1. loading="lazy" et decoding="async". La page Réalisations porte sept
+        captures : sans cela, tout est téléchargé alors qu'une seule est visible.
+
+     2. width et height. Sans elles, le navigateur ne réserve pas la place et la
+        page saute pendant le chargement.
+
+     3. Un aperçu flou pendant le chargement. Une miniature de 24 px de large,
+        intégrée en base64 dans l'attribut style, s'affiche en fond de l'image.
+        Le visiteur voit tout de suite les couleurs et la composition du site
+        présenté plutôt qu'un rectangle vide, et ça ne coûte que 1,6 Ko pour les
+        sept captures réunies.
+
+     Les dimensions et les miniatures sont dans data/lqip.yaml. Pour les
+     régénérer après ajout ou remplacement d'une capture dans
+     static/images/projects/ :
+
+       python3 - <<'EOF'
+       import base64, glob, os, subprocess
+       rows = []
+       for f in sorted(glob.glob("static/images/projects/*.webp")):
+           w, h = subprocess.run(["magick","identify","-format","%w %h",f],
+                                 capture_output=True, text=True).stdout.split()
+           subprocess.run(["magick",f,"-resize","24x","-strip","-quality","45","/tmp/lqip.webp"])
+           rows.append((os.path.basename(f).removesuffix(".webp"), w, h,
+                        base64.b64encode(open("/tmp/lqip.webp","rb").read()).decode()))
+       with open("data/lqip.yaml","w") as out:
+           for k, w, h, b in rows:
+               out.write(f'\n"{k}":\n  width: {w}\n  height: {h}\n  lqip: "data:image/webp;base64,{b}"\n')
+       EOF
+
+     Une image absente du fichier de données est rendue sans aperçu ni
+     dimensions, ce qui dégrade proprement au lieu de casser la page. */}}
+
+{{- $dest := .Destination | safeURL -}}
+{{- $key := $dest | path.Base | strings.TrimSuffix (path.Ext $dest) -}}
+{{- $meta := index site.Data.lqip $key -}}
+
+<img src="{{ $dest }}"
      alt="{{ .Text }}"
-     {{ with .Title }}title="{{ . }}"{{ end }}
+     {{- with .Title }} title="{{ . }}"{{ end }}
+     {{- with $meta }}
+     width="{{ .width }}"
+     height="{{ .height }}"
+     style="{{ printf "background-image:url(%s);background-size:cover;background-position:center top;background-repeat:no-repeat" .lqip | safeCSS }}"
+     {{- end }}
      loading="lazy"
      decoding="async">

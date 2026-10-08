@@ -1,0 +1,44 @@
+# Miniatures de préchargement (LQIP) et dimensions des captures de réalisations.
+#
+# Générées à partir de static/images/projects/*.webp. Le render hook
+# layouts/_default/_markup/render-image.html les pose en fond de l'image, ce qui
+# affiche un aperçu flou pendant le chargement et réserve l'espace pour éviter
+# tout saut de mise en page.
+#
+# Régénérer après ajout ou remplacement d'une capture : voir le commentaire en
+# tête du render hook.
+
+"alternav":
+  width: 1000
+  height: 591
+  lqip: "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACQAwCdASoYAA4APt1cpkyopSOiMAgBEBuJQBYdhDlELByC560AAPyPm0czcBXgpmbap8dGxAP6IVTOC533s+SK+SKPAK12AFJZHA75TChaJuVVNXyMsUhNWcBgCOeIAJkByBLPhpy3vadVu8OxI8ZM/Q0oMAAA"
+
+"lafruitiere":
+  width: 1000
+  height: 593
+  lqip: "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADwAwCdASoYAA4APt1ep00opSOiMAgBEBuJZQBUfodNd2xv1zP59/uoAP7v3e0FU7wyZcz2reuJ8kGm7XroCRL6z5rkFHD8sK5kni25+QbEXRhvbCKOxgRB/w7L+UniZTU7hjfcfgIAfGAg3jWQAdVnrYkQgAAA"
+
+"les-inoxydables":
+  width: 1000
+  height: 593
+  lqip: "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAACQBACdASoYAA4APt1apkyopSOiMAgBEBuJZgCdMoMYJn/AeaGKSXORERaZn+AA/dvvnwmZ6vbrCUAF+15hJYz6W3TVqw0Ymx1PGWpd0tnQrwge70Ygc97sqHNeHCjrvwuR9AB4xULUoNqcG1A3liacoBeyYnVKb+uf9ncm53v7M/qY3gJWs+GrV8OeUVShnTqp/VS8WSTulx73tf2OTOFDik1zyXIMOu2XOx8knpzy0KannBTlkV4RAAA="
+
+"picksea":
+  width: 1000
+  height: 593
+  lqip: "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAACwBACdASoYAA4APt1cpkyopSOiMAgBEBuJYgCdIKngshf7puMq8652x66dNzZAAP7t2JAJt4Pi3xK7e3xYiyyUAoj0aoWtDGtpC7leo5omR++G8b6F7U5pHs6SByKVLwuuljOYTZNVuDtIw/XsaMGEqMj4V4ZCiYIvUdYXrF6tAE58EwqS8LiGyW2Apgt/Djonq2nxCsgQE8uoAVvEQ4u8t4qVCv3Oez9sOC2ZM7nYxX/r/x/+fayWVlzEAA=="
+
+"planetevin":
+  width: 1000
+  height: 593
+  lqip: "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAAAwBACdASoYAA4APt1cpkyopSOiMAgBEBuJQBOmUABfeE02z5CzN2eaa4AA+yPDRX+GIHM0evdBywmt6jz01Ih6uBDzhg+QJ5qzk373pvWWfqzolWt1Q8r6cGLz7R8qZHgH/ucJI9ClZDej/qe/3OSK+SlTlo47EQlLGo2oXTBepHXzKah0ehEnmz8NwDSc94GYJ7ubAf5BMiNnOOh+AUr7ivp0uo/J7p4ZmdR+RyGsyP64/yafsaTY+NIAAA=="
+
+"so-transactions":
+  width: 1000
+  height: 593
+  lqip: "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBACdASoYAA4APt1cpkyopSOiMAgBEBuJYwCdABuCMK0XZyK56orQUAAA/ujxZlVMs3gtN+3rCSF84gDHO6/Y7FOpZBX9igX2VDACVFlXuFJVmavdybifGuimheNcuE+17P5+DbNhcToa/gFyt6FLN9rPOckHqLDufqKVnA8KF24rB4nk8NIAAAA="
+
+"suppliers-from-bretagne":
+  width: 1000
+  height: 593
+  lqip: "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoYAA4APt1cpkyopSOiMAgBEBuJZwDImCHYfYOLdwjuO3iiDADyp+Xjo0Vc0Y43Umm/KDuWnEsRMDlnAEy5Cp3IJvTwm+mGtqHTRp8Id5BZaH2153T1g8283uGLp30b2s7j8vyx+q6IO3mfaqKqAA=="

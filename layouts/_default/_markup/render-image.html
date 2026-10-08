@@ -1,0 +1,10 @@
+{{/* Rendu des images en markdown.
+
+     Hugo n'ajoute ni loading ni decoding par défaut. La page Réalisations porte
+     sept captures, soit environ 350 Ko : sans chargement différé, tout est
+     téléchargé alors qu'une seule est visible au premier écran. */}}
+<img src="{{ .Destination | safeURL }}"
+     alt="{{ .Text }}"
+     {{ with .Title }}title="{{ . }}"{{ end }}
+     loading="lazy"
+     decoding="async">

@@ -12,6 +12,8 @@ réalisation d'équipe et une réalisation en solo ne racontent pas la même cho
 
 ### Alternav
 
+![Page d'accueil du site Alternav](/images/projects/alternav.webp)
+
 Expert maritime indépendant, présent à La Rochelle, Caen et en Méditerranée.
 
 Son ancien site n'apparaissait plus sur Google et il ne pouvait rien y modifier
@@ -29,6 +31,8 @@ Conception et développement, sauf mention contraire.
 
 ### Picksea
 
+![Page d'accueil de la boutique Picksea](/images/projects/picksea.webp)
+
 Boutique d'équipement nautique sous PrestaShop. Plusieurs milliers de
 références, près de 200 marques, un espace réservé aux professionnels, plusieurs
 transporteurs et le paiement en plusieurs fois. La boutique tourne toujours et
@@ -37,6 +41,8 @@ affiche 9,1 sur 10 pour plus de 4 000 avis clients.
 [picksea.com](https://www.picksea.com/fr/)
 
 ### SO'Transactions
+
+![Page d'accueil du site SO'Transactions](/images/projects/so-transactions.webp)
 
 Réseau de transaction en immobilier d'entreprise : commerces, locaux, cessions
 de société.
@@ -51,6 +57,8 @@ bien sur chaque site. L'application est interne, seul le site public est visible
 
 ### Suppliers from Bretagne
 
+![Page d'accueil de Suppliers from Bretagne](/images/projects/suppliers-from-bretagne.webp)
+
 Place de marché de Bretagne Commerce International, qui met en relation des
 acheteurs internationaux avec des fournisseurs bretons.
 
@@ -64,6 +72,8 @@ outils internes. Réalisé sous la marque Lamour du Shop.
 
 ### La Fruitière du Val Evel
 
+![Page d'accueil du site La Fruitière du Val Evel](/images/projects/lafruitiere.webp)
+
 Entreprise familiale bretonne qui produit des purées et coulis de fruits pour
 les professionnels : pâtissiers, glaciers, restaurants, brasseurs.
 
@@ -75,16 +85,25 @@ anglais et allemand.
 
 ### Planète Vin
 
-Boutique de vins et champagnes sous PrestaShop. Catalogue organisé par région,
-par appellation et par domaine, avec coffrets, programme de fidélité et paiement
-en plusieurs fois.
+![Page d'accueil de la boutique Planète Vin](/images/projects/planetevin.webp)
+
+Boutique de vins et champagnes sous PrestaShop, en ligne depuis 2005. Catalogue
+organisé par région, par appellation et par domaine, avec coffrets cadeaux, une
+offre entreprise, un programme de fidélité et le paiement en plusieurs fois.
+9,9 sur 10 pour plus de 400 avis clients.
 
 [planetevin.com](https://www.planetevin.com/)
 
 ### Les Inoxydables
 
-Boutique en ligne sous PrestaShop. L'un des premiers projets que j'ai menés en
-agence.
+![Page d'accueil de la boutique Les Inoxydables](/images/projects/les-inoxydables.webp)
+
+Quincaillerie en ligne sous PrestaShop : visserie inox, fixation, accastillage,
+outillage et plomberie. Un catalogue de pièces vendues à l'unité, souvent à
+quelques centimes, ce qui demande une recherche et un filtrage qui tiennent la
+charge. La boutique a aussi son blog de conseils. L'un des premiers projets que
+j'ai menés en agence, et il affiche aujourd'hui 9,8 sur 10 pour plus de
+7 700 avis clients.
 
 [les-inoxydables.com](https://www.les-inoxydables.com/)
 

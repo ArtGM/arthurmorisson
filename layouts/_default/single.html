@@ -3,7 +3,6 @@
      y compris sur les pages de service et les pages légales. */}}
 {{ define "head" }}
 <meta name="description" content="{{ .Params.description }}">
-<link rel="stylesheet" href="{{ (printf "%scss/single.css" (.Site.Params.staticPath | default "")) | relURL }}">
 
 {{ end }}
 

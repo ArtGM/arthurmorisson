@@ -78,10 +78,6 @@ params:
   author: "Arthur Morisson"
   favicon: "/images/favicon.png"
   useBootstrapCDN: false
-  # Charge static/style.css en dernier, après les CSS du thème. C'est le crochet
-  # prévu par hugo-profile : nos surcharges gagnent sans !important et sans
-  # bricoler la spécificité.
-  customCSS: true
   mathjax: false
   animate: true
 

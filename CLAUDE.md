@@ -28,7 +28,9 @@ No submodule step: the site has no external theme any more.
 
 ## Conventions that cost time to rediscover
 
-- **`static/style.css` is loaded last**, through `params.customCSS`, which is the theme's own hook. Put overrides there rather than fighting specificity: `baseof.html` renders the `head` block *after* `partials/head.html`, so a stylesheet linked from the latter loses to `index.css` at equal specificity.
+- **All CSS is bundled in `layouts/partials/head.html`**, from `assets/css/`, concatenated then minified and fingerprinted into one request. `assets/css/zz-custom.css` holds our own rules and must stay last in the list so it wins without `!important`; the `zz` prefix protects that order. Note that a class selector still loses to an ID selector from the theme even with `!important` on both, which is why some rules carry a `#section` prefix.
+- **Bootstrap is compiled from source**, `assets/scss/bootstrap-custom.scss`, importing only the modules the markup uses and trimming the utilities map. Hugo extended ships libsass, so there is no npm and no bundler. The file lists what was left out and why. Watch out for one thing: the navbar template can render a dropdown if a menu entry is given children, and the dropdown module is not imported.
+- **`hugo --minify` does not touch `static/`**, it copies those files verbatim. Anything that should be minified belongs in `assets/`.
 - **The phone number is never written in plain HTML.** It lives in `params.contact.phone`; `layouts/partials/contact-phone.html` encodes it at build time and the script in `customScripts` rebuilds it. Mode `wa` renders a WhatsApp link, mode `legal` a `tel:` link for the legal notices.
 - **Images in markdown go through `layouts/_default/_markup/render-image.html`**, which adds lazy loading, width and height, and a blurred placeholder read from `data/lqip.yaml`. The regeneration script sits in that file's header comment.
 - **Dates are printed only for blog posts**, by a section test in `layouts/_default/single.html`.

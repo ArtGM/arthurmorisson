@@ -3,7 +3,6 @@
      anglais "<Titre> of <Site>" codé en dur dans le thème. */}}
 {{ define "head" }}
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<link rel="stylesheet" href="{{ (printf "%scss/list.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 {{ end }}
 
 {{ define "title" }}

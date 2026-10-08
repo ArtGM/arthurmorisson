@@ -2,8 +2,6 @@
      utilise params.title (titre SEO) au lieu de .Site.Title (nom de marque). */}}
 {{ define "head" }}
 <meta name="description" content={{ .Site.Params.description }}>
-<link rel="stylesheet" href="{{ (printf "%scss/index.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
-<link rel="stylesheet" href="{{ (printf "%scss/projects.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 
 
 <!-- L'image du hero est l'élément LCP : on la précharge. -->

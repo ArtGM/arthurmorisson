@@ -1,0 +1,79 @@
+// Build Bootstrap sur mesure.
+//
+// Le site servait bootstrap.min.css en entier, 20,6 Ko dont Lighthouse mesurait
+// 19,6 Ko inutilisés. On ne compile ici que les modules dont le balisage se sert
+// réellement, relevés en comptant les classes présentes dans le site généré.
+//
+// Compilé par Hugo, qui embarque libsass : aucun npm, aucun bundler. Les sources
+// sont vendorisées dans assets/bootstrap (Bootstrap 5.1.3, licence MIT).
+//
+// Pour ajouter un composant : décommenter ou ajouter son @import, rebuilder, et
+// vérifier le poids affiché par `ls -l public/css/`. Les modules absents sont
+// listés en bas de ce fichier avec la raison.
+
+// Socle obligatoire, ne produit presque aucune règle par lui-même.
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+@import "../bootstrap/utilities";
+
+// L'API des utilitaires génère à elle seule 50,6 Ko sur les 115 Ko du build
+// complet, parce qu'elle décline chaque famille sur tous les points de rupture.
+// On ne garde que les familles dont une classe apparaît réellement dans le site
+// généré. Relevé des classes utilisées : align-middle, bg-transparent, d-*,
+// float-end, h-100, w-100, justify-content-center, m-*, p-*, rounded-circle,
+// shadow-sm, text-center, text-danger, text-secondary, text-wrap.
+//
+// Pour réactiver une famille, retirer son nom de cette liste puis rebuilder.
+$utilities: map-remove($utilities,
+  "opacity", "overflow", "position", "top", "bottom", "start", "end",
+  "translate-middle",
+  "border", "border-top", "border-end", "border-bottom", "border-start",
+  "border-color", "border-width",
+  "max-width", "viewport-width", "min-viewport-width",
+  "max-height", "viewport-height", "min-viewport-height",
+  "flex", "flex-direction", "flex-grow", "flex-shrink", "flex-wrap", "gap",
+  "align-items", "align-content", "align-self", "order",
+  "negative-margin", "negative-margin-x", "negative-margin-y",
+  "negative-margin-top", "negative-margin-end", "negative-margin-bottom",
+  "negative-margin-start",
+  "font-family", "font-size", "font-style", "font-weight", "line-height",
+  "text-decoration", "text-transform", "word-wrap",
+  "text-opacity", "bg-opacity", "gradient", "user-select", "pointer-events",
+  "rounded-top", "rounded-end", "rounded-bottom", "rounded-start",
+  "visibility"
+);
+
+// Base.
+@import "../bootstrap/root";      // variables CSS --bs-*, référencées par les composants
+@import "../bootstrap/reboot";    // remise à zéro, le thème s'appuie dessus
+@import "../bootstrap/type";      // titres, listes, .text-* de base
+@import "../bootstrap/images";    // .img-fluid et .img-thumbnail, utilisés par le hero
+
+// Mise en page.
+@import "../bootstrap/containers";  // .container, .container-fluid
+@import "../bootstrap/grid";        // .row et .col-*
+
+// Composants réellement présents dans le balisage.
+@import "../bootstrap/forms";       // .form-control, .form-label, .form-select
+@import "../bootstrap/buttons";     // .btn, .btn-sm
+@import "../bootstrap/transitions"; // .collapse, utilisé par le menu burger
+@import "../bootstrap/nav";         // .nav-link, .nav-item
+@import "../bootstrap/navbar";      // barre de navigation
+@import "../bootstrap/card";        // cartes de services, réalisations, employeurs
+@import "../bootstrap/badge";       // étiquettes des cas concrets
+@import "../bootstrap/progress";    // barre de progression de lecture des articles
+
+// Les utilitaires en dernier, comme l'exige Bootstrap.
+@import "../bootstrap/utilities/api";
+
+// Volontairement absents, et pourquoi :
+//
+//   accordion, alert, breadcrumb, button-group, carousel, close, dropdown,
+//   list-group, modal, offcanvas, pagination, placeholders, popover, spinners,
+//   toasts, tooltip, tables, helpers
+//
+// Aucune de ces classes n'apparaît dans le site généré. Attention tout de même à
+// dropdown : le gabarit de la barre de navigation sait rendre un menu déroulant
+// si une entrée de menu reçoit des enfants. Il n'y en a plus aucune aujourd'hui,
+// mais si tu en rajoutes, réimporte dropdown en même temps.

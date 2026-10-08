@@ -8,10 +8,13 @@
 {{- $ctx := .ctx -}}
 {{- $mail := $ctx.Site.Params.contact.email -}}
 <div class="contact-channels">
+  {{/* La phrase est construite pour rester sensée sans JavaScript : le partial
+       rend alors un repli, et la suite de la phrase ne promet plus que WhatsApp
+       est plus rapide que le courriel alors que le courriel est tout ce qui
+       reste. */}}
   <p class="channel-urgent">
     <strong>Votre site est en panne maintenant ?</strong>
-    Écrivez-moi sur {{ partial "contact-phone.html" (dict "mode" "wa" "ctx" $ctx) }},
-    je réponds plus vite que par courriel.
+    {{ partial "contact-phone.html" (dict "mode" "wa" "ctx" $ctx) }}
   </p>
   <p class="channel-normal">
     Pour un devis, une question ou un projet, le

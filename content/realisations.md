@@ -4,9 +4,13 @@ date: 2026-10-08
 description: "Boutiques en ligne, sites vitrines, catalogues multilingues et applications métier sur mesure, créés ou repris pour des TPE, des PME et des réseaux."
 ---
 
-Les projets ci-dessous couvrent une dizaine d'années, d'abord en agence web puis
-en indépendant. Pour chacun, je précise mon rôle et le cadre, parce qu'une
-réalisation d'équipe et une réalisation en solo ne racontent pas la même chose.
+Les projets ci-dessous viennent de huit ans de métier : quatre ans en agence
+web, puis quatre ans sur une plateforme en ligne utilisée par des industriels,
+où je travaille toujours. Depuis 2026, je prends aussi des missions en
+indépendant.
+
+Pour chacun, je précise mon rôle et le cadre, parce qu'une réalisation d'équipe
+et une réalisation en solo ne racontent pas la même chose.
 
 ## En indépendant
 
@@ -35,8 +39,7 @@ Conception et développement, sauf mention contraire.
 
 Boutique d'équipement nautique sous PrestaShop. Plusieurs milliers de
 références, près de 200 marques, un espace réservé aux professionnels, plusieurs
-transporteurs et le paiement en plusieurs fois. La boutique tourne toujours et
-affiche 9,1 sur 10 pour plus de 4 000 avis clients.
+transporteurs et le paiement en plusieurs fois. La boutique tourne toujours.
 
 [picksea.com](https://www.picksea.com/fr/)
 
@@ -90,7 +93,6 @@ anglais et allemand.
 Boutique de vins et champagnes sous PrestaShop, en ligne depuis 2005. Catalogue
 organisé par région, par appellation et par domaine, avec coffrets cadeaux, une
 offre entreprise, un programme de fidélité et le paiement en plusieurs fois.
-9,9 sur 10 pour plus de 400 avis clients.
 
 [planetevin.com](https://www.planetevin.com/)
 
@@ -101,9 +103,7 @@ offre entreprise, un programme de fidélité et le paiement en plusieurs fois.
 Quincaillerie en ligne sous PrestaShop : visserie inox, fixation, accastillage,
 outillage et plomberie. Un catalogue de pièces vendues à l'unité, souvent à
 quelques centimes, ce qui demande une recherche et un filtrage qui tiennent la
-charge. La boutique a aussi son blog de conseils. L'un des premiers projets que
-j'ai menés en agence, et il affiche aujourd'hui 9,8 sur 10 pour plus de
-7 700 avis clients.
+charge. La boutique a aussi son blog de conseils. L'un des premiers projets que j'ai menés en agence.
 
 [les-inoxydables.com](https://www.les-inoxydables.com/)
 

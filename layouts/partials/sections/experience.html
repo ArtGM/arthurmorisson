@@ -18,13 +18,13 @@
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card h-100" title="{{ .company }}">
                     <div class="card-body bg-transparent p-4">
-                        <h5 class="card-title bg-transparent">
+                        <h4 class="card-title bg-transparent">
                             {{ if .companyUrl }}
                             <a href="{{ .companyUrl }}" target="_blank" rel="noopener">{{ .company }}</a>
                             {{ else }}
                             {{ .company }}
                             {{ end }}
-                        </h5>
+                        </h4>
                         {{ range .jobs }}
                         <div class="pt-2">
                             <p class="mb-1"><strong>{{ .name }}</strong></p>

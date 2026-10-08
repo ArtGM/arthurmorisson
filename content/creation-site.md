@@ -84,8 +84,17 @@ formulaire de contact, et la prise en main pour que vous puissiez le modifier.
 **Boutique en ligne : 3 000 à 8 000 €.** Selon le nombre de produits, les
 options de livraison, et les connexions à prévoir avec vos outils existants.
 
-**Reprise d'un site existant : à partir de 800 €.** Après diagnostic, parce que
-l'état du site de départ change tout.
+**Reprise d'un site existant : à partir de 1 200 €.** Après diagnostic, parce
+que l'état du site de départ change tout. Reprendre un site coûte au moins aussi
+cher que d'en créer un, et parfois davantage.
+
+Au-delà de ces montants, un projet d'une autre ampleur, par exemple une boutique
+de plusieurs milliers de références avec un espace réservé aux professionnels,
+est chiffré séparément.
+
+Ces montants sont indicatifs. Le prix exact dépend du périmètre réel de votre
+projet, et il vous est donné dans un devis ferme avant que je commence quoi que
+ce soit.
 
 Le devis est ferme avant de commencer. Si en cours de route vous voulez ajouter
 quelque chose, je vous dis ce que ça coûte avant de le faire.

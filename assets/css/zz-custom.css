@@ -307,3 +307,12 @@ a.btn-nudge:focus-visible .nudge-arrow {
     animation: none;
   }
 }
+
+/* Les titres de la colonne latérale des pages de contenu sont des h2 pour ne pas
+   créer de saut de niveau depuis les h2 du corps. Ils gardent la taille d'un
+   titre secondaire, leur rôle étant utilitaire et non éditorial. */
+
+#single .sidebar-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}

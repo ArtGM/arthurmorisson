@@ -24,7 +24,7 @@
                             <span class="badge badge-secondary">{{ . }}</span>
                             {{ end }}
                         </div>
-                        <h5 class="card-title bg-transparent mt-1">{{ .title }}</h5>
+                        <h4 class="card-title bg-transparent mt-1">{{ .title }}</h4>
                         <div class="card-text bg-transparent secondary-font">
                             {{ .content }}
                         </div>
@@ -63,7 +63,7 @@
                             <span class="badge badge-secondary">{{ . }}</span>
                             {{ end }}
                         </div>
-                        <h5 class="card-title bg-transparent">{{ .Title | truncate 50 }}</h5>
+                        <h4 class="card-title bg-transparent">{{ .Title | truncate 50 }}</h4>
                         <div class="card-text bg-transparent secondary-font">
                             {{ .Summary | truncate 100 | safeHTML }}
                         </div>

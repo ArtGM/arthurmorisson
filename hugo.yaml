@@ -29,31 +29,36 @@ menus:
       title: "Dépannage de site web en urgence"
       url: "/depannage-urgence/"
       weight: 1
+    - identifier: visibilite
+      name: "Visibilité Google"
+      title: "Site lent ou absent de Google"
+      url: "/visibilite-google/"
+      weight: 2
     - identifier: creation
       name: "Création de site"
       title: "Création de site vitrine et de boutique en ligne"
       url: "/creation-site/"
-      weight: 2
+      weight: 3
     - identifier: integration
       name: "Connexion d'outils"
       title: "Connecter vos outils entre eux"
       url: "/integration-outils/"
-      weight: 3
+      weight: 4
     - identifier: realisations
       name: "Réalisations"
       title: "Toutes mes réalisations"
       url: "/realisations/"
-      weight: 4
+      weight: 5
     - identifier: blog
       name: "Blog"
       title: "Blog"
       url: "/blog/"
-      weight: 5
+      weight: 6
     - identifier: contact
       name: "Contact"
       title: "Me contacter"
       url: "/contact/"
-      weight: 6
+      weight: 7
 
 params:
   title: "Arthur Morisson : dépannage de site web et visibilité sur Google"
@@ -167,6 +172,7 @@ params:
       [Dépannage : processus et tarifs](/depannage-urgence/)
 
       **Votre site est lent, ou absent de Google.** Vos clients ne vous trouvent pas, ou abandonnent avant que la page s'affiche. Je trouve pourquoi, je corrige, et je vous montre le résultat en chiffres.
+      [Visibilité sur Google et vitesse](/visibilite-google/)
 
       **Vous n'avez pas de site, ou il est à refaire.** Site vitrine ou boutique en ligne, construits pour être trouvés sur Google dès le départ, et pour que vous puissiez les mettre à jour vous-même.
       [Création de site et de boutique](/creation-site/)
@@ -256,7 +262,7 @@ params:
             url: "https://alternav.fr"
 
       - title: "Picksea : boutique en ligne de plusieurs milliers de références"
-        content: "Boutique d'équipement nautique conçue et développée sous PrestaShop : plusieurs milliers de références, près de 200 marques, un espace réservé aux professionnels, plusieurs transporteurs et le paiement en plusieurs fois. Mission réalisée comme développeur pour l'agence Lamour du Web. La boutique tourne toujours et affiche 9,1 sur 10 pour plus de 4 000 avis clients."
+        content: "Boutique d'équipement nautique conçue et développée sous PrestaShop : plusieurs milliers de références, près de 200 marques, un espace réservé aux professionnels, plusieurs transporteurs et le paiement en plusieurs fois. Mission réalisée comme développeur pour l'agence Lamour du Web. La boutique tourne toujours."
         image: /images/projects/picksea.webp
         featured:
           name: "Voir la boutique"
@@ -550,10 +556,13 @@ params:
         } else {
           a.href = 'https://wa.me/' + intl;
           a.rel = 'noopener';
-          a.textContent = 'WhatsApp au ' + pretty;
+          a.textContent = 'Écrivez-moi sur WhatsApp au ' + pretty;
         }
         el.textContent = '';
         el.appendChild(a);
+        if (el.dataset.telMode !== 'legal') {
+          el.appendChild(document.createTextNode(', je réponds plus vite que par courriel.'));
+        }
       }
     })();
     </script>

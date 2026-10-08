@@ -111,6 +111,10 @@ pour communiquer.
 que les connexions tournent, je corrige si un éditeur change quelque chose de son
 côté, et vous êtes prévenu avant que ça vous pénalise.
 
+Ces montants sont indicatifs. Le prix exact dépend du périmètre réel de votre
+projet, et il vous est donné dans un devis ferme avant que je commence quoi que
+ce soit.
+
 Le diagnostic est gratuit, et il vous dit si l'opération vaut le coup. Il
 m'arrive de répondre que non.
 
@@ -121,9 +125,10 @@ C'est normal, et c'est ma première vérification. Donnez-moi leurs noms, je vou
 réponds sous 24 h.
 
 **Mes données vont circuler, est-ce que c'est sûr ?**
-Les connexions passent par des accès dédiés, limités au strict nécessaire et
-révocables. Je ne stocke pas vos données ailleurs que dans vos propres outils, et
-je vous laisse la liste des accès créés.
+Je crée des accès réservés à cet usage, avec le minimum de droits, que vous
+pouvez supprimer quand vous voulez. Vos données restent dans vos outils et dans
+les services de connexion que nous choisissons ensemble, dont je vous donne la
+liste avant de commencer.
 
 **Et si un de mes logiciels change ?**
 Les éditeurs modifient parfois leur fonctionnement sans prévenir. C'est le rôle

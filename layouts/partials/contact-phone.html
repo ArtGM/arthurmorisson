@@ -13,4 +13,4 @@
 {{- $mail := .ctx.Site.Params.contact.email -}}
 {{- $a := substr $num 0 5 | base64Encode -}}
 {{- $b := substr $num 5 | base64Encode -}}
-<span class="tel-masked" data-tel-a="{{ $a }}" data-tel-b="{{ $b }}" data-tel-mode="{{ $mode }}"><noscript>{{ if eq $mode "legal" }}Numéro communiqué sur simple demande à {{ $mail }}{{ else }}Écrivez-moi à {{ $mail }}{{ end }}</noscript></span>
+<span class="tel-masked" data-tel-a="{{ $a }}" data-tel-b="{{ $b }}" data-tel-mode="{{ $mode }}"><noscript>{{ if eq $mode "legal" }}Numéro communiqué sur simple demande à {{ $mail }}{{ else }}Écrivez-moi à {{ $mail }}, je réponds sous 24 h ouvrées.{{ end }}</noscript></span>

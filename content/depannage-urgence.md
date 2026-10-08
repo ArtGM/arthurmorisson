@@ -60,8 +60,12 @@ dans quel ordre de grandeur vous vous situez avant même de me contacter :
 ancien à reprendre, panne dont la cause n'est pas évidente, base de données
 endommagée.
 
-**Audit de performance et de visibilité : 600 à 1 200 €.** Site lent ou
-introuvable sur Google, avec rapport chiffré avant et après.
+**Site lent ou introuvable sur Google : 600 à 1 200 €.** C'est une prestation à
+part, détaillée sur la page [Visibilité sur Google et vitesse](/visibilite-google/).
+
+Ces montants sont indicatifs. Le prix exact dépend du périmètre réel de votre
+projet, et il vous est donné dans un devis ferme avant que je commence quoi que
+ce soit.
 
 Le pré-diagnostic est toujours gratuit, et vous recevez un devis ferme avant que
 je commence. Aucune intervention n'est facturée sans votre accord écrit.
@@ -79,8 +83,10 @@ pouvez les révoquer à la fin. Si vous avez perdu certains accès, c'est souven
 récupérable, et ça fait partie du travail.
 
 **Mon site est piraté, est-ce que mes données clients sont en danger ?**
-C'est la première chose que je vérifie. Si des données personnelles ont pu être
-exposées, vous avez des obligations de déclaration, et je vous dis lesquelles.
+C'est la première chose que je vérifie. Si je constate qu'il y a pu y avoir un
+accès à des données personnelles, je vous le signale tout de suite et je vous
+remets les éléments techniques dont vous aurez besoin pour en parler à la CNIL
+ou à un juriste.
 
 **Vous êtes à Rennes, et moi non.**
 J'interviens à distance, partout en France. La quasi-totalité des pannes web se

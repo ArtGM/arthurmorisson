@@ -9,6 +9,9 @@
      741 ms de CPU). Voir static/css/icons.css. -->
 <link rel="stylesheet" href="{{ "css/icons.css" | relURL }}" media="all">
 
+<!-- Surcharges de mise en forme maison, chargées après les CSS du thème. -->
+<link rel="stylesheet" href="{{ "css/custom.css" | relURL }}" media="all">
+
 <!-- L'image du hero est l'élément LCP : on la précharge. -->
 <link rel="preload" as="image" href="{{ .Site.Params.hero.image | relURL }}" fetchpriority="high">
 {{ end }}

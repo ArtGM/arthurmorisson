@@ -1,3 +1,6 @@
 .idea/
 public/
 .hugo_build.lock
+# Fichiers de swap des éditeurs
+*.swp
+*.swo

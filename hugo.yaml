@@ -209,7 +209,7 @@ params:
         companyUrl: "https://lamourduweb.com/"
         jobs:
           - name: "Sites vitrines, boutiques en ligne et refontes"
-            content: "Dizaines de sites créés ou repris pour des TPE, PME et indépendants : vitrines, boutiques en ligne, refontes de sites devenus lents ou invisibles sur Google."
+            content: "Dizaines de sites créés ou repris pour des TPE, PME et indépendants : vitrines, boutiques en ligne, refontes de sites devenus lents ou invisibles sur Google. Dont Picksea, boutique nautique de plusieurs milliers de références, conçue et développée sous PrestaShop."
       - company: "Mobility Work"
         companyUrl: "https://www.mobility-work.com/"
         jobs:
@@ -226,6 +226,21 @@ params:
     enable: true
     title: "Cas concrets"
     items:
+      - title: "Picksea : boutique en ligne de plusieurs milliers de références"
+        content: "Boutique d'équipement nautique conçue et développée sous PrestaShop : plusieurs milliers de références, près de 200 marques, un espace réservé aux professionnels, plusieurs transporteurs et le paiement en plusieurs fois. Mission réalisée comme développeur pour l'agence Lamour du Web. La boutique tourne toujours et affiche 9,1 sur 10 pour plus de 4 000 avis clients."
+        image: /images/projects/picksea.webp
+        featured:
+          name: "Voir la boutique"
+          link: "https://www.picksea.com/fr/"
+        badges:
+          - "Boutique en ligne"
+          - "PrestaShop"
+          - "Espace professionnel"
+          - "Mission en agence"
+        links:
+          - icon: fa fa-globe
+            url: "https://www.picksea.com/fr/"
+
       - title: "Alternav : site refait, administration autonome, retour dans les résultats Google"
         content: "Un expert maritime indépendant (La Rochelle, Caen, Méditerranée) avait un ancien site qui n'apparaissait plus sur Google, et dont il ne pouvait rien modifier sans aide. Refonte complète du site, avec une administration qui lui permet de gérer son contenu lui-même. Paramétrage complet pour les moteurs de recherche, nettoyage des résultats parasites, et prise en main de ses fiches Google. Son site est ressorti dans les résultats, et il n'a plus besoin de personne pour le mettre à jour."
         image: /images/projects/alternav.webp

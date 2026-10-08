@@ -59,7 +59,11 @@ autonome sur les modifications courantes.
 ## Mon expérience sur ce type de projet
 
 J'ai passé quatre ans en agence web, à créer des sites vitrines et des boutiques
-en ligne pour des clients variés, puis à les maintenir dans le temps.
+en ligne pour des clients variés, puis à les maintenir dans le temps. La plus
+grosse est [Picksea](https://www.picksea.com/fr/), une boutique d'équipement
+nautique de plusieurs milliers de références, avec près de 200 marques, un espace
+réservé aux professionnels, plusieurs transporteurs et le paiement en plusieurs
+fois. Je l'ai conçue et développée sous PrestaShop. Elle tourne toujours.
 
 Depuis, je travaille sur une plateforme en ligne utilisée tous les jours par des
 entreprises. C'est moins visible dans un portfolio, mais c'est ce qui m'a appris

@@ -30,6 +30,16 @@ menus:
       title: "Dépannage de site web en urgence"
       url: "/depannage-urgence/"
       weight: 5
+    - identifier: creation
+      name: "Création de site"
+      title: "Création de site vitrine et de boutique en ligne"
+      url: "/creation-site/"
+      weight: 6
+    - identifier: integration
+      name: "Connexion d'outils"
+      title: "Connecter vos outils entre eux"
+      url: "/integration-outils/"
+      weight: 7
     - identifier: blog
       name: "Blog"
       title: "Blog"
@@ -37,17 +47,23 @@ menus:
       weight: 10
 
 params:
-  title: "Arthur Morisson : dépannage site web et SEO technique"
+  title: "Arthur Morisson : dépannage de site web et visibilité sur Google"
   description: "Votre site est en panne, lent ou introuvable sur Google ? Développeur web indépendant, 8 ans d'expérience. Diagnostic gratuit sous 24 h, devis clair avant toute intervention."
+  # Les mots du client dans la copie visible, le vocabulaire métier ici et dans
+  # le JSON-LD : la cible ne tape pas "SEO", elle tape "mon site n'apparaît plus
+  # sur Google".
   keywords:
     - "réparer site internet"
     - "dépannage site web"
     - "site web en panne"
     - "site internet lent"
+    - "site n'apparaît pas sur Google"
+    - "création site vitrine"
+    - "création boutique en ligne"
+    - "connecter CRM et ERP"
     - "développeur web freelance"
-    - "SEO technique"
+    - "SEO"
     - "Core Web Vitals"
-    - "maintenance site web"
   images:
     - "/images/moi-og.jpg"
   author: "Arthur Morisson"
@@ -107,10 +123,12 @@ params:
 
   hero:
     enable: true
-    intro: "Bonjour, je suis"
-    title: "Arthur."
-    subtitle: "Je débloque votre site web."
-    content: "Développeur web indépendant, 8 ans d'expérience. Bug bloquant, site en panne, lenteur, disparition de Google : je diagnostique et je répare. Sans jargon, avec un devis clair avant de commencer."
+    # Le H1 porte la requête, pas le prénom : "Arthur." en H1 ne confirmait
+    # aucune intention de recherche sur la balise la plus lourde de la page.
+    intro: "Arthur Morisson, développeur web indépendant"
+    title: "Je répare votre site et je le remets sur Google"
+    subtitle: "Erreur 500, site lent, formulaire cassé, disparition des résultats."
+    content: "8 ans d'expérience. Je diagnostique, je répare, et je vous explique ce qui s'est passé. Sans jargon, avec un devis clair avant toute intervention."
     image: /images/moi-square.webp
     roundImage: true
     bottomImage:
@@ -137,17 +155,30 @@ params:
     enable: true
     title: "Services"
     content: |-
-      **Dépannage et urgences.** Site planté, erreur 500, formulaire qui n'envoie plus, mise à jour qui a tout cassé. Je reprends du code existant, même ancien et mal documenté, je répare et je sécurise.
+      **Votre site est en panne.** Site planté, erreur au chargement, formulaire qui n'envoie plus, mise à jour qui a tout cassé. Je reprends un site existant, même ancien et mal documenté, je le répare et je le sécurise.
+      [Dépannage : processus et tarifs](/depannage-urgence/)
 
-      **Vitesse et visibilité Google.** Site lent ou introuvable sur Google. J'audite, je réduis le temps de chargement, je corrige l'indexation. Résultats mesurables dans la Search Console.
+      **Votre site est lent, ou absent de Google.** Vos clients ne vous trouvent pas, ou abandonnent avant que la page s'affiche. Je trouve pourquoi, je corrige, et je vous montre le résultat en chiffres.
 
-      **Automatisation et connexions.** Vos outils ne se parlent pas. Je connecte vos logiciels (CRM, facturation, stocks) pour supprimer les ressaisies manuelles.
+      **Vous n'avez pas de site, ou il est à refaire.** Site vitrine ou boutique en ligne, construits pour être trouvés sur Google dès le départ, et pour que vous puissiez les mettre à jour vous-même.
+      [Création de site et de boutique](/creation-site/)
+
+      **Vos outils ne se parlent pas.** Vous ressaisissez les mêmes informations dans votre logiciel de devis, votre fichier client et votre comptabilité. Je les connecte pour que ça se fasse tout seul.
+      [Connexion de vos outils](/integration-outils/)
 
       Chaque intervention commence par un diagnostic gratuit et un ordre de prix. Vous décidez ensuite.
 
-      [Voir le détail du dépannage, le processus et les tarifs](/depannage-urgence/)
+      <details>
+        <summary>Voir les technologies que j'utilise</summary>
+        <p>Pour les profils techniques : TypeScript, React, Vue, Node.js, API REST,
+        PHP, Symfony, Laravel, PostgreSQL, MySQL, Docker. Côté référencement :
+        Core Web Vitals, schema.org, sitemap, robots, hreflang, Search Console,
+        Lighthouse, PageSpeed Insights.</p>
+      </details>
     skills:
-      enable: true
+      # Remplacé par un <details> replié dans about.content : la cible n'est pas
+      # technique, une liste de technologies en clair la faisait douter.
+      enable: false
       title: "Pour les profils techniques :"
       items:
         - "TypeScript / JavaScript"
@@ -156,7 +187,7 @@ params:
         - "PHP / Symfony / Laravel"
         - "PostgreSQL / MySQL"
         - "Docker"
-        - "SEO technique : Core Web Vitals, schema.org, sitemap, robots, hreflang"
+        - "SEO : Core Web Vitals, schema.org, sitemap, robots, hreflang"
         - "Search Console / Lighthouse / PageSpeed Insights"
 
   experience:
@@ -167,7 +198,7 @@ params:
         companyUrl: "https://www.dream-me-up.fr/"
         jobs:
           - name: "Sites PME et indépendants"
-            content: "Création et maintenance de sites pour les clients de l'agence. Corrections de bugs bloquants, reprise de sites existants, optimisation SEO technique : performance, indexation, balisage."
+            content: "Création et maintenance de sites pour les clients de l'agence. Corrections de bugs bloquants, reprise de sites existants, remise en visibilité sur Google : vitesse, indexation, balisage."
             featuredItems:
               fontAwesomeIcons:
                 - icon: fa-brands fa-php
@@ -178,7 +209,7 @@ params:
         companyUrl: "https://lamourduweb.com/"
         jobs:
           - name: "Refonte et accélération de sites"
-            content: "Dizaines de sites repris, accélérés et remis en conformité SEO technique pour des TPE, PME et indépendants."
+            content: "Dizaines de sites repris, accélérés et remis en visibilité sur Google pour des TPE, PME et indépendants."
       - company: "Mobility Work"
         companyUrl: "https://www.mobility-work.com/"
         jobs:
@@ -196,13 +227,13 @@ params:
     title: "Cas concrets"
     items:
       - title: "Alternav : site refait et visibilité Google récupérée"
-        content: "Un expert maritime indépendant (La Rochelle, Caen, Méditerranée) avait un ancien site Weebly invisible sur Google. Nouveau site, nettoyage des résultats parasites, Core Web Vitals et SEO technique repris de zéro. Visibilité organique récupérée."
+        content: "Un expert maritime indépendant (La Rochelle, Caen, Méditerranée) avait un ancien site Weebly invisible sur Google. Nouveau site, nettoyage des résultats parasites, vitesse de chargement et visibilité sur Google reprises de zéro. Le site est ressorti dans les résultats."
         image: /images/projects/alternav.webp
         featured:
           name: "Voir le site"
           link: "https://alternav.fr"
         badges:
-          - "SEO technique"
+          - "Visibilité Google"
           - "Core Web Vitals"
           - "Refonte"
         links:
@@ -218,6 +249,11 @@ params:
     netlify:
       enable: true
       formName: "diagnostic"
+    # Numéro en clair ici, jamais dans le HTML : le partial contact-phone.html
+    # l'encode au build et le navigateur le reconstitue. Voir static/js ? non :
+    # le script vit dans params.customScripts.
+    phone: "0695791273"
+    email: "contact@arthurmorisson.fr"
 
   footer:
     recentPosts:
@@ -403,6 +439,36 @@ params:
     })();
     </script>
     <!-- Fin mesure d'audience -->
+
+    <!-- Reconstitution des numéros de téléphone masqués.
+
+         Le numéro n'est jamais écrit en clair dans le HTML : le partial
+         contact-phone.html pose deux moitiés encodées en base64. Mode "wa" rend
+         un lien WhatsApp, mode "legal" un lien tel: pour les mentions légales. -->
+    <script>
+    (function () {
+      var slots = document.querySelectorAll('[data-tel-a]');
+      if (!slots.length) return;
+      for (var i = 0; i < slots.length; i++) {
+        var el = slots[i];
+        var n;
+        try { n = atob(el.dataset.telA) + atob(el.dataset.telB); } catch (e) { continue; }
+        var pretty = n.replace(/(\d{2})(?=\d)/g, '$1 ').trim();
+        var intl = '33' + n.slice(1);
+        var a = document.createElement('a');
+        if (el.dataset.telMode === 'legal') {
+          a.href = 'tel:+' + intl;
+          a.textContent = pretty;
+        } else {
+          a.href = 'https://wa.me/' + intl;
+          a.rel = 'noopener';
+          a.textContent = 'WhatsApp au ' + pretty;
+        }
+        el.textContent = '';
+        el.appendChild(a);
+      }
+    })();
+    </script>
 
     <!-- Background pixel drift -->
     <canvas id="bg-particles" aria-hidden="true"></canvas>

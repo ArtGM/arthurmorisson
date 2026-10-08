@@ -11,6 +11,7 @@
                     <div class="text-center">
                         {{ $contact.content | emojify | markdownify }}
                     </div>
+                    {{ partial "contact-channels.html" (dict "ctx" .) }}
                     {{ if .Site.Params.contact.netlify.enable | default false }}
                     {{- $formName := .Site.Params.contact.netlify.formName | default "contact" -}}
                     <div class="row justify-content-center">

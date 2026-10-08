@@ -11,25 +11,7 @@ Le site arthurmorisson.fr est édité par :
 **Arthur Morisson, entrepreneur individuel (EI)**
 SIRET : 840 524 334 00033
 Établi à Rennes, France
-Téléphone : <span id="tel-mentions" data-a="MDY5NTc=" data-b="OTEyNzM=">
-  <noscript>Numéro communiqué sur simple demande à contact@arthurmorisson.fr</noscript>
-</span>
-<script>
-(function () {
-  /* Le numéro n'apparaît pas en clair dans le HTML, pour limiter la récolte
-     automatisée. Il est reconstitué côté navigateur. Cela n'arrête pas un
-     scraper qui exécute du JavaScript, seulement ceux qui lisent la source. */
-  var el = document.getElementById('tel-mentions');
-  if (!el) return;
-  var n = atob(el.dataset.a) + atob(el.dataset.b);
-  var pretty = n.replace(/(\d{2})(?=\d)/g, '$1 ').trim();
-  var a = document.createElement('a');
-  a.href = 'tel:+33' + n.slice(1);
-  a.textContent = pretty;
-  el.textContent = '';
-  el.appendChild(a);
-})();
-</script>
+Téléphone : {{< phone mode="legal" >}}
 Courriel : contact@arthurmorisson.fr
 
 TVA non applicable, article 293 B du Code général des impôts.

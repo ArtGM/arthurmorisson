@@ -96,4 +96,6 @@ délai vous est annoncé dans le devis, avant que vous validiez.
 Remplissez le formulaire de diagnostic. Vous recevez une réponse sous 24 h avec
 un pré-diagnostic et un ordre de prix, sans engagement.
 
+{{< contact-channels >}}
+
 [Décrire ma situation](/#contact)

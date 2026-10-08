@@ -1,0 +1,16 @@
+{{/* Rend le numéro de téléphone sans jamais l'écrire en clair dans le HTML.
+
+     Le numéro vit dans params.contact.phone. Il est coupé en deux et encodé en
+     base64 au build ; le script de params.customScripts le reconstitue côté
+     navigateur. Cela arrête les aspirateurs qui lisent la source, pas ceux qui
+     exécutent du JavaScript.
+
+     Paramètre mode :
+       "wa"    lien WhatsApp, pour les pages commerciales
+       "legal" lien tel:, pour les mentions légales où le numéro est obligatoire */}}
+{{- $mode := .mode | default "wa" -}}
+{{- $num := .ctx.Site.Params.contact.phone -}}
+{{- $mail := .ctx.Site.Params.contact.email -}}
+{{- $a := substr $num 0 5 | base64Encode -}}
+{{- $b := substr $num 5 | base64Encode -}}
+<span class="tel-masked" data-tel-a="{{ $a }}" data-tel-b="{{ $b }}" data-tel-mode="{{ $mode }}"><noscript>{{ if eq $mode "legal" }}Numéro communiqué sur simple demande à {{ $mail }}{{ else }}Écrivez-moi à {{ $mail }}{{ end }}</noscript></span>

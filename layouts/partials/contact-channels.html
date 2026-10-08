@@ -1,0 +1,20 @@
+{{/* Préférence de canal, affichée partout de la même façon.
+
+     WhatsApp est mis en avant pour l'urgence uniquement : c'est le visiteur dont
+     le site est tombé qui a besoin d'une réponse immédiate, et c'est le trafic
+     le plus qualifié. Le courriel et le formulaire restent la voie normale.
+
+     Le numéro n'est jamais en clair dans le HTML, voir contact-phone.html. */}}
+{{- $ctx := .ctx -}}
+{{- $mail := $ctx.Site.Params.contact.email -}}
+<div class="contact-channels">
+  <p class="channel-urgent">
+    <strong>Votre site est en panne maintenant ?</strong>
+    Écrivez-moi sur {{ partial "contact-phone.html" (dict "mode" "wa" "ctx" $ctx) }},
+    je réponds plus vite que par courriel.
+  </p>
+  <p class="channel-normal">
+    Pour un devis, une question ou un projet, le formulaire ci-dessous ou
+    <a href="mailto:{{ $mail }}">{{ $mail }}</a>. Réponse sous 24 h.
+  </p>
+</div>

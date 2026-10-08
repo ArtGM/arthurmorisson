@@ -81,6 +81,23 @@ autre échelle. Le site public de ce réseau est visible sur
 [so-transactions.immo](https://so-transactions.immo/), l'application de gestion
 est interne. Mission réalisée comme développeur pour l'agence Lamour du Web.
 
+## Un deuxième exemple, dans l'autre sens
+
+Pour la place de marché de Bretagne Commerce International, qui met en relation
+des acheteurs internationaux avec des fournisseurs bretons, le problème était
+inverse : il fallait que des centaines d'entreprises extérieures puissent
+alimenter le catalogue elles-mêmes.
+
+J'ai connecté le site à des outils no-code pour que chaque entreprise saisisse
+ses informations de son côté et qu'elles remontent directement dans le
+catalogue, sans que personne ne les retape. Le site est également connecté à leur
+CRM Microsoft, pour que les contacts et les fiches entreprises circulent entre le
+site public et leurs outils internes.
+
+C'est visible sur
+[suppliers-from-bretagne.com](https://www.suppliers-from-bretagne.com/). Mission
+réalisée comme développeur pour l'agence Lamour du Web.
+
 ## Combien ça coûte
 
 **Connexion simple : 600 à 1 500 €.** Deux outils, un sens de circulation, des

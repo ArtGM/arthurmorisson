@@ -223,22 +223,152 @@ params:
     articleRecent: "2 Jan 2006"
 
   customScripts: |-
-    <!-- Matomo -->
+    <!-- Mesure d'audience Google Analytics 4, sous consentement.
+
+         GA4 dépose des cookies non exemptés de consentement, donc rien n'est
+         chargé avant un accord explicite. Tant que GA4_ID vaut la valeur
+         d'exemple, ni le bandeau ni le script ne s'affichent : remplacer la
+         valeur par l'identifiant de mesure (format G-XXXXXXXXXX) pour activer.
+
+         Le choix est mémorisé dans localStorage. Pour revenir dessus, il faut
+         effacer les données de site, ce qui est indiqué dans la page
+         /confidentialite/. -->
+    <style>
+      #consent-banner {
+        position: fixed;
+        inset: auto 0 0 0;
+        z-index: 10000;
+        padding: 1rem 1.25rem;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.12);
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      #consent-banner .consent-inner {
+        max-width: 56rem;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #consent-banner p {
+        margin: 0;
+        flex: 1 1 22rem;
+      }
+      #consent-banner a {
+        color: var(--text-link-color);
+      }
+      #consent-banner .consent-actions {
+        display: flex;
+        gap: 0.5rem;
+      }
+      #consent-banner button {
+        min-height: 44px;
+        padding: 0.5rem 1.25rem;
+        border-radius: 0.75rem;
+        border: 1px solid var(--primary-color);
+        background: transparent;
+        color: var(--text-color);
+        font: inherit;
+        cursor: pointer;
+      }
+      #consent-banner button.consent-accept {
+        background-color: var(--primary-color);
+        color: #fff;
+      }
+    </style>
     <script>
-        var _paq = window._paq = window._paq || [];
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function () {
-            var u = "https://analytics.lambofcode.com/";
-            _paq.push(['setTrackerUrl', u + 'piwik.php']);
-            _paq.push(['setSiteId', '3']);
-            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-            g.async = true;
-            g.src = u + 'piwik.js';
-            s.parentNode.insertBefore(g, s);
-        })();
+    (function () {
+      var GA4_ID = 'G-3CBH4S6P5C';
+      var KEY = 'consent-analytics';
+      var loaded = false;
+
+      function read() {
+        try { return localStorage.getItem(KEY); } catch (e) { return null; }
+      }
+      function write(value) {
+        try { localStorage.setItem(KEY, value); } catch (e) {}
+      }
+
+      function loadAnalytics() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA4_ID, { anonymize_ip: true });
+      }
+
+      function showBanner() {
+        if (document.getElementById('consent-banner')) return;
+        var el = document.createElement('div');
+        el.id = 'consent-banner';
+        el.setAttribute('role', 'dialog');
+        el.setAttribute('aria-label', 'Consentement à la mesure d\'audience');
+        el.innerHTML =
+          '<div class="consent-inner">' +
+            '<p>J\'utilise Google Analytics pour savoir quelles pages vous servent. ' +
+            'Aucune publicité, aucun profilage. Rien n\'est déposé sans votre accord. ' +
+            '<a href="/confidentialite/">En savoir plus</a>.</p>' +
+            '<div class="consent-actions">' +
+              '<button type="button" class="consent-refuse">Refuser</button>' +
+              '<button type="button" class="consent-accept">Accepter</button>' +
+            '</div>' +
+          '</div>';
+        document.body.appendChild(el);
+        el.querySelector('.consent-accept').addEventListener('click', function () {
+          write('granted');
+          el.remove();
+          loadAnalytics();
+        });
+        el.querySelector('.consent-refuse').addEventListener('click', function () {
+          var wasGranted = loaded;
+          write('denied');
+          el.remove();
+          /* Si la mesure tournait déjà dans cette page, seul un rechargement
+             l'arrête réellement : gtag ne se désinstalle pas. */
+          if (wasGranted) location.reload();
+        });
+      }
+
+      /* Lien "Gérer mes cookies" du pied de page : réaffiche le choix. */
+      function bindManageLinks() {
+        var links = document.querySelectorAll('[data-consent-manage]');
+        for (var i = 0; i < links.length; i++) {
+          links[i].hidden = false;
+          links[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            showBanner();
+          });
+        }
+      }
+
+      function start() {
+        bindManageLinks();
+        var stored = read();
+        if (stored === 'granted') { loadAnalytics(); return; }
+        if (stored === 'denied') return;
+        showBanner();
+      }
+
+      if (GA4_ID.indexOf('XXXX') !== -1) return;
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', start);
+      } else {
+        start();
+      }
+    })();
     </script>
-    <!-- End Matomo Code -->
+    <!-- Fin mesure d'audience -->
 
     <!-- Background pixel drift -->
     <canvas id="bg-particles" aria-hidden="true"></canvas>

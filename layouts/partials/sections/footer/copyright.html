@@ -1,0 +1,49 @@
+{{/* Copie du partial du thème, avec un seul ajout : les liens légaux.
+
+     Ils sont conditionnés par .Site.GetPage, donc ils n'apparaissent que si la
+     page existe réellement dans le build. Tant que les pages légales sont en
+     draft, aucun lien mort n'est publié. */}}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            {{ if or .Site.Params.navbar.brandLogo .Site.Params.favicon }}
+                <div class="pb-2">
+                    <a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">
+                        <img alt="Footer logo" src="{{ .Site.Params.navbar.brandLogo | default .Site.Params.favicon }}"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            {{ end }}
+            &copy; {{ now.Format "2006"}} {{ .Site.Params.copyright }} {{ .Site.Params.terms.copyright | default (i18n "copyright") }}
+
+            {{ $legal := slice }}
+            {{ with .Site.GetPage "/mentions-legales" }}
+              {{ $legal = $legal | append (printf "<a href=\"%s\">%s</a>" .RelPermalink .Title) }}
+            {{ end }}
+            {{ with .Site.GetPage "/confidentialite" }}
+              {{ $legal = $legal | append (printf "<a href=\"%s\">%s</a>" .RelPermalink .Title) }}
+            {{ end }}
+            {{/* Le lien de gestion du consentement est masqué par défaut et
+                 révélé par le script de consentement, pour ne pas afficher un
+                 lien inerte si la mesure d'audience est désactivée. */}}
+            {{ $legal = $legal | append "<a href=\"#\" data-consent-manage hidden>Gérer mes cookies</a>" }}
+            {{ with $legal }}
+              <div class="pt-2">
+                {{ delimit . " &middot; " | safeHTML }}
+              </div>
+            {{ end }}
+
+            <div class="text-secondary pt-2">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

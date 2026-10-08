@@ -130,3 +130,46 @@
   }}
 <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
 {{ end }}
+
+{{/* Pages de service : schema Service + fil d'Ariane. Activé par
+     schemaService: true en front matter.
+
+     Volontairement sans prix : les fourchettes affichées sur la page sont encore
+     provisoires, et dupliquer des montants ici obligerait à les tenir à jour en
+     deux endroits. Ajouter un priceSpecification quand les tarifs seront fermes. */}}
+{{ if .Params.schemaService }}
+  {{ $base := .Site.BaseURL }}
+  {{ $logoImg := "/images/moi-og.jpg" | absURL }}
+  {{ $provider := dict
+    "@type" "ProfessionalService"
+    "@id" (printf "%s#service" $base)
+    "name" "Arthur Morisson, dépannage web et SEO technique"
+    "url" $base
+    "logo" (dict "@type" "ImageObject" "url" $logoImg)
+    "areaServed" "FR"
+  }}
+  {{ $service := dict
+    "@type" "Service"
+    "@id" (printf "%s#service-page" .Permalink)
+    "name" .Title
+    "description" (.Params.description | default (.Summary | plainify | chomp | truncate 160))
+    "serviceType" "Dépannage et maintenance de sites web"
+    "provider" $provider
+    "areaServed" (dict "@type" "Country" "name" "France")
+    "availableChannel" (dict
+      "@type" "ServiceChannel"
+      "serviceUrl" (printf "%s#contact" $base)
+      "availableLanguage" (dict "@type" "Language" "name" "French"))
+  }}
+  {{ $crumbs := dict
+    "@type" "BreadcrumbList"
+    "itemListElement" (slice
+      (dict "@type" "ListItem" "position" 1 "name" "Accueil" "item" $base)
+      (dict "@type" "ListItem" "position" 2 "name" .Title))
+  }}
+  {{ $ld := dict
+    "@context" "https://schema.org"
+    "@graph" (slice $service $crumbs)
+  }}
+<script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+{{ end }}

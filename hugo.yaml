@@ -25,26 +25,44 @@ markup:
 
 menus:
   main:
+    - identifier: services
+      name: "Services"
+      title: "Ce que je règle pour vous"
+      url: "/#about"
+      weight: 1
     - identifier: depannage
-      name: "Dépannage"
+      parent: services
+      name: "Dépannage de site"
       title: "Dépannage de site web en urgence"
       url: "/depannage-urgence/"
-      weight: 5
+      weight: 1
     - identifier: creation
+      parent: services
       name: "Création de site"
       title: "Création de site vitrine et de boutique en ligne"
       url: "/creation-site/"
-      weight: 6
+      weight: 2
     - identifier: integration
+      parent: services
       name: "Connexion d'outils"
       title: "Connecter vos outils entre eux"
       url: "/integration-outils/"
-      weight: 7
+      weight: 3
+    - identifier: realisations
+      name: "Réalisations"
+      title: "Toutes mes réalisations"
+      url: "/realisations/"
+      weight: 2
     - identifier: blog
       name: "Blog"
       title: "Blog"
       url: "/blog/"
-      weight: 10
+      weight: 3
+    - identifier: contact
+      name: "Contact"
+      title: "Me contacter"
+      url: "/#contact"
+      weight: 4
 
 params:
   title: "Arthur Morisson : dépannage de site web et visibilité sur Google"
@@ -114,12 +132,15 @@ params:
       showOnScrollUp: true
     enableSeparator: false
     menus:
-      disableAbout: false
-      disableExperience: false
+      # Les ancres de sections sont retirées de la navbar : elles faisaient
+      # doublon avec les pages de service et la page Réalisations, ce qui
+      # portait le menu à neuf entrées. Les sections restent sur la page.
+      disableAbout: true
+      disableExperience: true
       disableEducation: true
-      disableProjects: false
+      disableProjects: true
       disableAchievements: true
-      disableContact: false
+      disableContact: true
 
   hero:
     enable: true
@@ -192,7 +213,9 @@ params:
 
   experience:
     enable: true
-    title: "Réalisations"
+    # Renommée : "Réalisations" désigne désormais la page qui liste tous les
+    # projets, et cette section liste les employeurs.
+    title: "Où j'ai travaillé"
     items:
       - company: "Dream Me Up"
         companyUrl: "https://www.dream-me-up.fr/"
@@ -213,8 +236,8 @@ params:
       - company: "Mobility Work"
         companyUrl: "https://www.mobility-work.com/"
         jobs:
-          - name: "Plateforme SaaS B2B en production"
-            content: "Reprise de code legacy, architectures complexes et orchestration d'agents IA sur une plateforme utilisée quotidiennement par des industriels."
+          - name: "Plateforme SaaS B2B en production, depuis bientôt quatre ans"
+            content: "Reprise de code legacy, architectures complexes et orchestration d'agents IA sur une plateforme utilisée quotidiennement par des industriels. C'est mon poste actuel."
 
   education:
     enable: false
@@ -256,21 +279,6 @@ params:
           - icon: fa fa-globe
             url: "https://www.picksea.com/fr/"
 
-      - title: "La Fruitière du Val Evel : catalogue produits et recettes de chefs, en trois langues"
-        content: "Entreprise familiale bretonne qui produit des purées et coulis de fruits pour les professionnels : pâtissiers, glaciers, restaurants, brasseurs. Site conçu et développé avec un catalogue de plus de quatre-vingts références, filtrable par gamme et par fruit, et un catalogue de recettes de chefs classées par métier. Le tout en français, anglais et allemand. Conception et développement comme développeur pour l'agence Lamour du Web."
-        image: /images/projects/lafruitiere.webp
-        featured:
-          name: "Voir le site"
-          link: "https://www.lafruitiere.com/"
-        badges:
-          - "Catalogue filtrable"
-          - "Recettes de chefs"
-          - "Site trilingue"
-          - "Mission en agence"
-        links:
-          - icon: fa fa-globe
-            url: "https://www.lafruitiere.com/"
-
       - title: "SO'Transactions : site immobilier et application métier sur mesure"
         content: "Réseau de transaction en immobilier d'entreprise : commerces, locaux, cessions de société. Site public développé sous WordPress, et surtout une application de gestion sur mesure développée sous Symfony, qui suit chaque bien à travers toutes les étapes de la vente et centralise tous les documents associés. Elle diffuse aussi les annonces vers les plateformes immobilières connectées, via une interface dédiée, au lieu de ressaisir chaque bien sur chaque site. Conception et développement comme développeur pour l'agence Lamour du Web. L'application est interne, seul le site public est visible."
         image: /images/projects/so-transactions.webp
@@ -300,6 +308,14 @@ params:
         links:
           - icon: fa fa-globe
             url: "https://www.suppliers-from-bretagne.com/"
+
+      - title: "Les autres projets"
+        content: "Boutiques en ligne, sites vitrines, catalogues multilingues et applications métier, créés ou repris en agence pour des TPE, des PME et des réseaux. La liste est sur une page à part."
+        featured:
+          name: "Voir toutes mes réalisations"
+          link: "/realisations/"
+        badges:
+          - "Liste complète"
 
   contact:
     enable: true

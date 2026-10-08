@@ -118,9 +118,13 @@
   padding-bottom: 2.5rem;
 }
 
+/* Pas de min-height : le thème mettait 100vh, puis 82vh laissait encore 204px
+   d'espace résiduel sous le contenu, ce qui détachait le bloc Services. Le hero
+   prend la hauteur de son contenu, Services vient juste après et reste visible
+   au-dessus de la ligne de flottaison. */
 @media (min-width: 992px) {
   #hero {
-    min-height: 82vh;
+    padding-bottom: 1rem;
   }
 }
 
@@ -158,20 +162,17 @@
   }
 }
 
-/* --- Enchaînement Services vers la section suivante ---
+/* --- Enchaînement du hero vers Services ---
 
-   Le thème met py-5 sur chaque section, soit 96px cumulés entre deux blocs.
-   Le bloc Services se lisait comme isolé alors qu'il introduit ce qui suit. */
+   Services est collé au hero qui le précède, pour qu'on comprenne tout de suite
+   que le bloc appartient à la même séquence et qu'il y a du contenu plus bas.
+   Le thème mettait py-5 sur chaque section, soit 96px cumulés. */
 
 #about {
-  padding-bottom: 0 !important;
+  padding-top: 0 !important;
 }
 
 #about .row {
-  padding-bottom: 1rem !important;
-}
-
-#experience {
   padding-top: 1rem !important;
 }
 

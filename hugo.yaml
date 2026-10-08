@@ -256,6 +256,21 @@ params:
           - icon: fa fa-globe
             url: "https://www.picksea.com/fr/"
 
+      - title: "La Fruitière du Val Evel : catalogue produits et recettes de chefs, en trois langues"
+        content: "Entreprise familiale bretonne qui produit des purées et coulis de fruits pour les professionnels : pâtissiers, glaciers, restaurants, brasseurs. Site conçu et développé avec un catalogue de plus de quatre-vingts références, filtrable par gamme et par fruit, et un catalogue de recettes de chefs classées par métier. Le tout en français, anglais et allemand. Conception et développement comme développeur pour l'agence Lamour du Web."
+        image: /images/projects/lafruitiere.webp
+        featured:
+          name: "Voir le site"
+          link: "https://www.lafruitiere.com/"
+        badges:
+          - "Catalogue filtrable"
+          - "Recettes de chefs"
+          - "Site trilingue"
+          - "Mission en agence"
+        links:
+          - icon: fa fa-globe
+            url: "https://www.lafruitiere.com/"
+
       - title: "SO'Transactions : site immobilier et application métier sur mesure"
         content: "Réseau de transaction en immobilier d'entreprise : commerces, locaux, cessions de société. Site public développé sous WordPress, et surtout une application de gestion sur mesure développée sous Symfony, qui suit chaque bien à travers toutes les étapes de la vente et centralise tous les documents associés. Elle diffuse aussi les annonces vers les plateformes immobilières connectées, via une interface dédiée, au lieu de ressaisir chaque bien sur chaque site. Conception et développement comme développeur pour l'agence Lamour du Web. L'application est interne, seul le site public est visible."
         image: /images/projects/so-transactions.webp

@@ -53,10 +53,34 @@ params:
   author: "Arthur Morisson"
   favicon: "/images/favicon.png"
   useBootstrapCDN: false
+  # Charge static/style.css en dernier, après les CSS du thème. C'est le crochet
+  # prévu par hugo-profile : nos surcharges gagnent sans !important et sans
+  # bricoler la spécificité.
+  customCSS: true
   mathjax: false
   animate: true
 
   theme: {}
+
+  # Palette. Le bleu Bootstrap par défaut (#007bff) échouait au contraste sur le
+  # fond clair (3,39 pour 4,5 exigé) sur la marque de la navbar et les liens, et
+  # en mode sombre l'accent valait #ffffff, donc l'accent disparaissait : liens,
+  # H1 et texte courant se confondaient tous en blanc.
+  # Ratios mesurés sur les fonds réels (#eaedf0 et #18191a).
+  color:
+    textColor: "#343a40"           # 9,79 sur fond clair
+    secondaryTextColor: "#55595c"  # 6,02, remplace #6c757d qui tombait à 3,99
+    primaryColor: "#0f6466"        # 5,89, remplace #007bff à 3,39
+    textLinkColor: "#0f6466"
+    backgroundColor: "#eaedf0"
+    secondaryColor: "#f8f9fa"
+    darkmode:
+      textColor: "#e4e6eb"           # 14,10 sur fond sombre
+      secondaryTextColor: "#b0b3b8"  # 8,37
+      primaryColor: "#5fd3d1"        # 9,83, remplace #ffffff
+      textLinkColor: "#5fd3d1"
+      backgroundColor: "#18191a"
+      secondaryColor: "#212529"
 
   font:
     fontSize: 1rem
@@ -284,7 +308,10 @@ params:
       }
       #consent-banner button.consent-accept {
         background-color: var(--primary-color);
-        color: #fff;
+        /* Pas de #fff en dur : en mode sombre l'accent est un teal clair, et du
+           blanc dessus tombait sous 2:1. La couleur de fond de page donne du
+           texte sombre sur accent clair et inversement. */
+        color: var(--background-color);
       }
     </style>
     <script>

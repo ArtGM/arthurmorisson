@@ -1,0 +1,67 @@
+/* Surcharges de mise en forme. Chargé par params.customCSS, donc en dernier et
+   sur toutes les pages. */
+
+/* --- Hiérarchie du hero ---
+
+   Le thème met le H1 (le prénom) en 80px et en couleur primaire, et délave le
+   H2 (la proposition de valeur) avec opacity: 0.5. Résultat : l'élément le
+   moins utile à la conversion est le plus visible. On inverse. */
+
+#hero h1 {
+  font-size: clamp(26px, 5vw, 40px);
+  margin-bottom: 0.1em;
+}
+
+#hero h2 {
+  font-size: clamp(34px, 7.5vw, 64px);
+  /* opacity: 0.5 dans le thème : la phrase de vente doit être le texte le plus
+     contrasté de l'écran, pas le plus pâle. */
+  opacity: 1;
+  color: var(--text-color);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* --- Contraste ---
+
+   Le thème applique opacity: 0.6 sur l'accroche du hero, ce qui la faisait
+   tomber à 3,32 pour 4,5 exigé en texte courant. À 0.85 elle passe. */
+
+#hero .subtitle {
+  opacity: 0.85;
+}
+
+/* --- Longueur de ligne ---
+
+   Mesure typographique usuelle : 45 à 75 caractères par ligne, optimum autour
+   de 66. Le texte de la section Services atteignait 83 caractères en 1440px,
+   parce que le thème laisse la colonne occuper toute sa largeur. L'unité ch
+   plafonne la ligne indépendamment de la taille de police choisie. */
+
+#about .content p,
+#about .content ul {
+  max-width: 68ch;
+}
+
+#single .page-content p,
+#single .page-content ul,
+#single .page-content ol,
+#single .page-content blockquote {
+  max-width: 68ch;
+}
+
+/* --- Listes des articles ---
+
+   Le thème met list-style-position: inside sur les listes de #single, ce qui
+   fait entrer la puce dans la boîte de contenu : les lignes suivantes d'un
+   élément s'alignent alors sur la puce au lieu du texte, et le retrait pendant
+   disparaît. On revient au comportement par défaut. */
+
+#single .page-content ul,
+#single .page-content ol {
+  list-style-position: outside;
+}
+
+#single .page-content li {
+  margin-bottom: 0.4em;
+}

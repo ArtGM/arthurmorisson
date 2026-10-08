@@ -13,16 +13,26 @@ markup:
     renderer:
       unsafe: true
 
+menus:
+  main:
+    - identifier: blog
+      name: "Blog"
+      title: "Blog"
+      url: "/blog/"
+      weight: 10
+
 params:
-  title: "Arthur Morisson — Développeur web freelance & SEO technique"
-  description: "Développeur web freelance à Paris. Sites, applications sur mesure et optimisation SEO technique (Core Web Vitals, indexation, schema.org). 8 ans d'expérience."
+  title: "Arthur Morisson : dépannage site web et SEO technique"
+  description: "Votre site est en panne, lent ou introuvable sur Google ? Développeur web indépendant, 8 ans d'expérience. Diagnostic gratuit sous 24 h, devis clair avant toute intervention."
   keywords:
+    - "réparer site internet"
+    - "dépannage site web"
+    - "site web en panne"
+    - "site internet lent"
     - "développeur web freelance"
-    - "freelance fullstack"
     - "SEO technique"
     - "Core Web Vitals"
-    - "PHP Symfony Laravel"
-    - "Node.js React"
+    - "maintenance site web"
   images:
     - "/images/moi-square.jpg"
   author: "Arthur Morisson"
@@ -60,15 +70,15 @@ params:
     enable: true
     intro: "Bonjour, je suis"
     title: "Arthur."
-    subtitle: "Développeur web freelance & expert SEO technique"
-    content: "Je conçois sites et applications web sur mesure, et j'optimise leur visibilité sur Google et Bing : Core Web Vitals, indexation, données structurées. 8 ans d'expérience salariée, désormais en freelance pour PME, startups et indépendants."
+    subtitle: "Je débloque votre site web."
+    content: "Développeur web indépendant, 8 ans d'expérience. Bug bloquant, site en panne, lenteur, disparition de Google : je diagnostique et je répare. Sans jargon, avec un devis clair avant de commencer."
     image: /images/moi-square.jpg
     roundImage: true
     bottomImage:
       enable: false
     button:
       enable: true
-      name: "Me contacter"
+      name: "Diagnostic gratuit sous 24 h"
       url: "#contact"
       download: false
       newPage: false
@@ -86,16 +96,18 @@ params:
 
   about:
     enable: true
-    title: "À propos"
+    title: "Services"
     content: |-
-      Développeur web fullstack avec 8 ans d'expérience salariée, je construis des produits web solides et agréables à utiliser — et je les rends visibles sur les moteurs de recherche.
+      **Dépannage et urgences.** Site planté, erreur 500, formulaire qui n'envoie plus, mise à jour qui a tout cassé. Je reprends du code existant, même ancien et mal documenté, je répare et je sécurise.
 
-      Mes interventions couvrent la chaîne complète : conception, développement front et back, mise en production, puis optimisation SEO **technique** : Core Web Vitals, indexation, sitemap, schema.org, audit Lighthouse. Pas de rédaction de contenu — uniquement la performance technique qui fait grimper un site dans Google et Bing.
+      **Vitesse et visibilité Google.** Site lent ou introuvable sur Google. J'audite, je réduis le temps de chargement, je corrige l'indexation. Résultats mesurables dans la Search Console.
 
-      Mon objectif : livrer vite, propre, maintenable, et trouvable.
+      **Automatisation et connexions.** Vos outils ne se parlent pas. Je connecte vos logiciels (CRM, facturation, stocks) pour supprimer les ressaisies manuelles.
+
+      Chaque intervention commence par un diagnostic gratuit et un ordre de prix. Vous décidez ensuite.
     skills:
       enable: true
-      title: "Stack technique :"
+      title: "Pour les profils techniques :"
       items:
         - "TypeScript / JavaScript"
         - "React / Vue"
@@ -108,32 +120,29 @@ params:
 
   experience:
     enable: true
-    title: "Expérience"
+    title: "Réalisations"
     items:
       - company: "Dream Me Up"
         companyUrl: "https://www.dream-me-up.fr/"
         jobs:
-          - name: "Développeur web — agence"
-            date: "2018 - 2019"
-            content: "Création de sites internet pour clients de l'agence, maintenance évolutive et corrective, et optimisation SEO technique (performance, indexation, balisage)."
+          - name: "Sites PME et indépendants"
+            content: "Création et maintenance de sites pour les clients de l'agence. Corrections de bugs bloquants, reprise de sites existants, optimisation SEO technique : performance, indexation, balisage."
             featuredItems:
               fontAwesomeIcons:
                 - icon: fa-brands fa-php
                   url: https://www.php.net/
                 - icon: fa-brands fa-wordpress
                   url: https://wordpress.org/
-      - company: "L'Amour du Web"
+      - company: "Lamour du Web"
         companyUrl: "https://lamourduweb.com/"
         jobs:
-          - name: "Développeur web — agence"
-            date: "2019 - 2022"
-            content: "Missions similaires en agence : création de sites internet, maintenance, et SEO technique pour clients variés."
+          - name: "Refonte et accélération de sites"
+            content: "Dizaines de sites repris, accélérés et remis en conformité SEO technique pour des TPE, PME et indépendants."
       - company: "Mobility Work"
         companyUrl: "https://www.mobility-work.com/"
         jobs:
-          - name: "Développeur — plateforme SaaS B2B"
-            date: "2022 - aujourd'hui"
-            content: "Plateforme SaaS B2B. Implémentations d'architectures complexes, orchestration d'agents IA, maintenance et évolution de code legacy."
+          - name: "Plateforme SaaS B2B en production"
+            content: "Reprise de code legacy, architectures complexes et orchestration d'agents IA sur une plateforme utilisée quotidiennement par des industriels."
 
   education:
     enable: false
@@ -143,10 +152,10 @@ params:
 
   projects:
     enable: true
-    title: "Projets"
+    title: "Cas concrets"
     items:
-      - title: "Alternav — nouveau site & SEO technique"
-        content: "Site vitrine pour un expert maritime indépendant (La Rochelle, Caen, Méditerranée). Remplacement d'un ancien Weebly/Wix par un nouveau site : nettoyage SERP, optimisation Core Web Vitals et SEO technique global pour récupérer la visibilité organique."
+      - title: "Alternav : site refait et visibilité Google récupérée"
+        content: "Un expert maritime indépendant (La Rochelle, Caen, Méditerranée) avait un ancien site Weebly invisible sur Google. Nouveau site, nettoyage des résultats parasites, Core Web Vitals et SEO technique repris de zéro. Visibilité organique récupérée."
         image: /images/projects/alternav.jpg
         featured:
           name: "Voir le site"
@@ -162,13 +171,20 @@ params:
   contact:
     enable: true
     title: "Contact"
-    content: "Un projet en tête ? Une question ? Écrivez-moi, je réponds rapidement."
-    btnName: "M'écrire"
+    content: "Décrivez votre situation. Je réponds sous 24 h avec un pré-diagnostic et un ordre de prix, sans engagement."
+    btnName: "Envoyer ma demande"
     btnLink: "mailto:contact@arthurmorisson.fr"
+    netlify:
+      enable: true
+      formName: "diagnostic"
 
   footer:
     recentPosts:
-      enable: false
+      path: "blog"
+      count: 3
+      title: "Derniers articles"
+      enable: true
+      disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/ArtGM
       linkedin: https://www.linkedin.com/in/arthur-morisson/

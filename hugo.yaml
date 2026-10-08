@@ -25,25 +25,17 @@ markup:
 
 menus:
   main:
-    - identifier: services
-      name: "Services"
-      title: "Ce que je règle pour vous"
-      url: "/#about"
-      weight: 1
     - identifier: depannage
-      parent: services
-      name: "Dépannage de site"
+      name: "Dépannage"
       title: "Dépannage de site web en urgence"
       url: "/depannage-urgence/"
       weight: 1
     - identifier: creation
-      parent: services
       name: "Création de site"
       title: "Création de site vitrine et de boutique en ligne"
       url: "/creation-site/"
       weight: 2
     - identifier: integration
-      parent: services
       name: "Connexion d'outils"
       title: "Connecter vos outils entre eux"
       url: "/integration-outils/"
@@ -52,17 +44,17 @@ menus:
       name: "Réalisations"
       title: "Toutes mes réalisations"
       url: "/realisations/"
-      weight: 2
+      weight: 4
     - identifier: blog
       name: "Blog"
       title: "Blog"
       url: "/blog/"
-      weight: 3
+      weight: 5
     - identifier: contact
       name: "Contact"
       title: "Me contacter"
-      url: "/#contact"
-      weight: 4
+      url: "/contact/"
+      weight: 6
 
 params:
   title: "Arthur Morisson : dépannage de site web et visibilité sur Google"
@@ -157,7 +149,7 @@ params:
     button:
       enable: true
       name: "Diagnostic gratuit sous 24 h"
-      url: "#contact"
+      url: "/contact/"
       download: false
       newPage: false
     socialLinks:
@@ -248,6 +240,10 @@ params:
   projects:
     enable: true
     title: "Cas concrets"
+    # Bouton rendu sous la grille par layouts/partials/sections/projects.html
+    allLink:
+      name: "Voir les autres réalisations"
+      url: "/realisations/"
     items:
       - title: "Alternav : site refait, administration autonome, retour dans les résultats Google"
         content: "Un expert maritime indépendant (La Rochelle, Caen, Méditerranée) avait un ancien site qui n'apparaissait plus sur Google, et dont il ne pouvait rien modifier sans aide. Refonte complète du site, avec une administration qui lui permet de gérer son contenu lui-même. Paramétrage complet pour les moteurs de recherche, nettoyage des résultats parasites, et prise en main de ses fiches Google. Son site est ressorti dans les résultats, et il n'a plus besoin de personne pour le mettre à jour."
@@ -309,16 +305,11 @@ params:
           - icon: fa fa-globe
             url: "https://www.suppliers-from-bretagne.com/"
 
-      - title: "Les autres projets"
-        content: "Boutiques en ligne, sites vitrines, catalogues multilingues et applications métier, créés ou repris en agence pour des TPE, des PME et des réseaux. La liste est sur une page à part."
-        featured:
-          name: "Voir toutes mes réalisations"
-          link: "/realisations/"
-        badges:
-          - "Liste complète"
-
   contact:
-    enable: true
+    # La section est désactivée : le contact a sa propre page, /contact/.
+    # Le bloc reste ici pour l'email, le nom du formulaire et le téléphone,
+    # utilisés par les partials contact-channels et contact-phone.
+    enable: false
     title: "Contact"
     content: "Décrivez votre situation. Je réponds sous 24 h avec un pré-diagnostic et un ordre de prix, sans engagement."
     btnName: "Envoyer ma demande"
@@ -382,12 +373,12 @@ params:
         position: fixed;
         inset: auto 0 0 0;
         z-index: 10000;
-        padding: 1rem 1.25rem;
+        padding: 0.7rem 1rem;
         background-color: var(--secondary-color);
         color: var(--text-color);
         box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.12);
-        font-size: 0.95rem;
-        line-height: 1.5;
+        font-size: 0.9rem;
+        line-height: 1.4;
       }
       #consent-banner .consent-inner {
         max-width: 56rem;
@@ -462,9 +453,8 @@ params:
         el.setAttribute('aria-label', 'Consentement à la mesure d\'audience');
         el.innerHTML =
           '<div class="consent-inner">' +
-            '<p>J\'utilise Google Analytics pour savoir quelles pages vous servent. ' +
-            'Aucune publicité, aucun profilage. Rien n\'est déposé sans votre accord. ' +
-            '<a href="/confidentialite/">En savoir plus</a>.</p>' +
+            '<p>Mesure d\'audience Google Analytics. Aucune publicité, aucun profilage, ' +
+            'rien sans votre accord. <a href="/confidentialite/">Détails</a>.</p>' +
             '<div class="consent-actions">' +
               '<button type="button" class="consent-refuse">Refuser</button>' +
               '<button type="button" class="consent-accept">Accepter</button>' +

@@ -104,3 +104,56 @@
   border-radius: 0.75rem;
   margin: 1.2rem 0 1.6rem;
 }
+
+/* --- Hauteur du hero ---
+
+   Le thème donne min-height: 100vh au hero, donc le bloc Services commence
+   exactement sous la ligne de flottaison et rien n'indique qu'il y a du contenu
+   en dessous. On le remonte pour que son titre dépasse, ce qui invite à faire
+   défiler. */
+
+#hero {
+  min-height: auto;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 992px) {
+  #hero {
+    min-height: 82vh;
+  }
+}
+
+/* Sur mobile, l'avatar est affiché sous le texte du hero en pleine largeur et
+   repousse le bloc Services à près de 960px, hors de l'écran. On le réduit pour
+   garder le visage, qui rassure, tout en laissant le titre suivant dépasser. */
+
+@media (max-width: 991px) {
+  #hero .image {
+    padding: 0 !important;
+  }
+
+  #hero .image img {
+    max-width: 118px;
+    margin: 0 auto;
+  }
+}
+
+/* Le thème met margin-top: 50px à la fois sur le bouton du hero et sur les
+   icônes sociales, soit 100px empilés sur mobile, ce qui repoussait le bloc
+   suivant hors de l'écran avec le bandeau de consentement affiché. */
+
+@media (max-width: 991px) {
+  #hero {
+    padding-top: 1.25rem;
+  }
+
+  #hero a.btn,
+  #hero a.btn.social-icon {
+    margin-top: 24px;
+  }
+
+  #hero p {
+    margin-top: 14px;
+  }
+}

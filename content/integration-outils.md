@@ -146,4 +146,4 @@ sous 24 h en vous disant si c'est automatisable et ce que ça représente.
 
 {{< contact-channels >}}
 
-[Décrire ma situation](/#contact)
+[Décrire ma situation](/contact/)

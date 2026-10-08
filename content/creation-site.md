@@ -121,4 +121,4 @@ Décrivez votre activité et ce que vous attendez du site. Je vous réponds sous
 
 {{< contact-channels >}}
 
-[Décrire mon projet](/#contact)
+[Décrire mon projet](/contact/)

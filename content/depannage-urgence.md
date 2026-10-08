@@ -98,4 +98,4 @@ un pré-diagnostic et un ordre de prix, sans engagement.
 
 {{< contact-channels >}}
 
-[Décrire ma situation](/#contact)
+[Décrire ma situation](/contact/)

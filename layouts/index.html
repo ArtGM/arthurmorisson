@@ -5,10 +5,6 @@
 <link rel="stylesheet" href="{{ (printf "%scss/index.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 <link rel="stylesheet" href="{{ (printf "%scss/projects.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 
-<!-- Icônes : CSS maison plutôt que le bundle FontAwesome JS du thème (528 Ko,
-     741 ms de CPU). Voir static/css/icons.css. -->
-<link rel="stylesheet" href="{{ "css/icons.css" | relURL }}" media="all">
-
 
 <!-- L'image du hero est l'élément LCP : on la précharge. -->
 <link rel="preload" as="image" href="{{ .Site.Params.hero.image | relURL }}" fetchpriority="high">

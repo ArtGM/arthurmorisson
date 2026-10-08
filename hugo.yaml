@@ -4,7 +4,6 @@ languageCode: "fr-fr"
 # sans cette ligne Hugo retombe sur "en" et le site se déclare anglophone.
 defaultContentLanguage: "fr"
 title: "Arthur Morisson"
-theme: hugo-profile
 
 enableRobotsTXT: true
 

@@ -4,27 +4,37 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Personal freelance site for Arthur Morisson (fullstack web developer), built with [Hugo](https://gohugo.io/) using the [hugo-profile](https://github.com/gurusabarish/hugo-profile) theme. The site's purpose is lead generation for freelance missions — every design decision should serve conversion over blogging.
+Personal freelance site for Arthur Morisson, built with [Hugo](https://gohugo.io/). The site's purpose is lead generation for freelance missions: every decision should serve conversion over blogging.
+
+**Audience**: small businesses, tradespeople and sole traders who do not understand the technical side, or do not want to. Write visible copy in the customer's words, never the trade's. "Mon site n'apparaît plus sur Google", not "SEO". Keep technical vocabulary to the collapsed block on the home page, the keywords and the JSON-LD, where only machines read it.
+
+**Typography of the copy**: no em dashes, no emoji. Use colons, commas or periods. Do not add decorative side borders to blocks you create.
 
 ## Commands
 
-- `hugo server -D` — run the local dev server (includes drafts).
-- `hugo` — build the static site into `public/`.
-- `hugo new <section>/<slug>.md` — scaffold a content file from `archetypes/default.md` (new pages start with `draft: true`).
-- `git submodule update --init --recursive` — required after clone, to pull the hugo-profile theme.
+- `hugo server -D` — local dev server, drafts included.
+- `hugo --gc --minify` — production build into `public/`, same command Netlify runs.
+- `hugo new blog/<slug>.md` — new post from `archetypes/blog.md`.
+
+No submodule step: the site has no external theme any more.
 
 ## Architecture
 
-- **Theme via git submodule**: `themes/hugo-profile` is a submodule (see `.gitmodules`). Treat its files as read-only — override by mirroring the path under the repo root's `layouts/` or `static/`. The theme's own example config lives at `themes/hugo-profile/exampleSite/hugo.yaml` — use it as the source of truth for available params.
-- **Single-file config**: everything lives in `hugo.yaml`. Unlike a typical theme-specific `config`, hugo-profile drives the *entire home page* from `params` (hero, about, experience, education, projects, achievements, contact). To edit the home page, edit `hugo.yaml` — don't look for a `content/_index.md`.
-- **`params.customScripts` is the inline-JS bucket**: the theme renders this block before `</body>`. It currently holds (a) the Matomo snippet (tracker at `analytics.lambofcode.com`, site id `3`) and (b) the hero particle background + hero-heading particle-text effect. When editing one, mind that you're sharing the block with the others. Do **not** re-introduce a `layouts/_default/baseof.html` override for analytics — the `customScripts` hook is enough.
-- **`layouts/` override is minimal**: only `layouts/partials/head/extensions.html` is overridden, to inject canonical, robots, keywords and the home-page schema.org JSON-LD graph (Person + ProfessionalService + WebSite). The theme already wires the internal `opengraph.html` and `twitter_cards.html` partials, so basic OG/Twitter come from `params.title` / `params.description` / `params.images` — no override needed for them.
-- **Disabled sections that are now enabled**: `experience` and `projects` are now `enable: true` with TODO placeholders. `education` and `achievements` stay disabled. When filling the placeholders, also flip the matching `navbar.menus.disable*` flag if you turn a section back off.
-- **Netlify pinning**: `netlify.toml` pins `HUGO_VERSION` to the local one (extended). The theme requires extended Hugo (SCSS), so if you bump the local Hugo version, update `netlify.toml` in the same commit or production will silently fall back to Netlify's old default and break the build.
-- **Custom Malt social icon**: `static/svg/icons/malt.svg` is referenced from `params.hero.socialLinks.customIcons` because hugo-profile's FontAwesome set doesn't ship a Malt icon.
-- **Avatar**: `static/images/moi-square.jpg` (1536×1536). Used both as hero image (with `roundImage: true`) and as the about-section image.
-- **Disabled sections**: `experience`, `education`, `projects`, `achievements` are set to `enable: false` until Arthur has real content to put there. Their navbar menu items are also disabled via `params.navbar.menus.disable*`. When enabling a section, flip both flags together.
+- **The theme was internalised**, on 8 October 2026. `layouts/` and `static/` started as a copy of [hugo-profile](https://github.com/gurusabarish/hugo-profile) (MIT) and are now the site's own code. There is no `theme:` key in `hugo.yaml` and no `themes/` directory. Edit the templates directly; there is nothing to override any more. Upstream updates are no longer pulled, which is deliberate: six near-complete copies of theme files had accumulated, and one of them silently reloaded FontAwesome on every content page.
+- **What was deliberately not copied from the theme**: `static/fontawesome-6/` (9.5 MB for six icons) and `static/viewer/` with `layouts/_default/gallery.html`, which depended on it. Icons are rendered by `static/css/icons.css`, which masks the handful of SVGs in `static/svg/icons/`. Adding an icon means copying its SVG there and adding a rule; the file says so.
+- **Single-file config**: everything about the home page lives in `hugo.yaml` `params` (hero, about, experience, projects, contact). There is no `content/_index.md`.
+- **`params.customScripts` is the inline-JS bucket**, rendered before `</body>` by `layouts/partials/scripts.html` on every page, without template execution, so values cannot be injected from params there. It holds the consent banner and GA4, the phone reassembly script, and the background particle canvas. Mind that you share the block when editing one of them.
+- **Netlify pinning**: `netlify.toml` pins `HUGO_VERSION` to the local one (extended, required for SCSS). Bump both in the same commit or production silently falls back and breaks.
+
+## Conventions that cost time to rediscover
+
+- **`static/style.css` is loaded last**, through `params.customCSS`, which is the theme's own hook. Put overrides there rather than fighting specificity: `baseof.html` renders the `head` block *after* `partials/head.html`, so a stylesheet linked from the latter loses to `index.css` at equal specificity.
+- **The phone number is never written in plain HTML.** It lives in `params.contact.phone`; `layouts/partials/contact-phone.html` encodes it at build time and the script in `customScripts` rebuilds it. Mode `wa` renders a WhatsApp link, mode `legal` a `tel:` link for the legal notices.
+- **Images in markdown go through `layouts/_default/_markup/render-image.html`**, which adds lazy loading, width and height, and a blurred placeholder read from `data/lqip.yaml`. The regeneration script sits in that file's header comment.
+- **Dates are printed only for blog posts**, by a section test in `layouts/_default/single.html`.
+- **Netlify Forms needs the `<form>` in the static HTML**, so check it survives in `public/` after any change to `layouts/partials/contact-form.html`.
+- **Verify in a browser, not only in the build.** Several defects found here passed the build and failed on screen: unreadable particle text, white-on-teal buttons, a lost hanging indent, a 403 on a client site. Playwright is available.
 
 ## Commit & PR conventions
 
-- **Never add `Co-Authored-By: Claude …` trailers** to commit messages or pull request descriptions. The author wants a clean `git blame` without Claude attribution noise. This overrides the default Claude Code commit template — drop the `Co-Authored-By` line entirely, don't just swap the identity.
+- **Never add `Co-Authored-By: Claude …` trailers** to commit messages or pull request descriptions. The author wants a clean `git blame`. Drop the line entirely rather than swapping the identity.

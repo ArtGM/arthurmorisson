@@ -47,6 +47,11 @@ i.fa-wordpress {
   mask-image: url("/svg/icons/wordpress.svg");
 }
 
+i.fa-angle-up {
+  -webkit-mask-image: url("/svg/icons/angle-up.svg");
+  mask-image: url("/svg/icons/angle-up.svg");
+}
+
 i.fa-globe {
   -webkit-mask-image: url("/svg/icons/globe.svg");
   mask-image: url("/svg/icons/globe.svg");

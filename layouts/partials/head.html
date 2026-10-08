@@ -30,6 +30,11 @@
 <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/lora-fr.woff2" | relURL }}" crossorigin>
 <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" media="all">
 
+<!-- Icônes : CSS maison avec les six SVG réellement utilisés, à la place du
+     bundle FontAwesome du thème (528 Ko et 741 ms de CPU). Chargée ici, donc
+     sur toutes les pages : les gabarits de contenu la rechargeaient sinon. -->
+<link rel="stylesheet" href="{{ "css/icons.css" | relURL }}" media="all">
+
 <!-- font configuration -->
 <link rel="stylesheet" href="{{ (printf "%scss/font.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 

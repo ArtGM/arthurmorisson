@@ -5,8 +5,12 @@
 <link rel="stylesheet" href="{{ (printf "%scss/index.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 <link rel="stylesheet" href="{{ (printf "%scss/projects.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
 
-<!-- fontawesome -->
-<script defer src="{{ (printf "%sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
+<!-- Icônes : CSS maison plutôt que le bundle FontAwesome JS du thème (528 Ko,
+     741 ms de CPU). Voir static/css/icons.css. -->
+<link rel="stylesheet" href="{{ "css/icons.css" | relURL }}" media="all">
+
+<!-- L'image du hero est l'élément LCP : on la précharge. -->
+<link rel="preload" as="image" href="{{ .Site.Params.hero.image | relURL }}" fetchpriority="high">
 {{ end }}
 
 {{ define "title" }}

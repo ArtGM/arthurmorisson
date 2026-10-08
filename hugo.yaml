@@ -1,9 +1,19 @@
 baseURL: "https://arthurmorisson.fr"
 languageCode: "fr-fr"
+# Pilote l'attribut <html lang>. languageCode ne sert qu'au flux RSS :
+# sans cette ligne Hugo retombe sur "en" et le site se déclare anglophone.
+defaultContentLanguage: "fr"
 title: "Arthur Morisson"
 theme: hugo-profile
 
 enableRobotsTXT: true
+
+# Taxonomies désactivées : aucun article n'a encore de tag ni de catégorie, donc
+# /categories/ et /tags/ seraient des pages vides indexables.
+# Retirer ce bloc dès qu'un article publie de vrais tags.
+disableKinds:
+  - taxonomy
+  - term
 
 pagination:
   pagerSize: 3
@@ -34,9 +44,9 @@ params:
     - "Core Web Vitals"
     - "maintenance site web"
   images:
-    - "/images/moi-square.jpg"
+    - "/images/moi-og.jpg"
   author: "Arthur Morisson"
-  favicon: "/images/moi-square.jpg"
+  favicon: "/images/favicon.png"
   useBootstrapCDN: false
   mathjax: false
   animate: true
@@ -72,7 +82,7 @@ params:
     title: "Arthur."
     subtitle: "Je débloque votre site web."
     content: "Développeur web indépendant, 8 ans d'expérience. Bug bloquant, site en panne, lenteur, disparition de Google : je diagnostique et je répare. Sans jargon, avec un devis clair avant de commencer."
-    image: /images/moi-square.jpg
+    image: /images/moi-square.webp
     roundImage: true
     bottomImage:
       enable: false
@@ -156,7 +166,7 @@ params:
     items:
       - title: "Alternav : site refait et visibilité Google récupérée"
         content: "Un expert maritime indépendant (La Rochelle, Caen, Méditerranée) avait un ancien site Weebly invisible sur Google. Nouveau site, nettoyage des résultats parasites, Core Web Vitals et SEO technique repris de zéro. Visibilité organique récupérée."
-        image: /images/projects/alternav.jpg
+        image: /images/projects/alternav.webp
         featured:
           name: "Voir le site"
           link: "https://alternav.fr"

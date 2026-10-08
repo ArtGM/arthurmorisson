@@ -1,0 +1,53 @@
+/* Remplace le bundle FontAwesome JS (528 Ko, 741 ms de CPU) par du CSS.
+   Le thème génère des <i class="fab fa-linkedin"> : on les rend ici avec
+   mask-image sur les SVG réellement utilisés, copiés dans /svg/icons/.
+   Ajouter une icône = copier son SVG depuis
+   themes/hugo-profile/static/fontawesome-6/svgs/ puis ajouter une règle ici. */
+
+i.fa,
+i.fas,
+i.fab,
+i.fa-solid,
+i.fa-brands {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+i.fa-linkedin {
+  -webkit-mask-image: url("/svg/icons/linkedin.svg");
+  mask-image: url("/svg/icons/linkedin.svg");
+}
+
+i.fa-github {
+  -webkit-mask-image: url("/svg/icons/github.svg");
+  mask-image: url("/svg/icons/github.svg");
+}
+
+i.fa-stack-overflow {
+  -webkit-mask-image: url("/svg/icons/stack-overflow.svg");
+  mask-image: url("/svg/icons/stack-overflow.svg");
+}
+
+i.fa-php {
+  -webkit-mask-image: url("/svg/icons/php.svg");
+  mask-image: url("/svg/icons/php.svg");
+}
+
+i.fa-wordpress {
+  -webkit-mask-image: url("/svg/icons/wordpress.svg");
+  mask-image: url("/svg/icons/wordpress.svg");
+}
+
+i.fa-globe {
+  -webkit-mask-image: url("/svg/icons/globe.svg");
+  mask-image: url("/svg/icons/globe.svg");
+}

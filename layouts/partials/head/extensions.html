@@ -9,8 +9,9 @@
 
 {{ if .IsHome }}
   {{ $base := .Site.BaseURL }}
-  {{ $img := "/images/moi-square.jpg" | absURL }}
+  {{ $img := "/images/moi-og.jpg" | absURL }}
   {{ $desc := .Site.Params.description }}
+  {{ $serviceId := printf "%s#service" $base }}
   {{ $person := dict
     "@type" "Person"
     "@id" (printf "%s#person" $base)
@@ -19,6 +20,7 @@
     "image" $img
     "jobTitle" "Développeur web indépendant, dépannage et SEO technique"
     "description" $desc
+    "worksFor" (dict "@id" $serviceId)
     "sameAs" (slice
       "https://www.linkedin.com/in/arthur-morisson/"
       "https://github.com/ArtGM"
@@ -27,21 +29,43 @@
     "knowsAbout" (slice
       "Développement web fullstack" "PHP" "Symfony" "Laravel"
       "JavaScript" "TypeScript" "React" "Vue.js" "Node.js"
-      "SEO technique" "Core Web Vitals" "Schema.org" "Google Search Console")
+      "SEO technique" "Core Web Vitals" "Schema.org")
   }}
   {{ $service := dict
     "@type" "ProfessionalService"
-    "@id" (printf "%s#service" $base)
+    "@id" $serviceId
     "name" "Arthur Morisson, dépannage web et SEO technique"
     "url" $base
     "image" $img
+    "logo" (dict "@type" "ImageObject" "url" $img)
     "description" $desc
     "areaServed" "FR"
     "founder" (dict "@id" (printf "%s#person" $base))
+    "contactPoint" (dict
+      "@type" "ContactPoint"
+      "email" "contact@arthurmorisson.fr"
+      "contactType" "customer support"
+      "availableLanguage" "French")
     "serviceType" (slice
       "Dépannage et maintenance de sites web"
       "Audit et optimisation SEO technique"
       "Automatisation et intégration d'outils métier")
+    "hasOfferCatalog" (dict
+      "@type" "OfferCatalog"
+      "name" "Services"
+      "itemListElement" (slice
+        (dict "@type" "Offer" "itemOffered" (dict
+          "@type" "Service"
+          "name" "Dépannage et maintenance de sites web"
+          "provider" (dict "@id" $serviceId)))
+        (dict "@type" "Offer" "itemOffered" (dict
+          "@type" "Service"
+          "name" "Audit et optimisation SEO technique"
+          "provider" (dict "@id" $serviceId)))
+        (dict "@type" "Offer" "itemOffered" (dict
+          "@type" "Service"
+          "name" "Automatisation et intégration d'outils métier"
+          "provider" (dict "@id" $serviceId)))))
   }}
   {{ $website := dict
     "@type" "WebSite"
@@ -60,13 +84,24 @@
 
 {{ if and (eq .Kind "page") (eq .Type "blog") }}
   {{ $base := .Site.BaseURL }}
+  {{ $logoImg := "/images/moi-og.jpg" | absURL }}
   {{ $img := "" }}
-  {{ with .Params.image }}{{ $img = . | absURL }}{{ else }}{{ $img = "/images/moi-square.jpg" | absURL }}{{ end }}
+  {{ with .Params.image }}{{ $img = . | absURL }}{{ else }}{{ $img = $logoImg }}{{ end }}
   {{ $author := dict
     "@type" "Person"
     "@id" (printf "%s#person" $base)
     "name" "Arthur Morisson"
     "url" $base
+  }}
+  {{/* publisher doit être Organization-compatible pour le rich result Article de
+       Google, d'où ProfessionalService plutôt que Person. Le noeud est recopié en
+       entier car Google ne résout pas les @id d'une page à l'autre. */}}
+  {{ $publisher := dict
+    "@type" "ProfessionalService"
+    "@id" (printf "%s#service" $base)
+    "name" "Arthur Morisson, dépannage web et SEO technique"
+    "url" $base
+    "logo" (dict "@type" "ImageObject" "url" $logoImg)
   }}
   {{ $post := dict
     "@type" "BlogPosting"
@@ -79,7 +114,7 @@
     "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
     "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
     "author" $author
-    "publisher" $author
+    "publisher" $publisher
     "wordCount" .WordCount
   }}
   {{ $crumbs := dict

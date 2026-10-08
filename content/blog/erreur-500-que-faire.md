@@ -1,6 +1,8 @@
 ---
 title: "Erreur 500 sur votre site : que faire dans l'heure"
 date: 2026-10-08
+image: "/images/blog/erreur-500.webp"
+imageAlt: "Navigateur affichant une page d'erreur 500, intitulée Erreur interne du serveur"
 description: "Votre site affiche « Erreur 500 » et vous ne savez pas quoi faire. Ce que ce message veut dire, les cinq causes les plus fréquentes, et les gestes à faire avant d'appeler quelqu'un."
 ---
 

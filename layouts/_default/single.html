@@ -37,9 +37,23 @@
               {{ end }}
             </div>
           </div>
-          {{ if .Params.image }}
+          {{ with .Params.image }}
+          {{/* Même traitement que les images du corps de page : dimensions
+               réservées et aperçu flou pendant le chargement, lus dans
+               data/lqip.yaml. L'alt vient du front matter plutôt que du titre,
+               qui décrit la page et non l'image. */}}
+          {{- $key := . | path.Base | strings.TrimSuffix (path.Ext .) -}}
+          {{- $meta := index site.Data.lqip $key -}}
           <div class="featured-image">
-            <img class="img-fluid mx-auto d-block" src="{{ .Params.image }}" alt="{{ .Title }}">
+            <img class="img-fluid mx-auto d-block"
+                 src="{{ . }}"
+                 alt="{{ $.Params.imageAlt | default $.Title }}"
+                 {{- with $meta }}
+                 width="{{ .width }}"
+                 height="{{ .height }}"
+                 style="{{ printf "background-image:url(%s);background-size:cover;background-position:center top;background-repeat:no-repeat" .lqip | safeCSS }}"
+                 {{- end }}
+                 decoding="async">
           </div>
           {{ end }}
           <article class="page-content  p-2">

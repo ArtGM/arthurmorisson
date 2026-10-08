@@ -1,12 +1,22 @@
-# Miniatures de préchargement (LQIP) et dimensions des captures de réalisations.
+# Miniatures de préchargement (LQIP) et dimensions des images du site.
 #
-# Générées à partir de static/images/projects/*.webp. Le render hook
-# layouts/_default/_markup/render-image.html les pose en fond de l'image, ce qui
-# affiche un aperçu flou pendant le chargement et réserve l'espace pour éviter
-# tout saut de mise en page.
+# Générées à partir de static/images/**/*.webp, clé = nom de fichier sans
+# extension. Le render hook layouts/_default/_markup/render-image.html et le
+# gabarit layouts/_default/single.html les posent en fond de l'image : aperçu
+# flou pendant le chargement, et espace réservé pour éviter tout saut de page.
 #
-# Régénérer après ajout ou remplacement d'une capture : voir le commentaire en
+# Régénérer après ajout ou remplacement d'une image : voir le commentaire en
 # tête du render hook.
+
+"erreur-500":
+  width: 1000
+  height: 346
+  lqip: "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAgCdASoYAAgAPt1apkyopSOiMAgBEBuJaQDKAC0kAAD+8IGgNd3XZ+ERsBmovE6BhJlOpwcb78Bev5bzPbr2AAA="
+
+"moi-square":
+  width: 620
+  height: 620
+  lqip: "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAQBQCdASoYABgAPt1kp1AopSMiqAqpEBuJaQAAJn7OaEjetEiAOWnRZElf8vG6pKAAAP4Unvw35Mt2RXYXJnpBR4bkSua/QTi2KKC2z53jjrTk3M/WpnQWqV8pNtM3llLmdZylffl/Itb6lp9WVzpBfhpJd+hY0fOqmnqQ5P1RYxOk8z3NuJrxlhYQwuT7Ai8tYXgNY4BLLVYxIG9KCQEAIAA="
 
 "alternav":
   width: 1000

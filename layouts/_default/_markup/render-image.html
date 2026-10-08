@@ -14,14 +14,15 @@
         présenté plutôt qu'un rectangle vide, et ça ne coûte que 1,6 Ko pour les
         sept captures réunies.
 
-     Les dimensions et les miniatures sont dans data/lqip.yaml. Pour les
-     régénérer après ajout ou remplacement d'une capture dans
-     static/images/projects/ :
+     Les dimensions et les miniatures sont dans data/lqip.yaml, partagées avec
+     le gabarit single.html pour l'image d'en-tête des articles. Pour les
+     régénérer après ajout ou remplacement d'une image dans static/images,
+     le script complet est dans l'historique git de ce fichier :
 
        python3 - <<'EOF'
        import base64, glob, os, subprocess
        rows = []
-       for f in sorted(glob.glob("static/images/projects/*.webp")):
+       for f in sorted(glob.glob(motif, recursive=True)):  # motif = static/images, deux etoiles, toutes les .webp
            w, h = subprocess.run(["magick","identify","-format","%w %h",f],
                                  capture_output=True, text=True).stdout.split()
            subprocess.run(["magick",f,"-resize","24x","-strip","-quality","45","/tmp/lqip.webp"])

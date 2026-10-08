@@ -209,7 +209,7 @@ params:
         companyUrl: "https://lamourduweb.com/"
         jobs:
           - name: "Sites vitrines, boutiques en ligne et refontes"
-            content: "Dizaines de sites créés ou repris pour des TPE, PME et indépendants : vitrines, boutiques en ligne, refontes de sites devenus lents ou invisibles sur Google. Dont Picksea, boutique nautique de plusieurs milliers de références, conçue et développée sous PrestaShop."
+            content: "Dizaines de sites créés ou repris pour des TPE, PME et indépendants : vitrines, boutiques en ligne, refontes de sites devenus lents ou invisibles sur Google. Dont Picksea, boutique nautique de plusieurs milliers de références, et l'application de gestion immobilière de SO'Transactions, avec diffusion automatique des annonces vers les plateformes."
       - company: "Mobility Work"
         companyUrl: "https://www.mobility-work.com/"
         jobs:
@@ -240,6 +240,21 @@ params:
         links:
           - icon: fa fa-globe
             url: "https://www.picksea.com/fr/"
+
+      - title: "SO'Transactions : site immobilier et application métier sur mesure"
+        content: "Réseau de transaction en immobilier d'entreprise : commerces, locaux, cessions de société. Site public développé sous WordPress, et surtout une application de gestion sur mesure développée sous Symfony, qui suit chaque bien à travers toutes les étapes de la vente et centralise tous les documents associés. Elle diffuse aussi les annonces vers les plateformes immobilières connectées, via une interface dédiée, au lieu de ressaisir chaque bien sur chaque site. Conception et développement comme développeur pour l'agence Lamour du Web. L'application est interne, seul le site public est visible."
+        image: /images/projects/so-transactions.webp
+        featured:
+          name: "Voir le site"
+          link: "https://so-transactions.immo/"
+        badges:
+          - "Application métier sur mesure"
+          - "Diffusion d'annonces par API"
+          - "WordPress et Symfony"
+          - "Mission en agence"
+        links:
+          - icon: fa fa-globe
+            url: "https://so-transactions.immo/"
 
       - title: "Alternav : site refait, administration autonome, retour dans les résultats Google"
         content: "Un expert maritime indépendant (La Rochelle, Caen, Méditerranée) avait un ancien site qui n'apparaissait plus sur Google, et dont il ne pouvait rien modifier sans aide. Refonte complète du site, avec une administration qui lui permet de gérer son contenu lui-même. Paramétrage complet pour les moteurs de recherche, nettoyage des résultats parasites, et prise en main de ses fiches Google. Son site est ressorti dans les résultats, et il n'a plus besoin de personne pour le mettre à jour."

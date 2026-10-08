@@ -64,6 +64,23 @@ de temps la connexion se rembourse.
 première semaine, je vérifie que rien ne passe à la trappe. Vous recevez une
 alerte si une connexion tombe, plutôt que de le découvrir un mois plus tard.
 
+## Un exemple concret
+
+Pour un réseau de transaction en immobilier d'entreprise, j'ai conçu et
+développé une application de gestion sur mesure. Elle suit chaque bien à travers
+toutes les étapes de la vente, centralise les documents associés, et surtout
+diffuse les annonces vers toutes les plateformes immobilières connectées à
+travers une interface dédiée.
+
+Avant, chaque bien devait être ressaisi sur chaque plateforme, une par une, à
+chaque modification de prix ou de description. Après, l'information est saisie
+une fois et part partout.
+
+C'est exactement le genre de trajet d'information que je décris plus haut, à une
+autre échelle. Le site public de ce réseau est visible sur
+[so-transactions.immo](https://so-transactions.immo/), l'application de gestion
+est interne. Mission réalisée comme développeur pour l'agence Lamour du Web.
+
 ## Combien ça coûte
 
 **Connexion simple : 600 à 1 500 €.** Deux outils, un sens de circulation, des

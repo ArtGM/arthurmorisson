@@ -1,5 +1,6 @@
 ---
 title: "Politique de confidentialité"
+date: 2026-10-08
 description: "Quelles données arthurmorisson.fr collecte, pourquoi, combien de temps, et comment exercer vos droits."
 ---
 

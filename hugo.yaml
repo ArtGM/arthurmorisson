@@ -25,6 +25,11 @@ markup:
 
 menus:
   main:
+    - identifier: depannage
+      name: "Dépannage"
+      title: "Dépannage de site web en urgence"
+      url: "/depannage-urgence/"
+      weight: 5
     - identifier: blog
       name: "Blog"
       title: "Blog"
@@ -115,6 +120,8 @@ params:
       **Automatisation et connexions.** Vos outils ne se parlent pas. Je connecte vos logiciels (CRM, facturation, stocks) pour supprimer les ressaisies manuelles.
 
       Chaque intervention commence par un diagnostic gratuit et un ordre de prix. Vous décidez ensuite.
+
+      [Voir le détail du dépannage, le processus et les tarifs](/depannage-urgence/)
     skills:
       enable: true
       title: "Pour les profils techniques :"

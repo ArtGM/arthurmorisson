@@ -1,7 +1,7 @@
 ---
 title: "Dépannage de site web en urgence"
+date: 2026-10-08
 description: "Site planté, erreur 500, formulaire cassé, site piraté ? Développeur indépendant à Rennes, j'interviens à distance partout en France. Pré-diagnostic gratuit sous 24 h et fourchette de prix avant toute intervention."
-draft: true
 schemaService: true
 ---
 

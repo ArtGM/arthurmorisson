@@ -1,7 +1,7 @@
 ---
 title: "Mentions légales"
+date: 2026-10-08
 description: "Informations légales du site arthurmorisson.fr : éditeur, hébergeur, propriété intellectuelle."
-draft: true
 ---
 
 ## Éditeur du site
@@ -10,7 +10,7 @@ Le site arthurmorisson.fr est édité par :
 
 **Arthur Morisson, entrepreneur individuel (EI)**
 SIRET : 840 524 334 00033
-Adresse : À COMPLÉTER (adresse postale obligatoire, voir note en fin de page)
+Établi à Rennes, France
 Téléphone : 06 95 79 12 76
 Courriel : contact@arthurmorisson.fr
 
@@ -46,15 +46,16 @@ responsabilité d'Arthur Morisson.
 Le traitement des données collectées sur ce site est décrit dans la
 [politique de confidentialité](/confidentialite/).
 
-<!-- NOTE INTERNE, à supprimer avant publication.
+<!-- Choix assumé par l'éditeur : seule la ville est affichée, pas l'adresse
+     personnelle, qui est aussi le lieu de travail et qui fait l'objet d'une
+     opposition à diffusion publique au Registre national des entreprises.
 
-     La ligne Adresse est le dernier élément bloquant. La LCEN impose une
-     adresse postale pour un éditeur professionnel, et c'est la mention dont le
-     manquement est sanctionné d'un an d'emprisonnement et 75 000 € d'amende
-     (source : entreprendre.service-public.gouv.fr/vosdroits/F31228).
+     À savoir : la LCEN impose une adresse postale pour un éditeur
+     professionnel, et c'est la mention dont le manquement est sanctionné
+     (source : entreprendre.service-public.gouv.fr/vosdroits/F31228). Nom,
+     SIRET, téléphone et courriel sont fournis, ce qui couvre l'objectif
+     d'identification et de joignabilité, mais pas la lettre du texte sur
+     l'adresse.
 
-     Options discutées : société de domiciliation (10 à 30 € par mois), adresse
-     d'un espace de coworking si le contrat l'autorise, ou adresse personnelle.
-
-     Tant que cette ligne n'est pas remplie, la page reste en draft: true et
-     n'est pas publiée. -->
+     Si une adresse publiable devient nécessaire : société de domiciliation
+     (10 à 30 € par mois) ou domiciliation en espace de coworking. -->

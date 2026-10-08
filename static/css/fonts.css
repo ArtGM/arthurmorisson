@@ -1,0 +1,61 @@
+/* Polices auto-hébergées.
+
+   Avant : le thème chargeait fonts.googleapis.com via trois <link> dont un
+   bloquant, et demandait 12 graisses de Roboto jamais rendues. Mesuré sur la
+   production, seules Alata 400 et Lora 400-700 servent, et le navigateur
+   téléchargeait en plus le sous-ensemble "symbols" de Lora, 17 Ko pour rien.
+
+   Maintenant : fichiers servis depuis le domaine, donc deux connexions tierces
+   en moins sur le chemin critique (fonts.googleapis.com et fonts.gstatic.com).
+   Lora reste variable, axe wght 400-700, un seul fichier pour les trois graisses.
+
+   Les fichiers -fr couvrent tout Latin-1 et la ponctuation typographique, ce qui
+   suffit au français et aux citations en langues voisines. Le sous-ensemble
+   latin-ext reste en repli pour les caractères rares (ł, ś, ȳ).
+
+   Attention à l'ordre : la spec CSS donne la priorité à la DERNIÈRE règle qui
+   couvre un caractère. Les fichiers -fr sont donc déclarés en dernier.
+
+   Régénérer après une mise à jour du thème ou un changement de typo :
+   voir le commentaire en tête de layouts/partials/head.html. */
+
+
+/* Alata latin-ext, repli */
+@font-face {
+  font-family: 'Alata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/alata-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Lora latin-ext, repli */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(/fonts/lora-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Alata latin, servi par défaut */
+@font-face {
+  font-family: 'Alata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/alata-fr.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+2215;
+}
+
+/* Lora latin, servi par défaut */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(/fonts/lora-fr.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+2215;
+}

@@ -119,7 +119,7 @@ tenir une application dans la durée, et corriger sans rien casser.
 
 ## Et pour vous ?
 
-Décrivez votre situation. Je réponds sous 24 h avec un premier avis et un ordre
+Décrivez votre situation. Je réponds sous 24 h ouvrées avec un premier avis et un ordre
 de prix, sans engagement.
 
 {{< contact-channels >}}

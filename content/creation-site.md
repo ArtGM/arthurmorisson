@@ -1,7 +1,7 @@
 ---
 title: "Création de site vitrine et de boutique en ligne"
 date: 2026-10-08
-description: "Un site que vos clients trouvent sur Google et que vous pouvez mettre à jour vous-même. Développeur indépendant à Rennes, devis clair avant de commencer, diagnostic gratuit sous 24 h."
+description: "Un site que vos clients trouvent sur Google et que vous pouvez mettre à jour vous-même. Développeur indépendant à Rennes, devis clair avant de commencer, diagnostic gratuit sous 24 h ouvrées."
 schemaService: true
 serviceType: "Création de sites web et de boutiques en ligne"
 ---
@@ -9,6 +9,8 @@ serviceType: "Création de sites web et de boutiques en ligne"
 Vous n'avez pas de site, ou celui que vous avez ne vous rapporte rien. Vous ne
 savez pas combien ça coûte, combien de temps ça prend, ni si vous pourrez le
 modifier sans rappeler quelqu'un à chaque fois. Voici comment ça se passe.
+
+{{< cta-top >}}
 
 ## Ce que je construis
 
@@ -126,7 +128,7 @@ Je travaille à distance partout en France. Un appel ou une visio suffisent.
 ## Parlons de votre projet
 
 Décrivez votre activité et ce que vous attendez du site. Je vous réponds sous
-24 h avec un premier avis et un ordre de prix, sans engagement.
+24 h ouvrées avec un premier avis et un ordre de prix, sans engagement.
 
 {{< contact-channels >}}
 

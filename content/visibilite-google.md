@@ -10,6 +10,8 @@ Vous avez un site, mais vos clients ne le trouvent pas. Ou bien ils le trouvent
 et repartent parce qu'il met trop longtemps à s'afficher. Dans les deux cas, vous
 payez pour un site qui ne travaille pas.
 
+{{< cta-top >}}
+
 ## Ce que vous constatez
 
 **Votre site n'apparaît pas quand vous tapez votre activité et votre ville.**

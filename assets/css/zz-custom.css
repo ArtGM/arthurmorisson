@@ -316,3 +316,35 @@ a.btn-nudge:focus-visible .nudge-arrow {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
+
+/* --- Appel à l'action en haut des pages de service --- */
+
+.cta-top {
+  margin: 1.5rem 0 2rem;
+  max-width: 68ch;
+}
+
+.cta-top-aside {
+  margin: 0.8rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary-color);
+}
+
+/* single.css impose la couleur des liens du corps de page en !important, et un
+   sélecteur d'identifiant bat une classe : le bouton doit donc être ciblé avec
+   #single comme il l'est avec #projects. */
+#single a.btn-nudge,
+#single a.btn-nudge:hover,
+#single a.btn-nudge:focus-visible {
+  text-decoration: none;
+}
+
+#single a.btn-nudge {
+  color: var(--text-color) !important;
+}
+
+#single a.btn-nudge:hover,
+#single a.btn-nudge:focus-visible {
+  background-color: var(--primary-color);
+  color: var(--background-color) !important;
+}

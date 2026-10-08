@@ -1,7 +1,7 @@
 ---
 title: "Connecter vos outils entre eux"
 date: 2026-10-08
-description: "Vous ressaisissez les mêmes informations dans plusieurs logiciels ? Je connecte votre CRM, votre ERP, votre facturation et votre site pour que les données circulent seules. Diagnostic gratuit sous 24 h."
+description: "Vous ressaisissez les mêmes informations dans plusieurs logiciels ? Je connecte votre CRM, votre ERP, votre facturation et votre site pour que les données circulent seules. Diagnostic gratuit sous 24 h ouvrées."
 schemaService: true
 serviceType: "Intégration et automatisation d'outils métier"
 ---
@@ -11,6 +11,8 @@ un deuxième pour la facture, puis dans un tableur pour le suivi. Quelqu'un chez
 vous passe des heures par semaine à recopier des données d'un écran à l'autre, et
 une erreur de frappe finit toujours par coûter cher. C'est exactement ce que je
 règle.
+
+{{< cta-top >}}
 
 ## Ce que je connecte
 
@@ -122,7 +124,7 @@ m'arrive de répondre que non.
 
 **Je ne sais pas si mes logiciels peuvent être connectés.**
 C'est normal, et c'est ma première vérification. Donnez-moi leurs noms, je vous
-réponds sous 24 h.
+réponds sous 24 h ouvrées.
 
 **Mes données vont circuler, est-ce que c'est sûr ?**
 Je crée des accès réservés à cet usage, avec le minimum de droits, que vous
@@ -147,7 +149,7 @@ déplacement.
 ## Dites-moi ce que vous recopiez à la main
 
 Décrivez le trajet que suit l'information chez vous aujourd'hui. Je vous réponds
-sous 24 h en vous disant si c'est automatisable et ce que ça représente.
+sous 24 h ouvrées en vous disant si c'est automatisable et ce que ça représente.
 
 {{< contact-channels >}}
 

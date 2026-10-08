@@ -1,13 +1,15 @@
 ---
 title: "Dépannage de site web en urgence"
 date: 2026-10-08
-description: "Site planté, erreur 500, formulaire cassé, site piraté ? Développeur indépendant à Rennes, j'interviens à distance partout en France. Pré-diagnostic gratuit sous 24 h et fourchette de prix avant toute intervention."
+description: "Site planté, erreur 500, formulaire cassé, site piraté ? Développeur indépendant à Rennes, j'interviens à distance partout en France. Pré-diagnostic gratuit sous 24 h ouvrées et fourchette de prix avant toute intervention."
 schemaService: true
 ---
 
 Votre site est inaccessible, affiche une erreur, ou ne fonctionne plus comme
 avant. Vous ne savez pas si c'est grave, combien de temps ça prendra, ni combien
 ça va coûter. Voici comment ça se passe.
+
+{{< cta-top >}}
 
 ## Ce que je répare
 
@@ -36,7 +38,7 @@ documenté, sans accès complet. C'est faisable.
 **1. Vous décrivez la situation.** Un formulaire, cinq champs. L'adresse de votre
 site, ce qui se passe, depuis quand. Pas besoin de vocabulaire technique.
 
-**2. Je vous réponds sous 24 h.** Vous recevez un pré-diagnostic écrit : ce qui
+**2. Je vous réponds sous 24 h ouvrées.** Vous recevez un pré-diagnostic écrit : ce qui
 semble cassé, ce que ça implique, et une fourchette de prix. Gratuit, sans
 engagement.
 
@@ -92,14 +94,25 @@ ou à un juriste.
 J'interviens à distance, partout en France. La quasi-totalité des pannes web se
 traite sans déplacement.
 
+**Quand êtes-vous joignable ?**
+Du lundi au vendredi, de 8 h à 18 h. Pendant ces heures, WhatsApp est le canal
+le plus rapide : c'est celui que je regarde en premier quand un site est tombé.
+Par courriel ou par le formulaire, vous avez une réponse écrite sous 24 h
+ouvrées.
+
+**Et si mon site tombe un samedi ?**
+J'interviens aussi le week-end pour les urgences, avec une majoration que je
+vous annonce avant de commencer. Écrivez sur WhatsApp en décrivant la panne, je
+vous dis si je peux prendre la main et à quel prix.
+
 **Combien de temps pour réparer ?**
-Le pré-diagnostic arrive sous 24 h. La réparation dépend de la panne : quelques
+Le pré-diagnostic arrive sous 24 h ouvrées. La réparation dépend de la panne : quelques
 heures pour un cas simple, quelques jours pour une reprise de code ancien. Le
 délai vous est annoncé dans le devis, avant que vous validiez.
 
 ## Décrivez votre panne
 
-Remplissez le formulaire de diagnostic. Vous recevez une réponse sous 24 h avec
+Remplissez le formulaire de diagnostic. Vous recevez une réponse sous 24 h ouvrées avec
 un pré-diagnostic et un ordre de prix, sans engagement.
 
 {{< contact-channels >}}

@@ -1,11 +1,11 @@
 ---
 title: "Me contacter"
 date: 2026-10-08
-description: "Décrivez votre situation en quelques lignes. Je réponds sous 24 h avec un pré-diagnostic et un ordre de prix, sans engagement. WhatsApp si votre site est en panne maintenant."
+description: "Décrivez votre situation en quelques lignes. Je réponds sous 24 h ouvrées avec un pré-diagnostic et un ordre de prix, sans engagement. WhatsApp si votre site est en panne maintenant."
 ---
 
 Décrivez votre situation, même en deux phrases et sans vocabulaire technique.
-Je vous réponds sous 24 h avec un premier avis, ce qui semble en cause, et un
+Je vous réponds sous 24 h ouvrées avec un premier avis, ce qui semble en cause, et un
 ordre de prix. C'est gratuit et vous n'êtes engagé à rien.
 
 {{< contact-channels >}}

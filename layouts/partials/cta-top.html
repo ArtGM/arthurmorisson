@@ -1,0 +1,19 @@
+{{/* Appel à l'action en haut des pages de service.
+
+     L'audit a relevé que le premier bouton arrivait après environ 650 mots :
+     un visiteur dont le site est tombé devait lire toute la page avant de
+     trouver comment joindre quelqu'un. Ce bloc met l'action à portée
+     immédiate, sans masquer le contenu qui suit.
+
+     Le numéro n'est jamais en clair dans le HTML, voir contact-phone.html. */}}
+{{- $ctx := .ctx -}}
+<div class="cta-top">
+  <a class="btn-nudge" href="/contact/">
+    Décrire ma situation
+    <span class="nudge-arrow" aria-hidden="true">&rarr;</span>
+  </a>
+  <p class="cta-top-aside">
+    <strong>Site en panne maintenant ?</strong>
+    {{ partial "contact-phone.html" (dict "mode" "wa" "ctx" $ctx) }}
+  </p>
+</div>

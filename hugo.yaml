@@ -226,6 +226,21 @@ params:
     enable: true
     title: "Cas concrets"
     items:
+      - title: "Alternav : site refait, administration autonome, retour dans les résultats Google"
+        content: "Un expert maritime indépendant (La Rochelle, Caen, Méditerranée) avait un ancien site qui n'apparaissait plus sur Google, et dont il ne pouvait rien modifier sans aide. Refonte complète du site, avec une administration qui lui permet de gérer son contenu lui-même. Paramétrage complet pour les moteurs de recherche, nettoyage des résultats parasites, et prise en main de ses fiches Google. Son site est ressorti dans les résultats, et il n'a plus besoin de personne pour le mettre à jour."
+        image: /images/projects/alternav.webp
+        featured:
+          name: "Voir le site"
+          link: "https://alternav.fr"
+        badges:
+          - "Refonte complète"
+          - "Administration autonome"
+          - "Visibilité Google"
+          - "Fiche Google"
+        links:
+          - icon: fa fa-globe
+            url: "https://alternav.fr"
+
       - title: "Picksea : boutique en ligne de plusieurs milliers de références"
         content: "Boutique d'équipement nautique conçue et développée sous PrestaShop : plusieurs milliers de références, près de 200 marques, un espace réservé aux professionnels, plusieurs transporteurs et le paiement en plusieurs fois. Mission réalisée comme développeur pour l'agence Lamour du Web. La boutique tourne toujours et affiche 9,1 sur 10 pour plus de 4 000 avis clients."
         image: /images/projects/picksea.webp
@@ -257,7 +272,7 @@ params:
             url: "https://so-transactions.immo/"
 
       - title: "Suppliers from Bretagne : catalogue alimenté par les entreprises elles-mêmes"
-        content: "Place de marché de Bretagne Commerce International, qui met en relation des acheteurs internationaux avec des fournisseurs bretons. J'ai connecté le site à des outils no-code pour que les entreprises bretonnes saisissent elles-mêmes leurs informations, qui remontent directement dans le catalogue sans ressaisie. J'ai aussi mis en place la publication d'actualités et la connexion directe avec leur CRM Microsoft, pour que les contacts et les fiches entreprises circulent entre le site et leurs outils internes. Conception et développement comme développeur pour l'agence Lamour du Web."
+        content: "Place de marché de Bretagne Commerce International, qui met en relation des acheteurs internationaux avec des fournisseurs bretons. J'ai connecté le site à des outils no-code pour que les entreprises bretonnes saisissent elles-mêmes leurs informations, qui remontent directement dans le catalogue sans ressaisie. J'ai aussi mis en place la publication d'actualités et la connexion directe avec leur CRM Microsoft, pour que les contacts et les fiches entreprises circulent entre le site et leurs outils internes. Conception et développement comme développeur pour l'agence Lamour du Web, sous sa marque Lamour du Shop."
         image: /images/projects/suppliers-from-bretagne.webp
         featured:
           name: "Voir le site"
@@ -270,21 +285,6 @@ params:
         links:
           - icon: fa fa-globe
             url: "https://www.suppliers-from-bretagne.com/"
-
-      - title: "Alternav : site refait, administration autonome, retour dans les résultats Google"
-        content: "Un expert maritime indépendant (La Rochelle, Caen, Méditerranée) avait un ancien site qui n'apparaissait plus sur Google, et dont il ne pouvait rien modifier sans aide. Refonte complète du site, avec une administration qui lui permet de gérer son contenu lui-même. Paramétrage complet pour les moteurs de recherche, nettoyage des résultats parasites, et prise en main de ses fiches Google. Son site est ressorti dans les résultats, et il n'a plus besoin de personne pour le mettre à jour."
-        image: /images/projects/alternav.webp
-        featured:
-          name: "Voir le site"
-          link: "https://alternav.fr"
-        badges:
-          - "Refonte complète"
-          - "Administration autonome"
-          - "Visibilité Google"
-          - "Fiche Google"
-        links:
-          - icon: fa fa-globe
-            url: "https://alternav.fr"
 
   contact:
     enable: true

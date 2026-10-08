@@ -79,7 +79,7 @@ une fois et part partout.
 C'est exactement le genre de trajet d'information que je décris plus haut, à une
 autre échelle. Le site public de ce réseau est visible sur
 [so-transactions.immo](https://so-transactions.immo/), l'application de gestion
-est interne. Mission réalisée comme développeur pour l'agence Lamour du Web.
+est interne. Mission réalisée comme développeur pour l'agence Lamour du Web, sous sa marque Lamour du Shop.
 
 ## Un deuxième exemple, dans l'autre sens
 
@@ -96,7 +96,7 @@ site public et leurs outils internes.
 
 C'est visible sur
 [suppliers-from-bretagne.com](https://www.suppliers-from-bretagne.com/). Mission
-réalisée comme développeur pour l'agence Lamour du Web.
+réalisée comme développeur pour l'agence Lamour du Web, sous sa marque Lamour du Shop.
 
 ## Combien ça coûte
 

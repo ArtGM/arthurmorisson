@@ -40,8 +40,9 @@ recherche. Ce n'est pas une prestation en plus, c'est la base.
 **Il fonctionne sur téléphone.** La majorité de vos visiteurs arriveront depuis
 un mobile. Le site est conçu pour cet écran d'abord.
 
-**Vous êtes propriétaire de tout.** Le nom de domaine, l'hébergement et le code
-sont à vous. Si un jour vous changez de prestataire, vous partez avec votre site.
+**Vous êtes propriétaire de tout.** Le nom de domaine et le code sont à votre
+nom. Que le site soit hébergé chez vous ou chez moi, vous pouvez partir avec à
+tout moment, et je vous remets les fichiers sans discussion.
 
 ## Comment ça se passe
 
@@ -90,6 +91,13 @@ options de livraison, et les connexions à prévoir avec vos outils existants.
 que l'état du site de départ change tout. Reprendre un site coûte au moins aussi
 cher que d'en créer un, et parfois davantage.
 
+**Hébergement, si vous voulez me le confier : à partir de 120 € par an.**
+Facultatif. Vous pouvez tout à fait rester chez votre hébergeur actuel. Je gère
+déjà l'hébergement des sites de mes clients, chez un hébergeur suisse, avec les
+sauvegardes et le certificat de sécurité compris. L'intérêt pour vous : un seul
+interlocuteur quand quelque chose cloche, au lieu de renvoyer la faute entre le
+développeur et l'hébergeur.
+
 Au-delà de ces montants, un projet d'une autre ampleur, par exemple une boutique
 de plusieurs milliers de références avec un espace réservé aux professionnels,
 est chiffré séparément.
@@ -110,9 +118,11 @@ quelque chose, je vous dis ce que ça coûte avant de le faire.
 ## Questions fréquentes
 
 **Il me faut un nom de domaine et un hébergement, c'est compris ?**
-Je m'occupe de les mettre en place et je vous explique quoi payer et à qui. Ces
-abonnements sont à votre nom, pas au mien, et coûtent quelques dizaines d'euros
-par an. Vous restez maître de vos accès.
+Le nom de domaine est toujours à votre nom, et je m'occupe de le mettre en
+place. Pour l'hébergement, vous choisissez : rester chez votre hébergeur
+actuel, ou me le confier à partir de 120 € par an. Dans les deux cas vous
+restez maître de vos accès, et vous pouvez partir avec votre site quand vous
+voulez.
 
 **Combien de temps avant la mise en ligne ?**
 Comptez deux à quatre semaines pour un site vitrine, six à dix pour une

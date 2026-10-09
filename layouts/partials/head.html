@@ -7,17 +7,22 @@
         trois fois (preload, astuce media=print, puis un <link rel=stylesheet> nu
         donc bloquant), et demandait 12 graisses de Roboto jamais rendues. Le
         site sert maintenant une seule famille variable depuis son domaine, voir
-        assets/css/fonts.css. On
+        assets/css/fonts.css.
 
      2. Le type du favicon, annoncé image/gif par le thème pour un fichier PNG.
 
-     Pour régénérer les polices (mise à jour du thème, changement de typo) :
+     Pour régénérer les polices (changement de typo) :
        a. relever les familles et graisses réellement rendues, par exemple avec
           Array.from(document.fonts).filter(f => f.status === 'loaded')
        b. récupérer la CSS Google Fonts correspondante avec un User-Agent moderne
           pour obtenir du WOFF2
-       c. télécharger les sous-ensembles latin et latin-ext, puis sous-ensembler
-          sur le jeu français avec pyftsubset
+       c. télécharger les sous-ensembles latin et latin-ext
+       d. mettre à jour assets/css/fonts.css et le preload ci-dessous
+
+     NE PAS SUPPRIMER la fermeture de commentaire qui suit. Sans elle, le
+     commentaire court jusqu'à la fermeture suivante du fichier et avale tout
+     le début du head : charset, viewport, favicon, OpenGraph et Twitter cards
+     disparaissent de la page sans que le build signale quoi que ce soit. */}}
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

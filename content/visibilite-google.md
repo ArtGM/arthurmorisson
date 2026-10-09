@@ -104,11 +104,10 @@ moteurs de recherche, nettoyé les résultats parasites et pris en main ses fich
 Google.
 
 Voici ce que dit sa Search Console. Le site est en ligne depuis le 18 mai 2026.
-En septembre, il recevait 55 visites depuis Google dans le mois, contre 11 au
-mois de la mise en ligne. Sur l'ensemble de la période, 162 visites pour
-1 553 affichages, sur 34 recherches différentes.
+En quatre mois, ses visites depuis Google ont été multipliées par cinq, sans
+qu'aucun mois ne recule.
 
-Et le chiffre que je regarde en premier : 20 de ces visites viennent de la
+Et le chiffre que je regarde en premier : plus d'une visite sur dix vient de la
 recherche « expert maritime lorient ». Ce sont des clients potentiels qui ne le
 connaissaient pas et qui cherchaient son métier près de chez eux. C'est ce que
 vous achetez quand vous payez pour de la visibilité : pas des visites de gens

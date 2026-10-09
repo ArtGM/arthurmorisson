@@ -28,16 +28,15 @@ résultats parasites qui s'affichaient à son nom, et prise en main de ses fiche
 Google.
 
 **Le résultat, mesuré dans sa Search Console.** Le site a été mis en ligne le
-18 mai 2026. Depuis, et jusqu'au 6 octobre, il a reçu 162 visites depuis Google
-pour 1 553 affichages dans les résultats, sur 34 recherches différentes. La
-progression est continue : 11 visites en mai, 19 en juin, 32 en juillet, 40 en
-août, 55 en septembre.
+18 mai 2026. En quatre mois, ses visites depuis Google ont été multipliées par
+cinq et ses affichages dans les résultats par plus de trois, avec une
+progression qui n'a baissé aucun mois.
 
 Le chiffre qui compte le plus n'est pas le plus gros. Une partie de ces visites
 vient de personnes qui cherchaient « Alternav » et le connaissaient déjà. Mais
-20 visites viennent de la recherche « expert maritime lorient », pour 219
-affichages : des gens qui ne le connaissaient pas et qui cherchaient
-simplement quelqu'un de son métier près de chez eux.
+plus d'une visite sur dix vient de la recherche « expert maritime lorient » :
+des gens qui ne le connaissaient pas et qui cherchaient simplement quelqu'un de
+son métier près de chez eux.
 
 [alternav.fr](https://alternav.fr)
 

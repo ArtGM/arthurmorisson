@@ -83,7 +83,8 @@ params:
     - "SEO"
     - "Core Web Vitals"
   images:
-    - "/images/moi-og.jpg"
+    # Carte générée, voir tools/og-card.html et tools/og-render.py.
+    - "/images/og.jpg"
   author: "Arthur Morisson"
   favicon: "/images/favicon.png"
   useBootstrapCDN: false
@@ -146,7 +147,7 @@ params:
     title: "Je répare votre site et je le remets sur Google"
     subtitle: "Erreur 500, site lent, formulaire cassé, disparition des résultats."
     content: "8 ans d'expérience. Je diagnostique, je répare, et je vous explique ce qui s'est passé. Sans jargon, avec un devis clair avant toute intervention."
-    image: /images/moi-square.webp
+    image: /images/hero-abstrait.svg
     roundImage: true
     bottomImage:
       enable: false

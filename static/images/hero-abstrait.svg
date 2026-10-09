@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="Visuel abstrait">
+  <!-- Visuel abstrait du hero. Remplace le portrait.
+
+       Lu dans un cadre rond avec l'effet écran, donc la composition est centrée
+       et ne compte sur aucun coin. Le fond est opaque et foncé : le même fichier
+       passe sur le thème clair et sur le thème sombre, sans variante.
+
+       Couleurs : la primaire du site (#0f6466) et sa variante de thème sombre
+       (#5fd3d1), pour que le visuel appartienne à la même palette que les
+       boutons et les titres. -->
+  <defs>
+    <radialGradient id="fond" cx="38%" cy="32%" r="78%">
+      <stop offset="0%" stop-color="#14797b"/>
+      <stop offset="62%" stop-color="#0f6466"/>
+      <stop offset="100%" stop-color="#07393b"/>
+    </radialGradient>
+    <linearGradient id="trace" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5fd3d1" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#9ff0ee" stop-opacity="1"/>
+    </linearGradient>
+    <clipPath id="cadre"><circle cx="300" cy="300" r="300"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#cadre)">
+    <rect width="600" height="600" fill="url(#fond)"/>
+
+    <!-- Ondes concentriques : le signal qui repart. -->
+    <g fill="none" stroke="#5fd3d1" stroke-linecap="round">
+      <circle cx="170" cy="430" r="86"  stroke-opacity="0.42" stroke-width="2"/>
+      <circle cx="170" cy="430" r="150" stroke-opacity="0.30" stroke-width="2"/>
+      <circle cx="170" cy="430" r="222" stroke-opacity="0.20" stroke-width="2"/>
+      <circle cx="170" cy="430" r="300" stroke-opacity="0.12" stroke-width="2"/>
+      <circle cx="170" cy="430" r="384" stroke-opacity="0.07" stroke-width="2"/>
+    </g>
+
+    <!-- Trame de fond, discrète, qui rappelle une structure de page. -->
+    <g stroke="#9ff0ee" stroke-opacity="0.07" stroke-width="1">
+      <path d="M0 150h600M0 250h600M0 350h600M0 450h600"/>
+      <path d="M150 0v600M250 0v600M350 0v600M450 0v600"/>
+    </g>
+
+    <!-- La courbe qui remonte. -->
+    <polyline points="78,452 168,408 248,430 330,318 410,268 500,150"
+              fill="none" stroke="url(#trace)" stroke-width="12"
+              stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#9ff0ee">
+      <circle cx="330" cy="318" r="10" fill-opacity="0.9"/>
+      <circle cx="500" cy="150" r="17"/>
+    </g>
+
+    <!-- Quelques repères, pour casser la symétrie. -->
+    <g fill="#5fd3d1">
+      <rect x="432" y="430" width="22" height="22" rx="5" fill-opacity="0.5"/>
+      <rect x="474" y="472" width="14" height="14" rx="4" fill-opacity="0.33"/>
+      <circle cx="140" cy="150" r="7" fill-opacity="0.55"/>
+      <circle cx="196" cy="112" r="4" fill-opacity="0.4"/>
+    </g>
+  </g>
+</svg>

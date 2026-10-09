@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<!-- Source de l'image d'aperçu des liens partagés, /images/og.png.
+
+     Ce fichier n'est pas publié : Hugo ne sert que static/ et content/. Il
+     existe pour que la carte soit reproductible, et pas un PNG tombé du ciel
+     que personne ne saurait refaire.
+
+     Pour la régénérer après un changement de texte ou de couleurs :
+       python3 tools/og-render.py
+     puis vérifier le poids de static/images/og.png.
+
+     Les polices sont lues directement dans static/fonts, donc la carte est
+     typographiée comme le site. -->
+<style>
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../static/fonts/jakarta-fr.woff2') format('woff2');
+    font-weight: 400 800;
+    font-display: block;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #07393b;
+    color: #ffffff;
+    position: relative;
+  }
+  .fond {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(120% 140% at 12% 8%, #14797b 0%, #0f6466 55%, #07393b 100%);
+  }
+  .trame {
+    position: absolute; inset: 0; opacity: 0.09;
+    background-image:
+      linear-gradient(#9ff0ee 1px, transparent 1px),
+      linear-gradient(90deg, #9ff0ee 1px, transparent 1px);
+    background-size: 100px 100px;
+  }
+  .ondes { position: absolute; left: -180px; bottom: -220px; width: 760px; height: 760px; }
+  .contenu {
+    position: relative; height: 100%;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 0 86px;
+  }
+  .sur-titre {
+    font-size: 27px; font-weight: 600; letter-spacing: 0.02em;
+    color: #9ff0ee; margin-bottom: 26px;
+  }
+  h1 {
+    font-size: 72px; font-weight: 800; line-height: 1.1;
+    letter-spacing: -0.015em; max-width: 16ch;
+  }
+  .promesse {
+    margin-top: 30px; font-size: 30px; font-weight: 400;
+    color: rgba(255,255,255,0.86); max-width: 30ch; line-height: 1.35;
+  }
+  .pied {
+    position: absolute; left: 86px; bottom: 54px;
+    font-size: 25px; font-weight: 600; color: #9ff0ee;
+  }
+  .courbe { position: absolute; right: 70px; bottom: 70px; width: 300px; height: 230px; }
+</style>
+</head>
+<body>
+  <div class="fond"></div>
+  <div class="trame"></div>
+
+  <svg class="ondes" viewBox="0 0 760 760" fill="none" stroke="#5fd3d1" stroke-width="2">
+    <circle cx="380" cy="380" r="120" stroke-opacity="0.26"/>
+    <circle cx="380" cy="380" r="205" stroke-opacity="0.19"/>
+    <circle cx="380" cy="380" r="290" stroke-opacity="0.13"/>
+    <circle cx="380" cy="380" r="375" stroke-opacity="0.08"/>
+  </svg>
+
+  <div class="contenu">
+    <div class="sur-titre">Arthur Morisson, développeur web indépendant</div>
+    <h1>Je répare votre site et je le remets sur Google</h1>
+    <div class="promesse">Erreur 500, site lent, formulaire cassé, disparition des résultats.</div>
+  </div>
+
+  <svg class="courbe" viewBox="0 0 300 230" fill="none">
+    <defs>
+      <linearGradient id="t" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0%" stop-color="#5fd3d1" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#9ff0ee"/>
+      </linearGradient>
+    </defs>
+    <polyline points="12,206 76,170 132,186 186,106 232,74 288,18"
+              stroke="url(#t)" stroke-width="13"
+              stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="186" cy="106" r="10" fill="#9ff0ee" fill-opacity="0.9"/>
+    <circle cx="288" cy="18" r="17" fill="#9ff0ee"/>
+  </svg>
+
+  <div class="pied">arthurmorisson.fr</div>
+</body>
+</html>

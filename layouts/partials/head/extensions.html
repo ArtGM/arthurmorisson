@@ -9,7 +9,7 @@
 
 {{ if .IsHome }}
   {{ $base := .Site.BaseURL }}
-  {{ $img := "/images/moi-og.jpg" | absURL }}
+  {{ $img := "/images/og.jpg" | absURL }}
   {{ $desc := .Site.Params.description }}
   {{ $serviceId := printf "%s#service" $base }}
   {{ $person := dict
@@ -84,7 +84,7 @@
 
 {{ if and (eq .Kind "page") (eq .Type "blog") }}
   {{ $base := .Site.BaseURL }}
-  {{ $logoImg := "/images/moi-og.jpg" | absURL }}
+  {{ $logoImg := "/images/og.jpg" | absURL }}
   {{ $img := "" }}
   {{ with .Params.image }}{{ $img = . | absURL }}{{ else }}{{ $img = $logoImg }}{{ end }}
   {{ $author := dict
@@ -139,7 +139,7 @@
      deux endroits. Ajouter un priceSpecification quand les tarifs seront fermes. */}}
 {{ if .Params.schemaService }}
   {{ $base := .Site.BaseURL }}
-  {{ $logoImg := "/images/moi-og.jpg" | absURL }}
+  {{ $logoImg := "/images/og.jpg" | absURL }}
   {{ $provider := dict
     "@type" "ProfessionalService"
     "@id" (printf "%s#service" $base)

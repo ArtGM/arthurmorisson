@@ -166,9 +166,10 @@
                         </div>
                     </li>
                     {{else}}
-                    <!-- Single menu item -->
+                    <!-- Single menu item. params.cta sur l'entree de menu la
+                         rend en bouton plein, voir .nav-cta dans zz-custom.css. -->
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{.URL}}" title="{{ .Title }}">
+                        <a class="nav-link{{ if .Params.cta }} nav-cta{{ end }}" href="{{.URL}}" title="{{ .Title }}">
                             {{ .Pre }}
                             {{ .Name }}
                         </a>

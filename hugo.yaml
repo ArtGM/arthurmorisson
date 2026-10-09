@@ -59,6 +59,10 @@ menus:
       title: "Me contacter"
       url: "/contact/"
       weight: 7
+      # Rendue en bouton plein dans la barre de navigation, voir la classe
+      # nav-cta dans layouts/partials/sections/header.html.
+      params:
+        cta: true
 
 params:
   title: "Arthur Morisson : dépannage de site web et visibilité sur Google"

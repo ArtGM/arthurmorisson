@@ -501,3 +501,41 @@ body.dark .cta-top {
     padding-left: 1.5rem;
   }
 }
+
+/* --- Contact en bouton dans la barre de navigation ---
+
+   Le menu alignait Contact avec les six autres entrées, donc l'action payante
+   avait le même poids visuel qu'un lien de rubrique. En bouton plein, c'est le
+   seul élément coloré de la barre.
+
+   Les couleurs de texte sont posées en !important parce que header.css impose
+   déjà la couleur des .nav-link au survol avec la même arme. En thème sombre, la
+   couleur primaire est un turquoise clair : le texte y passe en sombre, sinon le
+   contraste tombe sous le seuil lisible. */
+
+.navbar .nav-link.nav-cta {
+  background-color: var(--primary-color);
+  color: #ffffff !important;
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.95rem;
+}
+
+/* La marge ne vaut que pour le menu horizontal : dans le menu replié, le bouton
+   occupe toute la largeur et la marge le décalait de 6 px vers la droite. */
+@media (min-width: 992px) {
+  .navbar .nav-link.nav-cta {
+    margin-left: 0.35rem;
+  }
+}
+
+.navbar .nav-link.nav-cta:hover,
+.navbar .nav-link.nav-cta:focus-visible {
+  color: #ffffff !important;
+  opacity: 0.9;
+}
+
+body.dark .navbar .nav-link.nav-cta,
+body.dark .navbar .nav-link.nav-cta:hover,
+body.dark .navbar .nav-link.nav-cta:focus-visible {
+  color: var(--background-color-dark) !important;
+}

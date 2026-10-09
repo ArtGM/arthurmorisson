@@ -326,6 +326,9 @@ params:
     phone: "0695791273"
     email: "contact@arthurmorisson.fr"
 
+  # Titulaire affiché dans le pied de page, devant params.terms.copyright.
+  copyright: "Arthur Morisson"
+
   footer:
     recentPosts:
       path: "blog"

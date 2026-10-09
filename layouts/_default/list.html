@@ -18,14 +18,25 @@
             <div class="card h-100">
                 {{ if and (not (.Site.Params.listPages.disableFeaturedImage | default false)) (.Params.image) }}
                 <div class="card-header">
+                    {{- $key := .Params.image | path.Base | strings.TrimSuffix (path.Ext .Params.image) -}}
+                    {{- $meta := index site.Data.lqip $key -}}
                     <a href="{{ .RelPermalink }}">
-                        <img src="{{ .Params.image }}" class="card-img-top" alt="{{ .Title }}">
+                        <img src="{{ .Params.image }}"
+                             class="card-img-top"
+                             alt="{{ .Params.imageAlt | default .Title }}"
+                             {{- with $meta }}
+                             width="{{ .width }}"
+                             height="{{ .height }}"
+                             style="{{ printf "background-image:url(%s);background-size:cover;background-position:center top;background-repeat:no-repeat" .lqip | safeCSS }}"
+                             {{- end }}
+                             loading="lazy"
+                             decoding="async">
                     </a>
                 </div>
                 {{ end }}
                 <div class="card-body bg-transparent p-4 shadow-sm">
                     <a href="{{ .RelPermalink }}" class="primary-font card-title">
-                        <h4 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 25 }}</h4>
+                        <h4 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 70 }}</h4>
                     </a>
                     <div class="card-text secondary-font">
                         <p>{{ .Summary | truncate 300}}</p>

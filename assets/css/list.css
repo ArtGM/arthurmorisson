@@ -56,6 +56,10 @@
     width: 100%;
     height: 250px !important;
     background-color: transparent !important;
+    /* Sans object-fit, la hauteur imposée étire l'image : une capture de
+       1000x346 se retrouvait déformée. On recadre plutôt que de déformer. */
+    object-fit: cover;
+    object-position: center top;
 }
 
 /* pagination */

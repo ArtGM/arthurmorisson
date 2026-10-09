@@ -348,3 +348,21 @@ a.btn-nudge:focus-visible .nudge-arrow {
   background-color: var(--primary-color);
   color: var(--background-color) !important;
 }
+
+/* --- Cartes de la liste du blog ---
+
+   Le titre de carte n'était couvert par aucune règle du thème : il retombait
+   sur la couleur de lien par défaut de Bootstrap, un bleu vif étranger à la
+   palette. Invisible tant que le blog était vide. */
+
+#list-page .card-title,
+#list-page a.card-title,
+#list-page a.card-title .card-title {
+  color: var(--text-color) !important;
+  text-decoration: none;
+}
+
+#list-page a.card-title:hover .card-title,
+#list-page a.card-title:focus-visible .card-title {
+  color: var(--primary-color) !important;
+}

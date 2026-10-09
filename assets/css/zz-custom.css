@@ -40,12 +40,33 @@
 
    Mesure typographique usuelle : 45 à 75 caractères par ligne, optimum autour
    de 66. Le texte de la section Services atteignait 83 caractères en 1440px,
-   parce que le thème laisse la colonne occuper toute sa largeur. L'unité ch
-   plafonne la ligne indépendamment de la taille de police choisie. */
+   parce que le thème laisse la colonne occuper toute sa largeur.
+
+   Deux pièges, trouvés en mesurant au navigateur.
+
+   L'unité ch vaut la largeur du chiffre 0 : elle suit donc la taille de police,
+   mais aussi la famille et la graisse. Le passage de Lora à Plus Jakarta Sans a
+   élargi le même plafond de 578 à 685 px, soit 95 caractères par ligne au lieu
+   de 76.
+
+   Surtout, ch est relative à la police de CHAQUE élément. Un plafond en ch sur
+   un titre à 32 px valait 977 px, donc ne plafonnait rien : les titres
+   débordaient de 149 px à gauche de la colonne de texte. La mesure est donc en
+   rem, identique pour le texte, les titres et l'image de tête, ce qui est la
+   condition pour qu'ils partagent le même bord.
+
+   31rem vaut 496 px, mesuré à 68 caractères par ligne en médiane avec la typo
+   actuelle. À revérifier en comptant les caractères rendus, jamais au jugé,
+   après tout changement de typo. */
+
+:root {
+  --mesure: 31rem;
+  --mesure-code: 37rem;
+}
 
 #about .content p,
 #about .content ul {
-  max-width: 68ch;
+  max-width: var(--mesure);
 }
 
 /* Le bloc de texte est centré sous le titre, qui l'est aussi. C'est le bloc
@@ -61,13 +82,13 @@
 #single .page-content h4,
 #single .page-content pre,
 #single .page-content table {
-  max-width: 68ch;
+  max-width: var(--mesure);
   margin-left: auto;
   margin-right: auto;
 }
 
 #single .page-content pre {
-  max-width: 80ch;
+  max-width: var(--mesure-code);
 }
 
 /* --- Listes des articles ---
@@ -89,7 +110,7 @@
 /* --- Préférence de canal de contact --- */
 
 .contact-channels {
-  max-width: 68ch;
+  max-width: var(--mesure);
   margin: 1.5rem auto 2rem;
 }
 
@@ -111,10 +132,19 @@
    laisse occuper la colonne, sans dépasser, et on arrondit pour rester cohérent
    avec les cartes du thème. */
 
+/* L'image de tete suit la meme mesure que le texte, sinon elle depasse la
+   colonne de lecture et la page semble avoir deux largeurs. Le min() est
+   indispensable : cette regle remplace le max-width: 100% de .img-fluid, et
+   sans lui l'image gardait 496 px dans un ecran de 390, ce qui faisait
+   deborder la page horizontalement. */
+#single .featured-image img {
+  max-width: min(100%, var(--mesure));
+}
+
 #single .page-content img {
   display: block;
   width: 100%;
-  max-width: 68ch;
+  max-width: var(--mesure);
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -344,7 +374,7 @@ a.btn-nudge:focus-visible .nudge-arrow {
 
 .cta-top {
   margin: 1.5rem auto 2rem;
-  max-width: 68ch;
+  max-width: var(--mesure);
   background-color: var(--secondary-color);
   border: 1px solid #ced4da;
   border-radius: 0.7rem;
@@ -442,7 +472,7 @@ body.dark .cta-top {
    avec une mesure plafonnée comme le reste du site. */
 #about .content > p,
 #about .content > details {
-  max-width: 68ch;
+  max-width: var(--mesure);
 }
 
 /* --- Sommaire à gauche sur les pages de contenu ---

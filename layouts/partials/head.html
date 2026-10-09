@@ -5,7 +5,9 @@
 
      1. Les polices. Le thème déclarait la même feuille fonts.googleapis.com
         trois fois (preload, astuce media=print, puis un <link rel=stylesheet> nu
-        donc bloquant), et demandait 12 graisses de Roboto jamais rendues. On
+        donc bloquant), et demandait 12 graisses de Roboto jamais rendues. Le
+        site sert maintenant une seule famille variable depuis son domaine, voir
+        assets/css/fonts.css. On
 
      2. Le type du favicon, annoncé image/gif par le thème pour un fichier PNG.
 
@@ -23,8 +25,7 @@
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
 <link rel="icon" href="{{ (.Site.Params.favicon | default "fav.png") | strings.TrimPrefix "/" | relURL }}" type="image/png">
 
-<link rel="preload" as="font" type="font/woff2" href="{{ "fonts/alata-fr.woff2" | relURL }}" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="{{ "fonts/lora-fr.woff2" | relURL }}" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="{{ "fonts/jakarta-fr.woff2" | relURL }}" crossorigin>
 
 
 <!-- Internal templates -->

@@ -1,7 +1,9 @@
+/* 16 px, comme le reste du site : le theme montait a 17 px uniquement ici, ce
+   qui donnait deux tailles de corps de texte selon la page. */
 #single {
     padding: 60px 0;
     line-height: 1.7em;
-    font-size: 17px;
+    font-size: 1rem;
 }
 
 #single .title > h1 {

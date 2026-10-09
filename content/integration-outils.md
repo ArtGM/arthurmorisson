@@ -113,6 +113,8 @@ pour communiquer.
 que les connexions tournent, je corrige si un éditeur change quelque chose de son
 côté, et vous êtes prévenu avant que ça vous pénalise.
 
+{{< pack-accompagnement >}}
+
 Ces montants sont indicatifs. Le prix exact dépend du périmètre réel de votre
 projet, et il vous est donné dans un devis ferme avant que je commence quoi que
 ce soit.

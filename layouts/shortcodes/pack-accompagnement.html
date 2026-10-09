@@ -1,0 +1,19 @@
+{{/* Pack d'accompagnement, proposé avec les quatre prestations.
+
+     Même texte sur les quatre pages, donc un seul endroit à corriger : écrit en
+     HTML et non en markdown pour que le rendu soit identique aux paragraphes de
+     tarif qui l'entourent, qui sont des <p> avec un <strong> en tête.
+
+     Le tarif horaire vient de params.contact.tauxHoraire, pour que les deux
+     montants du pack ne puissent pas diverger du taux affiché.
+
+     Apostrophes courbes en dur : le markdown du site rend ' en &rsquo;, et ce
+     bloc court-circuite le markdown. Avec des apostrophes droites il serait le
+     seul de la page à ne pas être typographié comme le reste. */}}
+{{- $taux := site.Params.contact.tauxHoraire -}}
+<p><strong>Pack d’accompagnement : {{ mul $taux 5 }} € les 5 heures, {{ mul $taux 10 }} € les 10 heures.</strong>
+À {{ $taux }} € de l’heure, pour ce qui sort de la prestation elle-même : un
+conseil, la prise en main d’un outil, un avis avant de décider, un coup de main
+sur ce que vous voulez faire vous-même. Les heures s’utilisent quand vous
+voulez, et je vous dis ce qu’il vous reste à chaque fois. Ce tarif est ferme :
+il ne dépend pas du projet, contrairement aux montants ci-dessus.</p>

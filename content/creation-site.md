@@ -94,6 +94,8 @@ Au-delà de ces montants, un projet d'une autre ampleur, par exemple une boutiqu
 de plusieurs milliers de références avec un espace réservé aux professionnels,
 est chiffré séparément.
 
+{{< pack-accompagnement >}}
+
 Ces montants sont indicatifs. Le prix exact dépend du périmètre réel de votre
 projet, et il vous est donné dans un devis ferme avant que je commence quoi que
 ce soit.

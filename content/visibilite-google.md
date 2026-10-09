@@ -88,6 +88,8 @@ corrections, la remesure et le compte rendu.
 visibilité ne se dégrade pas, et je vous préviens avant que ça vous coûte des
 clients.
 
+{{< pack-accompagnement >}}
+
 Ces montants sont indicatifs. Le prix exact dépend du périmètre réel de votre
 projet, et il vous est donné dans un devis ferme avant que je commence quoi que
 ce soit.

@@ -348,6 +348,11 @@ params:
     # l'encode au build et le navigateur le reconstitue. Voir static/js ? non :
     # le script vit dans params.customScripts.
     phone: "0695791273"
+
+    # Taux horaire du pack d'accompagnement, en euros. Sert à calculer les deux
+    # montants du pack dans layouts/shortcodes/pack-accompagnement.html : changer
+    # ce nombre suffit, les 5 h et 10 h suivent.
+    tauxHoraire: 70
     email: "contact@arthurmorisson.fr"
 
   # Titulaire affiché dans le pied de page, devant params.terms.copyright.

@@ -65,6 +65,8 @@ endommagée.
 **Site lent ou introuvable sur Google : 600 à 1 200 €.** C'est une prestation à
 part, détaillée sur la page [Visibilité sur Google et vitesse](/visibilite-google/).
 
+{{< pack-accompagnement >}}
+
 Ces montants sont indicatifs. Le prix exact dépend du périmètre réel de votre
 projet, et il vous est donné dans un devis ferme avant que je commence quoi que
 ce soit.

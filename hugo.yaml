@@ -273,7 +273,7 @@ params:
       url: "/realisations/"
     items:
       - title: "Alternav : site refait, administration autonome, retour dans les résultats Google"
-        content: "Un expert maritime indépendant (La Rochelle, Caen, Méditerranée) avait un ancien site qui n'apparaissait plus sur Google, et dont il ne pouvait rien modifier sans aide. Refonte complète du site, avec une administration qui lui permet de gérer son contenu lui-même. Paramétrage complet pour les moteurs de recherche, nettoyage des résultats parasites, et prise en main de ses fiches Google. Son site est ressorti dans les résultats, et il n'a plus besoin de personne pour le mettre à jour."
+        content: "Un expert maritime indépendant, basé à Lorient et intervenant sur la Bretagne et la façade Atlantique, avait un ancien site dont il ne pouvait rien modifier sans aide. Refonte complète, avec une administration qui lui permet de gérer son contenu lui-même. Paramétrage complet pour les moteurs de recherche, nettoyage des résultats parasites, et prise en main de ses fiches Google. Mis en ligne le 18 mai 2026, son site recevait 55 visites depuis Google au mois de septembre, et il n'a plus besoin de personne pour le mettre à jour."
         image: /images/projects/alternav.webp
         featured:
           name: "Voir le site"
@@ -281,7 +281,7 @@ params:
         badges:
           - "Refonte complète"
           - "Administration autonome"
-          - "Visibilité Google"
+          - "55 visites Google par mois"
           - "Fiche Google"
         links:
           - icon: fa fa-globe

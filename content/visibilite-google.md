@@ -97,11 +97,22 @@ m'arrive de répondre que non.
 
 ## Un cas concret
 
-Un expert maritime indépendant avait un site qui n'apparaissait plus sur Google,
-et dont il ne pouvait rien modifier sans aide. J'ai refait le site avec une
-administration qu'il gère lui-même, repris tous les réglages pour les moteurs de
-recherche, nettoyé les pages inutiles qui s'affichaient dans les résultats, et
-pris en main ses fiches Google. Son site est réapparu dans les résultats.
+Un expert maritime indépendant de Lorient avait un site qu'il ne pouvait pas
+modifier et qui n'était pas construit pour être trouvé. J'ai refait le site avec
+une administration qu'il gère lui-même, repris tous les réglages pour les
+moteurs de recherche, nettoyé les résultats parasites et pris en main ses fiches
+Google.
+
+Voici ce que dit sa Search Console. Le site est en ligne depuis le 18 mai 2026.
+En septembre, il recevait 55 visites depuis Google dans le mois, contre 11 au
+mois de la mise en ligne. Sur l'ensemble de la période, 162 visites pour
+1 553 affichages, sur 34 recherches différentes.
+
+Et le chiffre que je regarde en premier : 20 de ces visites viennent de la
+recherche « expert maritime lorient ». Ce sont des clients potentiels qui ne le
+connaissaient pas et qui cherchaient son métier près de chez eux. C'est ce que
+vous achetez quand vous payez pour de la visibilité : pas des visites de gens
+qui vous connaissent déjà.
 
 Le détail est sur la page [Réalisations](/realisations/).
 

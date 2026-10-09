@@ -18,14 +18,26 @@ et une réalisation en solo ne racontent pas la même chose.
 
 ![Page d'accueil du site Alternav](/images/projects/alternav.webp)
 
-Expert maritime indépendant, présent à La Rochelle, Caen et en Méditerranée.
+Expert maritime indépendant, basé à Lorient et intervenant sur la Bretagne et
+la façade Atlantique.
 
-Son ancien site n'apparaissait plus sur Google et il ne pouvait rien y modifier
-sans aide. Refonte complète, avec une administration qui lui permet de gérer son
-contenu lui-même. Paramétrage complet pour les moteurs de recherche, nettoyage
-des résultats parasites, et prise en main de ses fiches Google. Son site est
-ressorti dans les résultats, et il n'a plus besoin de personne pour le mettre à
-jour.
+Son ancien site ne lui permettait de rien modifier sans aide, et n'était pas
+construit pour être trouvé. Refonte complète, avec une administration qu'il
+gère lui-même. Paramétrage complet pour les moteurs de recherche, nettoyage des
+résultats parasites qui s'affichaient à son nom, et prise en main de ses fiches
+Google.
+
+**Le résultat, mesuré dans sa Search Console.** Le site a été mis en ligne le
+18 mai 2026. Depuis, et jusqu'au 6 octobre, il a reçu 162 visites depuis Google
+pour 1 553 affichages dans les résultats, sur 34 recherches différentes. La
+progression est continue : 11 visites en mai, 19 en juin, 32 en juillet, 40 en
+août, 55 en septembre.
+
+Le chiffre qui compte le plus n'est pas le plus gros. Une partie de ces visites
+vient de personnes qui cherchaient « Alternav » et le connaissaient déjà. Mais
+20 visites viennent de la recherche « expert maritime lorient », pour 219
+affichages : des gens qui ne le connaissaient pas et qui cherchaient
+simplement quelqu'un de son métier près de chez eux.
 
 [alternav.fr](https://alternav.fr)
 

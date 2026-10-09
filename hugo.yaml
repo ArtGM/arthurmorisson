@@ -168,17 +168,41 @@ params:
     enable: true
     title: "Services"
     content: |-
+      <div class="offres">
+
+      <div class="offre">
+
       **Votre site est en panne.** Site planté, erreur au chargement, formulaire qui n'envoie plus, mise à jour qui a tout cassé. Je reprends un site existant, même ancien et mal documenté, je le répare et je le sécurise.
+
       [Dépannage : processus et tarifs](/depannage-urgence/)
 
+      </div>
+
+      <div class="offre">
+
       **Votre site est lent, ou absent de Google.** Vos clients ne vous trouvent pas, ou abandonnent avant que la page s'affiche. Je trouve pourquoi, je corrige, et je vous montre le résultat en chiffres.
+
       [Visibilité sur Google et vitesse](/visibilite-google/)
 
+      </div>
+
+      <div class="offre">
+
       **Vous n'avez pas de site, ou il est à refaire.** Site vitrine ou boutique en ligne, construits pour être trouvés sur Google dès le départ, et pour que vous puissiez les mettre à jour vous-même.
+
       [Création de site et de boutique](/creation-site/)
 
+      </div>
+
+      <div class="offre">
+
       **Vos outils ne se parlent pas.** Vous ressaisissez les mêmes informations dans votre logiciel de devis, votre fichier client et votre comptabilité. Je les connecte pour que ça se fasse tout seul.
+
       [Connexion de vos outils](/integration-outils/)
+
+      </div>
+
+      </div>
 
       Chaque intervention commence par un diagnostic gratuit et un ordre de prix. Vous décidez ensuite.
 

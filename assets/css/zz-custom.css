@@ -48,11 +48,26 @@
   max-width: 68ch;
 }
 
+/* Le bloc de texte est centré sous le titre, qui l'est aussi. C'est le bloc
+   qui est centré, pas l'alignement du texte : des paragraphes centrés se
+   lisent mal, et le lectorat visé est précisément celui qui lit le moins
+   facilement. */
 #single .page-content p,
 #single .page-content ul,
 #single .page-content ol,
-#single .page-content blockquote {
+#single .page-content blockquote,
+#single .page-content h2,
+#single .page-content h3,
+#single .page-content h4,
+#single .page-content pre,
+#single .page-content table {
   max-width: 68ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#single .page-content pre {
+  max-width: 80ch;
 }
 
 /* --- Listes des articles ---
@@ -99,8 +114,10 @@
 #single .page-content img {
   display: block;
   width: 100%;
-  max-width: 820px;
+  max-width: 68ch;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 0.75rem;
   margin: 1.2rem 0 1.6rem;
 }
@@ -320,7 +337,7 @@ a.btn-nudge:focus-visible .nudge-arrow {
 /* --- Appel à l'action en haut des pages de service --- */
 
 .cta-top {
-  margin: 1.5rem 0 2rem;
+  margin: 1.5rem auto 2rem;
   max-width: 68ch;
 }
 
@@ -365,4 +382,65 @@ a.btn-nudge:focus-visible .nudge-arrow {
 #list-page a.card-title:hover .card-title,
 #list-page a.card-title:focus-visible .card-title {
   color: var(--primary-color) !important;
+}
+
+/* --- Bloc Services ---
+
+   Le bloc est aligné sur la même largeur que les autres sections de la page
+   d'accueil. Une seule colonne de texte sur 1140px donnerait plus de
+   140 caractères par ligne, donc les quatre offres passent en deux colonnes :
+   les bords s'alignent et chaque offre garde une mesure lisible. */
+
+#about .offres {
+  display: grid;
+  gap: 1.5rem 3rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  #about .offres {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+#about .offre p {
+  max-width: 100%;
+}
+
+#about .offre p:last-child {
+  margin-bottom: 0;
+}
+
+/* Le texte de clôture et le repli technique restent sur toute la largeur,
+   avec une mesure plafonnée comme le reste du site. */
+#about .content > p,
+#about .content > details {
+  max-width: 68ch;
+}
+
+/* --- Sommaire à gauche sur les pages de contenu ---
+
+   Le déplacement se fait en CSS et non dans le balisage : le contenu reste
+   avant le sommaire dans l'ordre du document, ce qui est ce que lisent les
+   lecteurs d'écran et les robots, tout en s'affichant à droite de lui. */
+
+@media (min-width: 992px) {
+  #single > .container > .row {
+    display: flex;
+  }
+
+  #single > .container > .row > .col-lg-9 {
+    order: 2;
+  }
+
+  #single > .container > .row > .col-lg-3 {
+    order: 1;
+  }
+
+  /* La marge du thème poussait le texte à droite de son conteneur alors que le
+     sommaire était à droite. Elle est inversée. */
+  #single .pr-lg-4 {
+    padding-right: 0;
+    padding-left: 1.5rem;
+  }
 }

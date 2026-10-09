@@ -5,9 +5,14 @@
      trouver comment joindre quelqu'un. Ce bloc met l'action à portée
      immédiate, sans masquer le contenu qui suit.
 
+     Présenté dans un cadre repris du gabarit des encadrés de la colonne
+     latérale, pour qu'on voie au premier coup d'oeil que ce n'est pas du
+     texte d'article.
+
      Le numéro n'est jamais en clair dans le HTML, voir contact-phone.html. */}}
 {{- $ctx := .ctx -}}
-<div class="cta-top">
+<aside class="cta-top">
+  <p class="cta-top-lead">Diagnostic gratuit, réponse sous 24 h ouvrées.</p>
   <a class="btn-nudge" href="/contact/">
     Décrire ma situation
     <span class="nudge-arrow" aria-hidden="true">&rarr;</span>
@@ -16,4 +21,4 @@
     <strong>Site en panne maintenant ?</strong>
     {{ partial "contact-phone.html" (dict "mode" "wa" "ctx" $ctx) }}
   </p>
-</div>
+</aside>

@@ -336,9 +336,36 @@ a.btn-nudge:focus-visible .nudge-arrow {
 
 /* --- Appel à l'action en haut des pages de service --- */
 
+/* Le bloc reprend le cadre des encadres de la colonne laterale, defini par
+   `#single aside` : meme fond, meme rayon. On redeclare ici fond et rayon pour
+   que le bloc tienne seul s'il est un jour pose hors de #single, et on prefixe
+   par #single pour battre la regle du theme sur les marges et le rembourrage,
+   qui est portee par un selecteur d'identifiant. */
+
 .cta-top {
   margin: 1.5rem auto 2rem;
   max-width: 68ch;
+  background-color: var(--secondary-color);
+  border: 1px solid #ced4da;
+  border-radius: 0.7rem;
+  padding: 1.25rem 1.5rem;
+}
+
+/* Le fond du bloc ne se detache que de 1,1 du fond de page, dans les deux
+   themes : sans trait de cadre on ne voit pas que c'est un encadre. Le trait
+   fait tout le tour, il ne s'agit pas d'un lisere lateral. */
+body.dark .cta-top {
+  border-color: #495057;
+}
+
+#single aside.cta-top {
+  margin: 1.5rem auto 2rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.cta-top-lead {
+  margin: 0 0 0.9rem;
+  font-weight: 600;
 }
 
 .cta-top-aside {

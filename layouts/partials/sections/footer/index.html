@@ -1,6 +1,12 @@
 <footer>
-    <!-- Recent blog posts -->
+    {{/* Derniers articles : uniquement sur la page d'accueil.
+
+         Sur la liste du blog, le bloc répète ce que la page affiche déjà. Sur
+         un article et sur les pages de service, de réalisations ou de contact,
+         toutes rendues par le gabarit single, c'est du bruit en bas de page. */}}
+    {{- if .IsHome -}}
     {{- partial "sections/footer/recentBlogPosts.html" . -}}
+    {{- end -}}
 
     <!-- Social Icons -->
     {{- partial "sections/footer/socialNetwork.html" . -}}

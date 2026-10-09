@@ -100,6 +100,10 @@ Ces montants sont indicatifs. Le prix exact dépend du périmètre réel de votr
 projet, et il vous est donné dans un devis ferme avant que je commence quoi que
 ce soit.
 
+TVA non applicable, article 293 B du Code général des impôts. Autrement dit, le
+montant annoncé est celui que vous payez : il n'y a pas de taxe à ajouter
+par-dessus.
+
 Le devis est ferme avant de commencer. Si en cours de route vous voulez ajouter
 quelque chose, je vous dis ce que ça coûte avant de le faire.
 

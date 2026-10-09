@@ -86,13 +86,18 @@ corrections, la remesure et le compte rendu.
 
 **Suivi mensuel : à partir de 80 € par mois.** Facultatif. Je surveille que la
 visibilité ne se dégrade pas, et je vous préviens avant que ça vous coûte des
-clients.
+clients. Une demi-heure d'intervention par mois est comprise. Au-delà, c'est
+{{< taux >}} € de l'heure, et je vous le dis avant de commencer, jamais après.
 
 {{< pack-accompagnement >}}
 
 Ces montants sont indicatifs. Le prix exact dépend du périmètre réel de votre
 projet, et il vous est donné dans un devis ferme avant que je commence quoi que
 ce soit.
+
+TVA non applicable, article 293 B du Code général des impôts. Autrement dit, le
+montant annoncé est celui que vous payez : il n'y a pas de taxe à ajouter
+par-dessus.
 
 Le diagnostic est gratuit et il vous dit si l'opération vaut le coup. Il
 m'arrive de répondre que non.

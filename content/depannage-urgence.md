@@ -58,9 +58,14 @@ dans quel ordre de grandeur vous vous situez avant même de me contacter :
 **Dépannage simple : 150 à 350 €.** Erreur identifiable rapidement, mise à jour
 à rattraper, formulaire à remettre en service, configuration à corriger.
 
-**Panne complexe : 350 à 900 €.** Site piraté à nettoyer et sécuriser, code
-ancien à reprendre, panne dont la cause n'est pas évidente, base de données
-endommagée.
+**Panne complexe : 350 à 900 €.** Code ancien à reprendre, panne dont la cause
+n'est pas évidente, base de données endommagée.
+
+**Site piraté : 700 à 1 800 €.** C'est un travail à part, et plus long qu'une
+panne ordinaire : nettoyage complet, recherche de la porte d'entrée pour qu'elle
+ne resserve pas, changement de tous les accès, sécurisation, et demande de
+réexamen auprès de Google si votre site a été signalé. Le prix dépend de
+l'ampleur de l'infection et du temps pendant lequel elle est restée en place.
 
 **Site lent ou introuvable sur Google : 600 à 1 200 €.** C'est une prestation à
 part, détaillée sur la page [Visibilité sur Google et vitesse](/visibilite-google/).
@@ -70,6 +75,10 @@ part, détaillée sur la page [Visibilité sur Google et vitesse](/visibilite-go
 Ces montants sont indicatifs. Le prix exact dépend du périmètre réel de votre
 projet, et il vous est donné dans un devis ferme avant que je commence quoi que
 ce soit.
+
+TVA non applicable, article 293 B du Code général des impôts. Autrement dit, le
+montant annoncé est celui que vous payez : il n'y a pas de taxe à ajouter
+par-dessus.
 
 Le pré-diagnostic est toujours gratuit, et vous recevez un devis ferme avant que
 je commence. Aucune intervention n'est facturée sans votre accord écrit.
